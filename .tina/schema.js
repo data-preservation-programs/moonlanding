@@ -1,7 +1,7 @@
-
 import { defineSchema, defineConfig } from 'tinacms'
 import { client } from './__generated__/client'
-
+import { seo, openGraph } from './templates/general'
+import { indexPage } from './templates/index-page'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -11,62 +11,20 @@ const branch =
 const schema = defineSchema({
   // See https://tina.io/docs/tina-cloud/connecting-site/ for more information about this config
   config: {
-    token: '<Your Read Only Token>', // generated on app.tina.io,
-    clientId: '<Your Client ID>', // generated on app.tina.io
+    token: 'ae004fc4091cac9f08c5b5928afde41aff8fed74', // generated on app.tina.io,
+    clientId: 'c17a15c9-4d9d-48fe-b7dc-7a28607ab9ac', // generated on app.tina.io
     branch,
   },
   collections: [
-    {
-      label: 'Blog Posts',
-      name: 'post',
-      path: 'content/posts',
-      format: 'mdx',
-      fields: [
-        {
-          type: 'string',
-          label: 'Title',
-          name: 'title',
-        },
-        {
-          type: 'rich-text',
-          label: 'Blog Post Body',
-          name: 'body',
-          isBody: true,
-          templates: [
-            {
-              name: 'PageSection',
-              label: 'Page Section',
-              fields: [
-                {
-                  type: 'string',
-                  name: 'heading',
-                  label: 'Heading',
-                },
-                {
-                  type: 'string',
-                  name: 'content',
-                  label: 'Content',
-                  ui: {
-                    component: 'textarea',
-                  },
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
     {
       label: 'Pages',
       name: 'page',
       path: 'content/pages',
       format: 'json',
       fields: [
-        {
-          type: 'string',
-          label: 'Title',
-          name: 'title'
-        }
+        seo,
+        openGraph,
+        indexPage
       ]
     }
   ],

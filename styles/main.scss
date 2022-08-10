@@ -1,0 +1,54 @@
+// /////////////////////////////////////////////////////////////////////// Fonts
+// -------------------------------------------------------------------------- //
+$fontAssetPath: '../assets/fonts';
+
+@font-face {
+  font-family: 'futura-pt';
+  src: url('#{$fontAssetPath}/FuturaPT/FuturaPTLight.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'futura-pt';
+  src: url('#{$fontAssetPath}/FuturaPT/FuturaPTMedium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'futura-pt';
+  src: url('#{$fontAssetPath}/FuturaPT/FuturaPTBold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ///////////////////////////////////////////////////////////////////// General
+// -------------------------------------------------------------------------- //
+html,
+body {
+  font-family: 'futura-pt', helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02rem;
+  color: #222;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+  &.no-cursor {
+    cursor: none;
+  }
+  * {
+    box-sizing: border-box;
+    &:before,
+    &:after {
+      box-sizing: border-box;
+    }
+  }
+}

@@ -1,3 +1,42 @@
 {
-  "title": "HOla"
+  "seo": {
+    "title": "Filecoin Moonlanding",
+    "description": "Website for the Filecoin Moonlanding site"
+  },
+  "og": {
+    "site_name": "Filecoin Moonlanding",
+    "url": "",
+    "type": "Website",
+    "image": ""
+  },
+  "page_content": {
+    "section": {
+      "id": "hero-header",
+      "block": [
+        {
+          "text_block": {
+            "cols": {
+              "num": "col-12"
+            },
+            "format": "header",
+            "heading": "The next frontier in storage",
+            "cta": [
+              {
+                "button": {
+                  "action": "a",
+                  "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
+                  "text": "Register"
+                }
+              }
+            ]
+          },
+          "image_block": {
+            "cols": {
+              "num": "col-12"
+            }
+          }
+        }
+      ]
+    }
+  }
 }
