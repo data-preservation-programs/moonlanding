@@ -20,6 +20,7 @@
             },
             "format": "header",
             "heading": "The next frontier in storage",
+            "subheading": "This is a subheading",
             "cta": [
               {
                 "button": {
@@ -29,11 +30,17 @@
                 }
               }
             ]
-          },
-          "image_block": {
+          }
+        },
+        {
+          "text_block": {
             "cols": {
-              "num": "col-12"
-            }
+              "num": "col-6"
+            },
+            "format": "medium",
+            "heading": "Heading 2",
+            "subheading": "another subheading",
+            "description": "hihihihihihihihihihihihihihihihi"
           }
         }
       ]

@@ -16,13 +16,13 @@ export default function TextBlock({ block }) {
   const hasDescription = typeof block.description === 'string' || Array.isArray(block.description);
   const tracking = {};
   if (typeof block.cta === 'object') {
-    if (block.cta.event) {
+    if (block?.cta?.event) {
       tracking.event = countly.events[block.cta.event];
     }
-    if (block.cta.ui) {
+    if (block?.cta?.ui) {
       tracking.ui = countly.ui[block.cta.ui];
     }
-    if (block.cta.action) {
+    if (block?.cta?.action) {
       tracking.action = block.cta.action;
     }
   }
@@ -42,19 +42,19 @@ export default function TextBlock({ block }) {
   };
 
   const getHeadingType = block => {
-    switch (block.format) {
+    switch (block?.format) {
       case 'header':
-        return <h1 className={clsx('h1', 'heading')}>{block.heading}</h1>;
+        return <h1 className={clsx('h1', 'heading')}>{block?.heading}</h1>;
       case 'small':
-        return <h3 className={clsx('h3', 'heading')}>{block.heading}</h3>;
+        return <h3 className={clsx('h3', 'heading')}>{block?.heading}</h3>;
       default:
-        return <h2 className={clsx('h2', 'heading')}>{block.heading}</h2>;
+        return <h2 className={clsx('h2', 'heading')}>{block?.heading}</h2>;
     }
   };
 
   const handleButtonClick = useCallback(
     cta => {
-      if (cta.url) {
+      if (cta?.url) {
         router.push(cta.url);
       }
     },
@@ -64,29 +64,29 @@ export default function TextBlock({ block }) {
   // ==================================================================== Export
   return (
     <div className={clsx('block text-block', `format__${format}`)}>
-      {typeof block.label === 'string' && (
+      {typeof block?.label === 'string' && (
         <div className={'label'}>
-          <span className={clsx('label-text')}>{block.label}</span>
+          <span className={clsx('label-text')}>{block?.label}</span>
         </div>
       )}
 
-      {typeof block.heading === 'string' && getHeadingType(block)}
+      {typeof block?.heading === 'string' && getHeadingType(block)}
 
-      {typeof block.subheading === 'string' && (
-        <div className={'subheading'} dangerouslySetInnerHTML={{ __html: block.subheading }}></div>
+      {typeof block?.subheading === 'string' && (
+        <div className={'subheading'} dangerouslySetInnerHTML={{ __html: block?.subheading }}></div>
       )}
 
-      {hasDescription && <div className={'description'}>{formatDescription(block.description)}</div>}
+      {hasDescription && <div className={'description'}>{formatDescription(block?.description)}</div>}
 
-      {typeof block.cta === 'object' && (
+      {typeof block?.cta === 'object' && (
         <Button
           className={'cta'}
-          variant={block.cta.theme}
+          variant={block?.cta?.theme}
           tracking={tracking}
-          onClick={() => handleButtonClick(block.cta)}
-          onKeyPress={() => handleButtonClick(block.cta)}
+          onClick={() => handleButtonClick(block?.cta)}
+          onKeyPress={() => handleButtonClick(block?.cta)}
         >
-          {block.cta.text}
+          {block?.cta?.text}
         </Button>
       )}
     </div>

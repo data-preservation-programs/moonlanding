@@ -1,7 +1,8 @@
 import { defineSchema, defineConfig } from 'tinacms'
 import { client } from './__generated__/client'
 import { seo, openGraph } from './templates/general'
-import { indexPage } from './templates/index-page'
+// import { indexPage } from './templates/index-page'
+import { textBlock, imageBlock } from './templates/blocks'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -11,8 +12,8 @@ const branch =
 const schema = defineSchema({
   // See https://tina.io/docs/tina-cloud/connecting-site/ for more information about this config
   config: {
-    token: 'ae004fc4091cac9f08c5b5928afde41aff8fed74', // generated on app.tina.io,
-    clientId: 'c17a15c9-4d9d-48fe-b7dc-7a28607ab9ac', // generated on app.tina.io
+    token: process.env.TINA_CLOUD_TOKEN, // generated on app.tina.io,
+    clientId: process.env.TINA_CLOUD_CLIENT_ID, // generated on app.tina.io
     branch,
   },
   collections: [
@@ -24,7 +25,34 @@ const schema = defineSchema({
       fields: [
         seo,
         openGraph,
-        indexPage
+        {
+          label: 'Page Content',
+          name: 'page_content',
+          type: 'object',
+          fields: [
+            {
+              label: 'Section',
+              name: 'section',
+              type: 'object',
+              fields: [
+                {
+                  label: 'ID',
+                  name: 'id',
+                  type: 'string'
+                },
+                {
+                  label: 'Blocks',
+                  name: 'block',
+                  type: 'object',
+                  list: true,
+                  fields: [
+                    textBlock
+                  ]
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ],

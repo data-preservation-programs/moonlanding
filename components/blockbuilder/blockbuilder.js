@@ -1,6 +1,7 @@
 // ===================================================================== Imports
 import React from 'react';
 import clsx from 'clsx';
+import CloneDeep from 'lodash/cloneDeep'
 
 import TextBlock from '../textblock/textblock.js';
 import ImageBlock from '../imageblock/imageblock.js';
@@ -12,6 +13,7 @@ class BlockBuilder extends React.Component {
     this.getGridClasses = this.getGridClasses.bind(this);
     this.getColumnPushCount = this.getColumnPushCount.bind(this);
     this.getCustomComponents = this.getCustomComponents.bind(this);
+    this.getColumnKeys = this.getColumnKeys.bind(this);
     this.getComponent = this.getComponent.bind(this);
   }
 
@@ -25,7 +27,10 @@ class BlockBuilder extends React.Component {
   }
 
   getColumnPushCount(columns, direction) {
-    return columns.hasOwnProperty(`push_${direction}`) ? columns[`push_${direction}`] : undefined;
+    if (columns) {
+      return columns.hasOwnProperty(`push_${direction}`) ? columns[`push_${direction}`] : undefined;
+    }
+    return false
   }
 
   getCustomComponents(customizations) {
@@ -39,6 +44,29 @@ class BlockBuilder extends React.Component {
       );
     }
     return false;
+  }
+
+  getColumnKeys(clmn, index) {
+    const column = CloneDeep(clmn)
+    delete column.__typename
+
+    return (
+      <>
+        {Object.entries(column).map(([key, value], j) => (
+          <div
+            key={`column-${index}-${key}`}
+            className={clsx(value?.cols?.num)}
+            data-push-left={this.getColumnPushCount(value?.cols, 'left')}
+            data-push-right={this.getColumnPushCount(value?.cols, 'right')}>
+            <div
+              data-block-id={`column-${j + 1}`}
+              className="column-content">
+              {value && this.getComponent(key, value)}
+            </div>
+          </div>
+        ))}
+      </>
+    )
   }
 
   getComponent(type, block) {
@@ -56,33 +84,18 @@ class BlockBuilder extends React.Component {
 
   // ====================================================== Template [Sectional]
   render(props) {
-    const section = this.props.section
-    console.log(section.block)
+    const section = CloneDeep(this.props.section)
+    delete section.__typename
+
     return (
       <section className="sectional" id={section.id}>
-        <div className={clsx(this.getGridClasses(section.grid))}>
-          {section.block.map((column, i) => (
-            <>
-              {Object.entries(column).map(([key, value], j) => (
-                <>
-                  {key !== '__typename' &&
-                    <div
-                      key={`column-${i}-${key}`}
-                      className={clsx(value.cols.num)}
-                      data-push-left={this.getColumnPushCount(value.cols, 'left')}
-                      data-push-right={this.getColumnPushCount(value.cols, 'right')}>
-                      <div
-                        data-block-id={`column-${j + 1}`}
-                        className="column-content">
-                        {this.getComponent(key, value)}
-                      </div>
-                    </div>
-                  }
-                </>
-              ))}
-            </>
-          ))}
-        </div>
+        {section.block.map((column, i) => (
+          <div
+            key={`grid-section-${i}`}
+            className={clsx(this.getGridClasses(section.grid))}>
+            {column && this.getColumnKeys(column, i)}
+          </div>
+        ))}
       </section>
     );
   }

@@ -1,6 +1,7 @@
 // ===================================================================== Imports
 import { client } from '../.tina/__generated__/client'
 import { useTina } from 'tinacms/dist/edit-state'
+import CloneDeep from 'lodash/cloneDeep'
 
 import BlockBuilder from '../components/blockbuilder/blockbuilder.js'
 
@@ -11,13 +12,13 @@ export default function HomePage(props) {
     variables: props.variables,
     data: props.data
   })
+  const pageContent = CloneDeep(data?.page?.page_content)
+  delete pageContent.__typename
 
   return (
     <main className="page page-index">
-      {Object.entries(data.page.page_content).map(([key, value]) => (
-        <>
-          {key !== '__typename' && <BlockBuilder id={value.id} key={value.id} section={value} />}
-        </>
+      {pageContent && Object.entries(pageContent).map(([key, value]) => (
+        <BlockBuilder id={value.id} key={value.id} section={value} />
       ))}
     </main>
   )
