@@ -97,3 +97,4 @@ awk
 
 # Vim swap files
 *.swp
+node_modules
