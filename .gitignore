@@ -40,7 +40,7 @@ bower_components
 build/Release
 
 # Dependency directories
-
+node_modules/
 jspm_packages/
 
 # TypeScript v1 declaration files
@@ -69,12 +69,11 @@ typings/
 
 # next.js build output
 .next
+out/
 
 # nuxt.js build output
 .nuxt
-
-# Nuxt generate
-dist
+dist/
 
 # vuepress build output
 .vuepress/dist
@@ -97,4 +96,3 @@ awk
 
 # Vim swap files
 *.swp
-node_modules
