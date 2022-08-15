@@ -36,6 +36,11 @@ export const buttonComponent = {
       label: 'Theme',
       name: 'theme',
       type: 'string'
+    },
+    {
+      label: 'Target',
+      name: 'target',
+      type: 'string'
     }
   ]
 }

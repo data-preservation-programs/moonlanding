@@ -20,7 +20,7 @@ import clsx from 'clsx';
  */
 const Button = ({ className, onClick, href, type, disabled, openInNewWindow, children }) => {
   return (
-    <div className={clsx(className, 'Button', disabled ? 'disabled' : undefined)}>
+    <div className={clsx(className, 'button', disabled ? 'disabled' : undefined)}>
       {href && !disabled ? (
         openInNewWindow ? (
           <a href={href} onClick={onClick} target="_blank" rel="noreferrer">

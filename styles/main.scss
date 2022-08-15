@@ -1,6 +1,15 @@
+@import 'variables';
+@import 'typography';
+@import 'grid/gridlex-2.7.1';
+
+// Components
 @import '../components/textblock/textblock.scss';
 @import '../components/imageblock/imageblock.scss';
 @import '../components/button/button.scss';
+
+// Pages
+@import '../pages/index.scss';
+
 // /////////////////////////////////////////////////////////////////////// Fonts
 // -------------------------------------------------------------------------- //
 $fontAssetPath: '../assets/fonts';
@@ -53,5 +62,35 @@ body {
     &:after {
       box-sizing: border-box;
     }
+  }
+}
+
+[class~='grid'],
+[class*='grid-'],
+[class*='grid_'] {
+  width: $containerWidth;
+  margin: 0 auto;
+  @include customMaxMQ($containerWidth + 4rem) {
+    padding: 0 4.1665%;
+    width: 100%;
+  }
+  &[class*='-noGutter'] {
+    margin: 0 auto;
+  }
+  &.full {
+    width: 100%;
+    padding: 0 0.5rem;
+    &.maxed {
+      max-width: 90rem;
+    }
+  }
+  &.no-padding {
+    padding: 0;
+  }
+  [class~='grid'],
+  [class*='grid-'],
+  [class*='grid_'] {
+    width: 100%;
+    padding: 0;
   }
 }

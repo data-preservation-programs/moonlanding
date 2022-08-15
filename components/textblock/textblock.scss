@@ -1,12 +1,28 @@
 // //////////////////////////////////////////////////////////// General & Themes
-.textBlock {
+.text-block {
   position: relative;
+  color: $codGray;
+  &.theme__light {
+    color: $white;
+  }
+  &.format__header {
+    .heading {
+      @include typography_h1;
+    }
+  }
 }
 
 // ///////////////////////////////////////////////////////////////////// Formats
 
 
 // ///////////////////////////////////////////////////////////////////// Content
+
+.label,
+.heading,
+.subheading,
+.description {
+  text-align: center;
+}
 
 .label {
   margin-bottom: 1.25rem;
@@ -34,4 +50,10 @@
     &:hover {
     }
   }
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

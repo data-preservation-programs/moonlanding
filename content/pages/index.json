@@ -21,6 +21,7 @@
               "push_right": "off-3"
             },
             "format": "header",
+            "theme": "light",
             "heading": "The next frontier in storage",
             "subheading": "Hi, I'm a subheading",
             "description": "This is a description.",
@@ -29,7 +30,8 @@
                 "button": {
                   "action": "a",
                   "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
-                  "text": "Register"
+                  "text": "Register",
+                  "target": "_blank"
                 }
               }
             ]
@@ -42,6 +44,9 @@
     },
     "section_2": {
       "id": "intro-1",
+      "grid": [
+        "reverse"
+      ],
       "block": [
         {
           "text_block": {
@@ -52,6 +57,9 @@
             "description": "MOON LANDING IS AN ACCELERATION PROGRAM FROM PROTOCOL LABS DESIGNED TO ONRAMP STORAGE PROVIDERS WITH REAL DATA. BY PARTICIPATING IN MOON LANDING, STORAGE PROVIDERS WILL STORE PUBLIC DATASETS THAT ARE VALUABLE TO THE WORLD.  TO PARTICIPATE, YOU CAN ELECT TO PARTICIPATE IN SLINGSHOT, EVERGREEN, OR BOTH. "
           },
           "image_block": {
+            "cols": {
+              "num": "col-6"
+            },
             "src": "/images/nebula-1.jpeg"
           }
         }

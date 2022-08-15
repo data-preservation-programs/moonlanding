@@ -1,3 +1,4 @@
+import { grid } from './layouts'
 import { textBlock, imageBlock } from './blocks'
 
 export const indexPage = {
@@ -15,6 +16,7 @@ export const indexPage = {
           name: 'id',
           type: 'string'
         },
+        grid,
         {
           label: 'Blocks',
           name: 'block',
@@ -34,6 +36,7 @@ export const indexPage = {
           name: 'id',
           type: 'string'
         },
+        grid,
         {
           label: 'Blocks',
           name: 'block',
@@ -53,6 +56,7 @@ export const indexPage = {
           name: 'id',
           type: 'string'
         },
+        grid,
         {
           label: 'Blocks',
           name: 'block',

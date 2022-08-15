@@ -14,6 +14,15 @@ export const textBlock = {
       type: 'string'
     },
     {
+      label: 'Theme',
+      name: 'theme',
+      type: 'string',
+      options: [
+        'light',
+        'dark'
+      ]
+    },
+    {
       label: 'Heading',
       name: 'heading',
       type: 'string'

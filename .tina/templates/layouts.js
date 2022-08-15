@@ -20,3 +20,60 @@ export const columns = {
     }
   ]
 }
+
+export const grid = {
+  label: 'Grid',
+  name: 'grid',
+  type: 'string',
+  list: true,
+  options: [
+    {
+      'label': 'center',
+      'value': 'center'
+    },
+    {
+      'label': 'middle',
+      'value': 'middle'
+    },
+    {
+      'label': 'bottom',
+      'value': 'bottom'
+    },
+    {
+      'label': 'spaceBetween',
+      'value': 'spaceBetween'
+    },
+    {
+      'label': 'spaceAround',
+      'value': 'spaceAround'
+    },
+    {
+      'label': 'reverse',
+      'value': 'reverse'
+    },
+    {
+      'label': 'column',
+      'value': 'column'
+    },
+    {
+      'label': 'column-reverse',
+      'value': 'column-reverse'
+    },
+    {
+      'label': 'noGutter',
+      'value': 'noGutter'
+    },
+    {
+      'label': 'equalHeight',
+      'value': 'equalHeight'
+    },
+    {
+      'label': 'noBottom',
+      'value': 'noBottom'
+    },
+    {
+      'label': 'noWrap',
+      'value': 'noWrap'
+    }
+  ]
+}

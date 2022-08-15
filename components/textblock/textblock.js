@@ -13,6 +13,7 @@ import Button from '../button/button';
 export default function TextBlock({ block }) {
   const router = useRouter();
   const format = block.format || 'medium';
+  const theme = block.theme;
   const hasDescription = typeof block.description === 'string' || Array.isArray(block.description);
   const tracking = {};
   if (typeof block.cta === 'object') {
@@ -63,7 +64,7 @@ export default function TextBlock({ block }) {
 
   // ==================================================================== Export
   return (
-    <div className={clsx('block text-block', `format__${format}`)}>
+    <div className={clsx('block text-block', `format__${format}`, `theme__${theme}`)}>
       {typeof block?.label === 'string' && (
         <div className={'label'}>
           <span className={clsx('label-text')}>{block?.label}</span>
@@ -78,17 +79,23 @@ export default function TextBlock({ block }) {
 
       {hasDescription && <div className={'description'}>{formatDescription(block?.description)}</div>}
 
-      {typeof block?.cta === 'object' && (
-        <Button
-          className={'cta'}
-          variant={block?.cta?.theme}
-          tracking={tracking}
-          onClick={() => handleButtonClick(block?.cta)}
-          onKeyPress={() => handleButtonClick(block?.cta)}
-        >
-          {block?.cta?.text}
-        </Button>
-      )}
+      <div className="button-row">
+        {Array.isArray(block?.cta) && (
+          block.cta.map((cta) => (
+            <Button
+              className={'cta'}
+              variant={cta.button.theme}
+              tracking={tracking}
+              target={cta.button.target}
+              onClick={() => handleButtonClick(cta.button)}
+              onKeyPress={() => handleButtonClick(cta.button)}
+            >
+              {cta.button.text}
+            </Button>
+          ))
+        )}
+      </div>
+
     </div>
   );
 }
