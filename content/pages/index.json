@@ -21,6 +21,7 @@
             "format": "header",
             "heading": "The next frontier in storage",
             "subheading": "Hi, I'm a subheading",
+            "description": "This is a description.",
             "cta": [
               {
                 "button": {
