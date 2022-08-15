@@ -1,0 +1,22 @@
+@use 'sass:math';
+
+// ///////////////////////////////////////////////////// General [Page Sections]
+// -----------------------------------------------------------------------------
+.sectional {
+  position: relative;
+}
+
+#hero-header {
+  padding: 13.4375rem 0;
+  .text-block {
+    position: relative;
+    z-index: 2;
+  }
+  .image-block {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,128 @@
+@use 'sass:math';
+
+$containerWidth: 72.875rem; // 1166px
+
+// Colors
+$codGray: #171717;
+$white: #fff;
+
+// Breakpoints
+$breakpoint_Tiny: 25.9375rem; // 415px
+$breakpoint_Mini: 40rem; // 640px
+$breakpoint_Smaller: 48rem; // 768px
+$breakpoint_Small: 53.125rem; // 850px
+$breakpoint_Medium: 64rem; // 1024px
+$breakpoint_Large: 75rem; // 1200px
+$breakpoint_Xlarge: 90rem; // 1440px
+$breakpoint_UltraLarge: 140.625rem; // 2250px
+
+
+
+// --------------------------------------------------------------- Media Queries
+@mixin tiny {
+  @media screen and (max-width: $breakpoint_Tiny) {
+    @content;
+  }
+}
+@mixin mini {
+  @media screen and (max-width: $breakpoint_Mini) {
+    @content;
+  }
+}
+@mixin smaller {
+  @media screen and (max-width: $breakpoint_Smaller) {
+    @content;
+  }
+}
+@mixin small {
+  @media screen and (max-width: $breakpoint_Small) {
+    @content;
+  }
+}
+@mixin medium {
+  @media screen and (max-width: $breakpoint_Medium) {
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (max-width: $breakpoint_Large) {
+    @content;
+  }
+}
+@mixin xlarge {
+  @media screen and (max-width: $breakpoint_Xlarge) {
+    @content;
+  }
+}
+@mixin ultraLarge {
+  @media screen and (max-width: $breakpoint_UltraLarge) {
+    @content;
+  }
+}
+
+@mixin containerMaxMQ {
+  @media screen and (max-width: $containerWidth) {
+    @content;
+  }
+}
+@mixin customMaxMQ($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin customMinMQ($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin FireFox {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+@mixin Edge {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+@mixin Safari9 {
+  @supports (overflow: -webkit-marquee) and (justify-content: inherit) {
+    @content;
+  }
+}
+
+@mixin Safari7Plus($item) {
+  _::-webkit-full-page-media,
+  _:future,
+  :root #{$item} {
+    @content;
+  }
+}
+
+@mixin Safari9Plus($item) {
+  _:default:not(:root:root),
+  #{$item} {
+    @content;
+  }
+}
+
+@mixin IE10and11 {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin iOSonly {
+  @supports (-webkit-overflow-scrolling: touch) {
+    @content;
+  }
+}
+
+@mixin everythingExceptIOS {
+  @supports not (-webkit-overflow-scrolling: touch) {
+    @content;
+  }
+}
