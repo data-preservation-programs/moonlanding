@@ -83,6 +83,7 @@ export default function TextBlock({ block }) {
         {Array.isArray(block?.cta) && (
           block.cta.map((cta) => (
             <Button
+              key={cta.button.text}
               className={'cta'}
               variant={cta.button.theme}
               tracking={tracking}

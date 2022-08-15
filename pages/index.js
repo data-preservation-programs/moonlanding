@@ -20,9 +20,7 @@ export default function HomePage(props) {
   return (
     <main className="page page-index">
       {pageContent && Object.entries(pageContent).map(([key, value]) => (
-        <>
-          {value && <BlockBuilder id={value.id} key={value.id} section={value} />}
-        </>
+        <BlockBuilder id={value.id} key={value.id} section={value} />
       ))}
     </main>
   )
