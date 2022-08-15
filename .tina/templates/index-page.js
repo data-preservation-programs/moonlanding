@@ -6,8 +6,46 @@ export const indexPage = {
   type: 'object',
   fields: [
     {
-      label: 'Section',
-      name: 'section',
+      label: 'Section 1',
+      name: 'section_1',
+      type: 'object',
+      fields: [
+        {
+          label: 'ID',
+          name: 'id',
+          type: 'string'
+        },
+        {
+          label: 'Blocks',
+          name: 'block',
+          type: 'object',
+          list: true,
+          fields: [textBlock, imageBlock]
+        }
+      ]
+    },
+    {
+      label: 'Section 2',
+      name: 'section_2',
+      type: 'object',
+      fields: [
+        {
+          label: 'ID',
+          name: 'id',
+          type: 'string'
+        },
+        {
+          label: 'Blocks',
+          name: 'block',
+          type: 'object',
+          list: true,
+          fields: [textBlock, imageBlock]
+        }
+      ]
+    },
+    {
+      label: 'Section 3',
+      name: 'section_3',
       type: 'object',
       fields: [
         {

@@ -26,7 +26,10 @@ export const textBlock = {
     {
       label: 'Description',
       name: 'description',
-      type: 'string'
+      type: 'string',
+      ui: {
+        component: 'textarea'
+      }
     },
     {
       label: 'CTA',

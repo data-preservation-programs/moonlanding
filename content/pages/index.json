@@ -10,17 +10,18 @@
     "image": ""
   },
   "page_content": {
-    "section": {
+    "section_1": {
       "id": "hero-header",
       "block": [
         {
           "text_block": {
             "cols": {
-              "num": "col-12"
+              "num": "col-6",
+              "push_left": "off-3",
+              "push_right": "off-3"
             },
             "format": "header",
             "heading": "The next frontier in storage",
-            "subheading": "This is a subheading",
             "cta": [
               {
                 "button": {
@@ -30,17 +31,45 @@
                 }
               }
             ]
+          },
+          "image_block": {
+            "src": "/images/astronaut-on-moon.png"
           }
-        },
+        }
+      ]
+    },
+    "section_2": {
+      "id": "intro-1",
+      "block": [
         {
           "text_block": {
             "cols": {
               "num": "col-6"
             },
-            "format": "medium",
-            "heading": "Heading 2",
-            "subheading": "another subheading",
-            "description": "hihihihihihihihihihihihihihihihi"
+            "format": "",
+            "description": "MOON LANDING IS AN ACCELERATION PROGRAM FROM PROTOCOL LABS DESIGNED TO ONRAMP STORAGE PROVIDERS WITH REAL DATA. BY PARTICIPATING IN MOON LANDING, STORAGE PROVIDERS WILL STORE PUBLIC DATASETS THAT ARE VALUABLE TO THE WORLD.  TO PARTICIPATE, YOU CAN ELECT TO PARTICIPATE IN SLINGSHOT, EVERGREEN, OR BOTH. "
+          },
+          "image_block": {
+            "src": "/images/nebula-1.jpeg"
+          }
+        }
+      ]
+    },
+    "section_3": {
+      "id": "intro-2",
+      "block": [
+        {
+          "text_block": {
+            "cols": {
+              "num": "col-8",
+              "push_left": "off-2",
+              "push_right": "off-2"
+            },
+            "heading": "STORAGE PROVIDER BENEFITS",
+            "description": "BE A FOUNDING MEMBER OF A NEW STORAGE PROVIDER COMMUNITY CONNECT WITH FELLOW STORAGE PROVIDERS THROUGH PROTOCOL LABS EARN AND INCREASE YOUR BLOCK REWARDS VIA QUALITY ADJUSTED POWER"
+          },
+          "image_block": {
+            "src": "/images/nebula-2.png"
           }
         }
       ]

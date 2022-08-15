@@ -14,7 +14,6 @@
     "build": "tinacms build && next build",
     "export": "tinacms build && next build && next export",
     "start": "tinacms build && next start",
-    "export": "tinacms build && next build && next export",
     "lint": "next lint"
   }
 }

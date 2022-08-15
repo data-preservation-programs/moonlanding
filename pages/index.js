@@ -13,12 +13,16 @@ export default function HomePage(props) {
     data: props.data
   })
   const pageContent = CloneDeep(data?.page?.page_content)
-  delete pageContent.__typename
+  if (typeof pageContent === 'object' && pageContent.hasOwnProperty('__typename')) {
+    delete pageContent.__typename
+  }
 
   return (
     <main className="page page-index">
       {pageContent && Object.entries(pageContent).map(([key, value]) => (
-        <BlockBuilder id={value.id} key={value.id} section={value} />
+        <>
+          {value && <BlockBuilder id={value.id} key={value.id} section={value} />}
+        </>
       ))}
     </main>
   )

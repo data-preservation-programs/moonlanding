@@ -1,8 +1,7 @@
 import { defineSchema, defineConfig } from 'tinacms'
 import { client } from './__generated__/client'
 import { seo, openGraph } from './templates/general'
-// import { indexPage } from './templates/index-page'
-import { textBlock, imageBlock } from './templates/blocks'
+import { indexPage } from './templates/index-page'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -25,34 +24,7 @@ const schema = defineSchema({
       fields: [
         seo,
         openGraph,
-        {
-          label: 'Page Content',
-          name: 'page_content',
-          type: 'object',
-          fields: [
-            {
-              label: 'Section',
-              name: 'section',
-              type: 'object',
-              fields: [
-                {
-                  label: 'ID',
-                  name: 'id',
-                  type: 'string'
-                },
-                {
-                  label: 'Blocks',
-                  name: 'block',
-                  type: 'object',
-                  list: true,
-                  fields: [
-                    textBlock
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        indexPage
       ]
     }
   ],
