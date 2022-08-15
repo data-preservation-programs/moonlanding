@@ -2,13 +2,43 @@
 .image-block {
   position: relative;
   div,
-  span {
+  span,
+  img {
     position: relative !important;
   }
   img {
-    position: relative !important;
     width: 100% !important;
     height: 100% !important;
+  }
+
+  &.theme__background {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    span {
+      position: absolute;
+      width: 100% !important;
+      height: 100% !important;
+      left: -9999px;
+      right: -9999px;
+      margin: auto;
+      bottom: 0;
+      z-index: 1;
+    }
+    img {
+      min-width: 1700px !important;
+      min-height: unset !important;
+      max-width: unset !important;
+      max-height: unset !important;
+      height: unset !important;
+      transform: translate(0, 0rem);
+      @include customMaxMQ(1720px) {
+        transform: translate(calc((100vw - 1720px) / 2), 0rem);
+      }
+    }
   }
 }
 

@@ -18,9 +18,9 @@ import clsx from 'clsx';
  * @param {ButtonProps} props
  * @returns
  */
-const Button = ({ className, onClick, href, type, disabled, openInNewWindow, children }) => {
+const Button = ({ className, onClick, href, type, disabled, openInNewWindow, children, variant = '' }) => {
   return (
-    <div className={clsx(className, 'button', disabled ? 'disabled' : undefined)}>
+    <div className={clsx(className, 'button', disabled ? 'disabled' : undefined, `variant__${variant}`)}>
       {href && !disabled ? (
         openInNewWindow ? (
           <a href={href} onClick={onClick} target="_blank" rel="noreferrer">

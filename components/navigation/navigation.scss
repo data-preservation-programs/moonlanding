@@ -1,0 +1,46 @@
+#site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navigationHeight;
+  z-index: 5;
+}
+
+.header-content,
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-content {
+  padding-top: 1.5rem;
+}
+
+.site-logo-button {
+  .button-contents {
+    padding: 0.3125rem 0.75rem;
+    background: transparent;
+    color: $white;
+    @include font_Bold;
+    font-size: $fontSize_Large;
+    letter-spacing: $letterSpacing_Large;
+    line-height: $leading_Medium;
+  }
+}
+
+.nav-item {
+  display: flex;
+  margin: 0 1rem;
+  .button-contents {
+    padding: 0.618rem 0;
+    margin: auto;
+    background: transparent;
+    color: $white;
+    @include font_Bold;
+    font-size: $fontSize_Tiny;
+    letter-spacing: $letterSpacing_Large;
+    line-height: $leading_Medium;
+  }
+}

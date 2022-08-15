@@ -89,9 +89,10 @@ export default function TextBlock({ block }) {
               tracking={tracking}
               target={cta.button.target}
               onClick={() => handleButtonClick(cta.button)}
-              onKeyPress={() => handleButtonClick(cta.button)}
-            >
+              onKeyPress={() => handleButtonClick(cta.button)}>
+
               {cta.button.text}
+              
             </Button>
           ))
         )}

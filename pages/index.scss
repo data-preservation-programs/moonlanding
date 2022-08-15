@@ -2,21 +2,27 @@
 
 // ///////////////////////////////////////////////////// General [Page Sections]
 // -----------------------------------------------------------------------------
+.page-index,
 .sectional {
   position: relative;
 }
 
+.sectional {
+  padding: 6.25rem 0;
+}
+
 #hero-header {
-  padding: 13.4375rem 0;
+  padding-top: calc(12rem + #{$navigationHeight});
+  padding-bottom: 14rem;
+}
+
+#intro-1 {
   .text-block {
-    position: relative;
-    z-index: 2;
+    margin-top: 1.75rem;
+    padding: 0 1rem;
   }
-  .image-block {
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    z-index: 1;
-  }
+}
+
+#intro-2 {
+  padding: 22.8125rem 0;
 }

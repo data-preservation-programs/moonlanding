@@ -9,6 +9,32 @@
     "type": "Website",
     "image": ""
   },
+  "navigation": {
+    "site_logo": {
+      "button": {
+        "action": "nuxt-link",
+        "url": "/",
+        "text": "MOON LANDING"
+      }
+    },
+    "nav_items": [
+      {
+        "button": {
+          "action": "nuxt-link",
+          "url": "/",
+          "text": "LEARN MORE"
+        }
+      },
+      {
+        "button": {
+          "action": "a",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
+          "text": "REGISTER",
+          "target": "_blank"
+        }
+      }
+    ]
+  },
   "page_content": {
     "section_1": {
       "id": "hero-header",
@@ -23,8 +49,8 @@
             "format": "header",
             "theme": "light",
             "heading": "The next frontier in storage",
-            "subheading": "Hi, I'm a subheading",
-            "description": "This is a description.",
+            "subheading": "",
+            "description": "",
             "cta": [
               {
                 "button": {
@@ -37,7 +63,8 @@
             ]
           },
           "image_block": {
-            "src": "/images/astronaut-on-moon.png"
+            "src": "/images/astronaut-on-moon.png",
+            "theme": "background"
           }
         }
       ]
@@ -75,14 +102,38 @@
               "push_left": "off-2",
               "push_right": "off-2"
             },
+            "theme": "light",
             "heading": "STORAGE PROVIDER BENEFITS",
             "description": "BE A FOUNDING MEMBER OF A NEW STORAGE PROVIDER COMMUNITY CONNECT WITH FELLOW STORAGE PROVIDERS THROUGH PROTOCOL LABS EARN AND INCREASE YOUR BLOCK REWARDS VIA QUALITY ADJUSTED POWER"
           },
           "image_block": {
-            "src": "/images/nebula-2.png"
+            "src": "/images/nebula-2.png",
+            "theme": "background"
           }
         }
       ]
     }
+  },
+  "footer": {
+    "copyright": [
+      {
+        "button": {
+          "action": "a",
+          "url": "https://www.nasa.gov/",
+          "text": "Photography courtesy of NASA.",
+          "theme": "footer",
+          "target": "_blank"
+        }
+      },
+      {
+        "button": {
+          "action": "a",
+          "url": "https://protocol.ai/",
+          "text": "A project from Protocol Labs.",
+          "theme": "footer",
+          "target": "_blank"
+        }
+      }
+    ]
   }
 }

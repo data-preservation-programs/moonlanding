@@ -61,6 +61,21 @@ export const imageBlock = {
       label: 'Image',
       name: 'src',
       type: 'string'
+    },
+    {
+      label: 'Theme',
+      name: 'theme',
+      type: 'string',
+      options: [
+        {
+          label: 'none',
+          value: 'none'
+        },
+        {
+          label: 'background',
+          value: 'background'
+        }
+      ]
     }
   ]
 }

@@ -15,4 +15,20 @@
       background: transparent;
     }
   }
+
+  &.variant__cta {
+    color: $codGray;
+  }
+
+  &.variant__footer {
+    color: $codGray;
+    .button-contents {
+      background: transparent;
+      @include font_Bold;
+      font-size: $fontSize_Regular;
+      text-transform: uppercase;
+      letter-spacing: $letterSpacing_Medium;
+      line-height: $leading_Tiny;
+    }
+  }
 }

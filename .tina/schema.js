@@ -2,6 +2,7 @@ import { defineSchema, defineConfig } from 'tinacms'
 import { client } from './__generated__/client'
 import { seo, openGraph } from './templates/general'
 import { indexPage } from './templates/index-page'
+import { buttonComponent } from './templates/components'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -24,7 +25,41 @@ const schema = defineSchema({
       fields: [
         seo,
         openGraph,
-        indexPage
+        {
+          label: 'Navigation',
+          name: 'navigation',
+          type: 'object',
+          fields: [
+            {
+              label: 'Site Logo',
+              name: 'site_logo',
+              type: 'object',
+              fields: [buttonComponent]
+            },
+            {
+              label: 'Nav',
+              name: 'nav_items',
+              type: 'object',
+              list: true,
+              fields: [buttonComponent]
+            }
+          ]
+        },
+        indexPage,
+        {
+          label: 'Footer',
+          name: 'footer',
+          type: 'object',
+          fields: [
+            {
+              label: 'Copyright',
+              name: 'copyright',
+              type: 'object',
+              list: true,
+              fields: [buttonComponent]
+            }
+          ]
+        }
       ]
     }
   ],

@@ -1,11 +1,14 @@
+@import 'normalize';
 @import 'variables';
 @import 'typography';
 @import 'grid/gridlex-2.7.1';
 
 // Components
+@import '../components/navigation/navigation.scss';
 @import '../components/textblock/textblock.scss';
 @import '../components/imageblock/imageblock.scss';
 @import '../components/button/button.scss';
+@import '../components/footer/footer.scss';
 
 // Pages
 @import '../pages/index.scss';
@@ -15,33 +18,59 @@
 $fontAssetPath: '../assets/fonts';
 
 @font-face {
-  font-family: 'futura-pt';
-  src: url('#{$fontAssetPath}/FuturaPT/FuturaPTLight.otf') format('otf');
-  font-weight: 300;
+  font-family: 'Futura PT Book';
   font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'futura-pt';
-  src: url('#{$fontAssetPath}/FuturaPT/FuturaPTMedium.otf') format('otf');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+  font-weight: normal;
+  src: local('Futura PT Book'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicBook.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'futura-pt';
-  src: url('#{$fontAssetPath}/FuturaPT/FuturaPTBold.otf') format('otf');
-  font-weight: bold;
+  font-family: 'Futura PT Light';
   font-style: normal;
-  font-display: swap;
+  font-weight: normal;
+  src: local('Futura PT Light'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicLight.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura PT Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Medium'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicMedium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura PT Demi';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Demi'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicDemi.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura PT Heavy';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Heavy'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicHeavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura PT Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Bold'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Futura PT Extra Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Futura PT Extra Bold'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicExtraBold.woff') format('woff');
 }
 
 // ///////////////////////////////////////////////////////////////////// General
 // -------------------------------------------------------------------------- //
 html,
 body {
-  font-family: 'futura-pt', helvetica, sans-serif;
+  font-family: 'Futura PT Book', helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;

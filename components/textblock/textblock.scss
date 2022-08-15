@@ -2,12 +2,21 @@
 .text-block {
   position: relative;
   color: $codGray;
+  z-index: 2;
   &.theme__light {
     color: $white;
   }
   &.format__header {
     .heading {
       @include typography_h1;
+    }
+  }
+  &.format__medium {
+    .heading {
+      @include typography_h2;
+    }
+    .description {
+      @include typography_p2;
     }
   }
 }
