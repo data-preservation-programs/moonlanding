@@ -4,6 +4,7 @@ import { buttonComponent } from './components'
 export const textBlock = {
   label: 'Text Block',
   name: 'text_block',
+  _template: 'text_block',
   type: 'object',
   fields: [
     columns,
@@ -25,7 +26,10 @@ export const textBlock = {
     {
       label: 'Description',
       name: 'description',
-      type: 'string'
+      type: 'string',
+      ui: {
+        component: 'textarea'
+      }
     },
     {
       label: 'CTA',
@@ -40,8 +44,14 @@ export const textBlock = {
 export const imageBlock = {
   label: 'Image block',
   name: 'image_block',
+  _template: 'image_block',
   type: 'object',
   fields: [
-    columns
+    columns,
+    {
+      label: 'Image',
+      name: 'src',
+      type: 'string'
+    }
   ]
 }

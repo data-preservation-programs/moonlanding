@@ -4,17 +4,9 @@
 }
 
 // ///////////////////////////////////////////////////////////////////// Formats
-// .format__medium {
-//   .description {
-//     padding-right: 10rem;
-//   }
-// }
+
 
 // ///////////////////////////////////////////////////////////////////// Content
-.label-text {
-  @include fontSize_Small;
-  @include fontWeight_Semibold;
-}
 
 .label {
   margin-bottom: 1.25rem;
@@ -35,15 +27,11 @@
 
 .subheading {
   margin-bottom: 0.5rem;
-  @include fontSize_Medium;
-  @include fontWeight_Semibold;
 }
 
 .description {
-  @include fontSize_Regular;
   a {
     &:hover {
-      border-bottom-color: $cerise;
     }
   }
 }

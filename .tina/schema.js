@@ -11,8 +11,8 @@ const branch =
 const schema = defineSchema({
   // See https://tina.io/docs/tina-cloud/connecting-site/ for more information about this config
   config: {
-    token: 'ae004fc4091cac9f08c5b5928afde41aff8fed74', // generated on app.tina.io,
-    clientId: 'c17a15c9-4d9d-48fe-b7dc-7a28607ab9ac', // generated on app.tina.io
+    token: process.env.TINA_CLOUD_TOKEN, // generated on app.tina.io,
+    clientId: process.env.TINA_CLOUD_CLIENT_ID, // generated on app.tina.io
     branch,
   },
   collections: [

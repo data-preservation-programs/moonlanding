@@ -12,6 +12,7 @@
   "scripts": {
     "dev": "tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
+    "export": "tinacms build && next build && next export",
     "start": "tinacms build && next start",
     "lint": "next lint"
   }
