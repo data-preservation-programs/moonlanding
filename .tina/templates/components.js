@@ -14,7 +14,7 @@ export const buttonComponent = {
         },
         {
           label: 'Internal Link',
-          value: 'nuxt-link'
+          value: 'next-link'
         },
         {
           label: 'Button',

@@ -16,10 +16,10 @@ export default function Footer({ copyright = [] }) {
               {copyright.map((item) => (
                 <Button
                   key={item.button?.text}
+                  action={item.button?.action}
+                  url={item.button?.url}
                   variant={item.button?.theme}
-                  target={item.button?.target}
-                  onClick={() => handleButtonClick(item.button)}
-                  onKeyPress={() => handleButtonClick(item.button)}>
+                  target={item.button?.target}>
 
                   {item.button?.text}
 

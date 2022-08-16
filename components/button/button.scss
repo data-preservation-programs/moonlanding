@@ -12,14 +12,16 @@
     display: flex;
 
     &:active, &:hover, &:focus {
-      background: transparent;
+      // background: transparent;
     }
   }
 
-  &.variant__cta {
+  a {
+    text-decoration: none;
     color: $codGray;
   }
 
+  &.variant__cta,
   &.variant__footer {
     color: $codGray;
     .button-contents {
@@ -30,5 +32,11 @@
       letter-spacing: $letterSpacing_Medium;
       line-height: $leading_Tiny;
     }
+  }
+
+  &.variant__cta {
+    background-color: #f8f8ff;
+    padding: 0.625rem 0.5rem;
+    border-radius: 2px;
   }
 }

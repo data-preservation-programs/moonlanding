@@ -16,12 +16,12 @@ export default function Navigation({ logo = {}, navItems = [] }) {
 
             <div className="site-logo">
               <Button
-                key={logo.text}
-                className={'site-logo-button'}
-                variant={logo.theme}
-                target={logo.target}
-                onClick={() => handleButtonClick(logo)}
-                onKeyPress={() => handleButtonClick(logo)}>
+                key={logo?.text}
+                action={logo?.action}
+                url={logo?.url}
+                target={logo?.target}
+                variant={logo?.theme}
+                className={'site-logo-button'}>
 
                 {logo.children ? logo.children : logo.text}
 
@@ -32,11 +32,11 @@ export default function Navigation({ logo = {}, navItems = [] }) {
               {navItems.map((item) => (
                 <Button
                   key={item.button.text}
-                  className={'nav-item'}
-                  variant={item.button.theme}
+                  action={item.button.action}
+                  url={item.button.url}
                   target={item.button.target}
-                  onClick={() => handleButtonClick(item.button)}
-                  onKeyPress={() => handleButtonClick(item.button)}>
+                  variant={item.button.theme}
+                  className={'nav-item'}>
 
                   {item.button.text}
 

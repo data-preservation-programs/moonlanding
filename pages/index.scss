@@ -14,6 +14,9 @@
 #hero-header {
   padding-top: calc(12rem + #{$navigationHeight});
   padding-bottom: 14rem;
+  .heading {
+    margin-bottom: 2rem;
+  }
 }
 
 #intro-1 {
@@ -25,4 +28,17 @@
 
 #intro-2 {
   padding: 22.8125rem 0;
+  .text-block {
+    .description {
+      line-height: 2;
+    }
+  }
+  .image-block {
+    img {
+      min-width: 2424px !important;
+      @include customMaxMQ(2424px) {
+        transform: translate(calc((100vw - 2424px) / 2), 0rem);
+      }
+    }
+  }
 }

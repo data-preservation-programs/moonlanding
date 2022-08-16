@@ -1,15 +1,18 @@
+// ===================================================================== Imports
 // @ts-nocheck
 import Link from 'next/link';
 import clsx from 'clsx';
 
+// ====================================================================== Params
 /**
  * @typedef {Object} ButtonProps
+ * @prop {string} [action]
+ * @prop {string} [url]
+ * @prop {string} [target]
+ * @prop {string} [variant]
  * @prop {string} [className]
- * @prop { import('react').MouseEventHandler<HTMLButtonElement> } [onClick]
- * @prop {string} [href]
- * @prop {import('react').ButtonHTMLAttributes<HTMLButtonElement>["type"]} [type]
  * @prop {boolean} [disabled]
- * @prop {boolean} [openInNewWindow]
+ * @prop { import('react').MouseEventHandler<HTMLButtonElement> } [onClick]
  * @prop {import('react').ReactNode | string} children
  */
 
@@ -18,34 +21,40 @@ import clsx from 'clsx';
  * @param {ButtonProps} props
  * @returns
  */
-const Button = ({ className, onClick, href, type, disabled, openInNewWindow, children, variant = '' }) => {
+// ====================================================================== Export
+const Button = ({ action, url, target, variant = '', className, disabled, onClick, children }) => {
+  const components = { a: 'a', 'next-link': Link, button: 'button' };
+  const Action = components.hasOwnProperty(action) && url && !disabled ? components[action] : 'button'
+  const attributes = { disabled }
+  if (action === 'next-link') {
+    attributes['passHref'] = true
+  }
+  if (onClick && action !== 'next-link') {
+    attributes['onClick'] = onClick
+  }
+
   return (
     <div className={clsx(className, 'button', disabled ? 'disabled' : undefined, `variant__${variant}`)}>
-      {href && !disabled ? (
-        openInNewWindow ? (
-          <a href={href} onClick={onClick} target="_blank" rel="noreferrer">
+      <Action
+        href={url}
+        target={target}
+        className={clsx(action !== 'next-link' ? 'button-contents' : '')}
+        {...attributes}>
+        {action === 'next-link' ? (
+          <a href="replace" className="button-contents" onClick={onClick}>
             {children}
           </a>
         ) : (
-          <Link href={href} passHref>
-            <a href="replace" tabIndex={0} onClick={onClick} className="button-contents">
-              {children}
-            </a>
-          </Link>
-        )
-      ) : (
-        <button className="button-contents" type={type} onClick={onClick} disabled={disabled}>
-          {children}
-        </button>
-      )}
+          children
+        )}
+      </Action>
     </div>
   );
 };
 
 Button.defaultProps = {
-  type: 'button',
-  openInNewWindow: false,
   disabled: false,
+  onClick: false
 };
 
 export default Button;

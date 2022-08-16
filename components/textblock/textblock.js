@@ -84,15 +84,14 @@ export default function TextBlock({ block }) {
           block.cta.map((cta) => (
             <Button
               key={cta.button.text}
-              className={'cta'}
-              variant={cta.button.theme}
-              tracking={tracking}
+              action={cta.button.action}
+              url={cta.button.url}
               target={cta.button.target}
-              onClick={() => handleButtonClick(cta.button)}
-              onKeyPress={() => handleButtonClick(cta.button)}>
+              variant={cta.button.theme}
+              className={'cta'}>
 
               {cta.button.text}
-              
+
             </Button>
           ))
         )}

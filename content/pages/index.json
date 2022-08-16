@@ -12,7 +12,7 @@
   "navigation": {
     "site_logo": {
       "button": {
-        "action": "nuxt-link",
+        "action": "next-link",
         "url": "/",
         "text": "MOON LANDING"
       }
@@ -20,7 +20,7 @@
     "nav_items": [
       {
         "button": {
-          "action": "nuxt-link",
+          "action": "next-link",
           "url": "/",
           "text": "LEARN MORE"
         }
@@ -57,6 +57,7 @@
                   "action": "a",
                   "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
                   "text": "Register",
+                  "theme": "cta",
                   "target": "_blank"
                 }
               }
