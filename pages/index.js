@@ -41,7 +41,7 @@ export default function HomePage(props) {
 }
 
 export const getStaticProps = async () => {
-  const pageResponse = await client.queries.page({ relativePath: 'index.json' })
+  const pageResponse = await client.queries.kitchen_sink({ relativePath: 'index.json' })
 
   return {
     props: {
