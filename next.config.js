@@ -4,8 +4,15 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-      loader: 'custom',
-    },
+    loader: 'custom',
+  },
+  webpack: (
+    config,
+    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }
+  ) => {
+    config.resolve.extensions = ['.ts', '.js', '.json']
+    return config
+  },
   eslint: {
     // Warning: Dangerously allow production builds to successfully complete even if
     // your project has ESLint errors.
