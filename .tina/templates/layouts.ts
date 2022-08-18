@@ -1,4 +1,6 @@
-export const columns = {
+import type { TinaTemplate } from "tinacms";
+
+export const columns:TinaTemplate = {
   label: 'Columns',
   name: 'cols',
   type: 'object',
@@ -21,7 +23,7 @@ export const columns = {
   ]
 }
 
-export const grid = {
+export const grid:TinaTemplate = {
   label: 'Grid',
   name: 'grid',
   type: 'string',

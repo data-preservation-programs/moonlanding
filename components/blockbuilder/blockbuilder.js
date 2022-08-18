@@ -13,7 +13,6 @@ class BlockBuilder extends React.Component {
     this.getGridClasses = this.getGridClasses.bind(this);
     this.getColumnPushCount = this.getColumnPushCount.bind(this);
     this.getCustomComponents = this.getCustomComponents.bind(this);
-    this.getColumnKeys = this.getColumnKeys.bind(this);
     this.getComponent = this.getComponent.bind(this);
   }
 
@@ -46,56 +45,42 @@ class BlockBuilder extends React.Component {
     return false;
   }
 
-  getColumnKeys(clmn, index) {
-    const column = CloneDeep(clmn)
-    delete column.__typename
-
-    return (
-      <>
-        {Object.entries(column).map(([key, value], j) => (
-          <div
-            key={`column-${index}-${key}`}
-            className={clsx(value?.cols?.num)}
-            data-push-left={this.getColumnPushCount(value?.cols, 'left')}
-            data-push-right={this.getColumnPushCount(value?.cols, 'right')}>
-            <div
-              data-block-id={`column-${j + 1}`}
-              className="column-content">
-              {value && this.getComponent(key, value)}
-            </div>
-          </div>
-        ))}
-      </>
-    )
-  }
-
-  getComponent(type, block) {
-    switch (type) {
-      case 'text_block':
+  getComponent(typename, block) {
+    if (typename && block) {
+      const type = typename.toLowerCase()
+      if (type.endsWith('text_block')) {
         return <TextBlock block={block} />;
-      case 'image_block':
+      } else if (type.endsWith('image_block')) {
         return <ImageBlock block={block} />;
-      case 'custom':
+      } else if (type.endsWith('custom')) {
         return this.getCustomComponents(block.customizations);
-      default:
-        return false;
+      }
     }
+    return false
   }
 
   // ====================================================== Template [Sectional]
   render(props) {
-    const section = CloneDeep(this.props.section)
-    delete section.__typename
+    const section = this.props.section
+    const blocks = Array.isArray(section.block) ? section.block : []
 
     return (
       <section className="sectional" id={section.id}>
-        {section.block.map((column, i) => (
-          <div
-            key={`grid-section-${i}`}
-            className={clsx(this.getGridClasses(section.grid))}>
-            {column && this.getColumnKeys(column, i)}
-          </div>
-        ))}
+        <div className={clsx(this.getGridClasses(section.grid))}>
+          {blocks.map((block, i) => (
+            <div
+              key={`column-${i}`}
+              className={clsx(block?.cols?.num)}
+              data-push-left={this.getColumnPushCount(block?.cols, 'left')}
+              data-push-right={this.getColumnPushCount(block?.cols, 'right')}>
+              <div
+                data-block-id={`block-${i + 1}`}
+                className="column-content">
+                {this.getComponent(block?.__typename, block)}
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     );
   }

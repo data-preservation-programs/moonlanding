@@ -1,4 +1,6 @@
-export const seo = {
+import type { TinaTemplate } from "tinacms";
+
+export const seo:TinaTemplate = {
   label: 'SEO',
   name: 'seo',
   type: 'object',
@@ -16,7 +18,7 @@ export const seo = {
   ]
 }
 
-export const openGraph = {
+export const openGraph:TinaTemplate = {
   label: 'Open Graph',
   name: 'og',
   type: 'object',

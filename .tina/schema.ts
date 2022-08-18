@@ -2,6 +2,9 @@
 import { defineSchema, defineConfig } from 'tinacms'
 import { client } from './__generated__/client.ts'
 import type { TinaTemplate } from "tinacms";
+import { seo, openGraph } from './templates/general.ts'
+import { indexPage } from './templates/index-page.ts'
+import { buttonComponent } from './templates/components.ts'
 
 const heroBlock:TinaTemplate = {
   name: 'hero',
@@ -30,7 +33,7 @@ const heroBlock:TinaTemplate = {
       label: 'Text',
       name: 'text',
       ui: {
-        component: 'markdown',
+        component: 'textarea',
       },
     },
   ],
@@ -74,7 +77,7 @@ const contentBlock:TinaTemplate = {
     {
       type: 'string',
       ui: {
-        component: 'markdown',
+        component: 'textarea',
       },
       label: 'Body',
       name: 'body',
@@ -93,6 +96,12 @@ const schema = defineSchema({
     token: process.env.TINA_CLOUD_TOKEN, // generated on app.tina.io,
     clientId: process.env.TINA_CLOUD_CLIENT_ID, // generated on app.tina.io
     branch,
+    media: {
+      tina: {
+        publicFolder: "public",
+        mediaRoot: "images"
+      }
+    }
   },
   collections: [
     {
@@ -110,6 +119,17 @@ const schema = defineSchema({
         },
       ],
     },
+    {
+      label: 'Pages',
+      name: 'page',
+      path: 'content/pages',
+      format: 'json',
+      fields: [
+        seo,
+        openGraph,
+        indexPage
+      ]
+    }
   ],
 })
 

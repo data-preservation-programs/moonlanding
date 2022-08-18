@@ -29,8 +29,8 @@ export default function HomePage(props) {
       navItems={navigation?.nav_items} />
 
       <main className="page page-index">
-        {pageContent && Object.entries(pageContent).map(([key, value]) => (
-          <BlockBuilder id={value.id} key={value.id} section={value} />
+        {pageContent && pageContent.sections.map((section, index) => (
+          <BlockBuilder key={`section_${index + 1}`} section={section} />
         ))}
       </main>
 
@@ -41,7 +41,7 @@ export default function HomePage(props) {
 }
 
 export const getStaticProps = async () => {
-  const pageResponse = await client.queries.kitchen_sink({ relativePath: 'index.json' })
+  const pageResponse = await client.queries.page({ relativePath: 'index.json' })
 
   return {
     props: {
