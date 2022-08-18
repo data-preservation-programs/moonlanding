@@ -4,86 +4,7 @@ import { client } from './__generated__/client.ts'
 import type { TinaTemplate } from "tinacms";
 import { seo, openGraph } from './templates/general.ts'
 import { indexPage } from './templates/index-page.ts'
-import { buttonComponent } from './templates/components.ts'
-
-const heroBlock:TinaTemplate = {
-  name: 'hero',
-  label: 'Hero',
-  ui: {
-    defaultItem: {
-      tagline: "Here's some text above the other text",
-      headline: 'This Big Text is Totally Awesome',
-      text:
-        'Phasellus scelerisque, libero eu finibus rutrum, risus risus accumsan libero, nec molestie urna dui a leo.',
-    },
-  },
-  fields: [
-    {
-      type: 'string',
-      label: 'Tagline',
-      name: 'tagline',
-    },
-    {
-      type: 'string',
-      label: 'Headline',
-      name: 'headline',
-    },
-    {
-      type: 'string',
-      label: 'Text',
-      name: 'text',
-      ui: {
-        component: 'textarea',
-      },
-    },
-  ],
-}
-
-const featureBlock:TinaTemplate = {
-  name: 'features',
-  label: 'Features',
-  fields: [
-    {
-      type: 'object',
-      label: 'Feature Items',
-      name: 'items',
-      list: true,
-      fields: [
-        {
-          type: 'string',
-          label: 'Title',
-          name: 'title',
-        },
-        {
-          type: 'string',
-          label: 'Text',
-          name: 'text',
-        },
-      ],
-    },
-  ],
-}
-
-const contentBlock:TinaTemplate = {
-  name: 'content',
-  label: 'Content',
-  ui: {
-    defaultItem: {
-      body:
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.',
-    },
-  },
-  fields: [
-    {
-      type: 'string',
-      ui: {
-        component: 'textarea',
-      },
-      label: 'Body',
-      name: 'body',
-    },
-  ],
-}
+import { button, navigation, footer } from './templates/components.ts'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -105,19 +26,14 @@ const schema = defineSchema({
   },
   collections: [
     {
-      name: 'kitchen_sink',
-      label: 'Kitchen Sink',
-      path: 'content/kitchen-sink',
+      label: 'General Site Content',
+      name: 'general',
+      path: 'content/general',
       format: 'json',
       fields: [
-        {
-          type: 'object',
-          list: true,
-          name: 'blocks',
-          label: 'Sections',
-          templates: [heroBlock, featureBlock, contentBlock],
-        },
-      ],
+        navigation,
+        footer
+      ]
     },
     {
       label: 'Pages',

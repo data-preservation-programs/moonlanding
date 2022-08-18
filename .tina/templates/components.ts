@@ -1,6 +1,6 @@
 import type { TinaTemplate } from "tinacms";
 
-export const buttonComponent:TinaTemplate = {
+export const button:TinaTemplate = {
   label: 'Button',
   name: 'button',
   type: 'object',
@@ -47,38 +47,38 @@ export const buttonComponent:TinaTemplate = {
   ]
 }
 
-// {
-//   label: 'Navigation',
-//   name: 'navigation',
-//   type: 'object',
-//   fields: [
-//     {
-//       label: 'Site Logo',
-//       name: 'site_logo',
-//       type: 'object',
-//       fields: [buttonComponent]
-//     },
-//     {
-//       label: 'Nav',
-//       name: 'nav_items',
-//       type: 'object',
-//       list: true,
-//       fields: [buttonComponent]
-//     }
-//   ]
-// },
+export const navigation:TinaTemplate = {
+  label: 'Navigation',
+  name: 'navigation',
+  type: 'object',
+  fields: [
+    {
+      label: 'Site Logo',
+      name: 'site_logo',
+      type: 'object',
+      fields: [button]
+    },
+    {
+      label: 'Nav',
+      name: 'nav_items',
+      type: 'object',
+      list: true,
+      fields: [button]
+    }
+  ]
+}
 
-// {
-//   label: 'Footer',
-//   name: 'footer',
-//   type: 'object',
-//   fields: [
-//     {
-//       label: 'Copyright',
-//       name: 'copyright',
-//       type: 'object',
-//       list: true,
-//       fields: [buttonComponent]
-//     }
-//   ]
-// }
+export const footer:TinaTemplate = {
+  label: 'Footer',
+  name: 'footer',
+  type: 'object',
+  fields: [
+    {
+      label: 'Copyright',
+      name: 'copyright',
+      type: 'object',
+      list: true,
+      fields: [button]
+    }
+  ]
+}

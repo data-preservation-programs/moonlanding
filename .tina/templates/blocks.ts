@@ -1,6 +1,6 @@
 import type { TinaTemplate } from "tinacms";
 import { columns } from './layouts'
-import { buttonComponent } from './components'
+import { button } from './components'
 
 export const textBlock:TinaTemplate = {
   label: 'Text Block',
@@ -45,7 +45,7 @@ export const textBlock:TinaTemplate = {
       name: 'cta',
       type: 'object',
       list: true,
-      fields: [buttonComponent]
+      fields: [button]
     }
   ]
 }
