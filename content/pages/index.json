@@ -30,7 +30,7 @@
             "cols": {
               "num": ""
             },
-            "src": "/images/moon-landing-image.png",
+            "src": "/images/astronaut-on-moon.png",
             "theme": "background",
             "_template": "image_block"
           }
@@ -52,6 +52,27 @@
             },
             "description": "MOON LANDING IS AN ACCELERATION PROGRAM FROM PROTOCOL LABS DESIGNED TO ONRAMP STORAGE PROVIDERS WITH REAL DATA. BY PARTICIPATING IN MOON LANDING, STORAGE PROVIDERS WILL STORE PUBLIC DATASETS THAT ARE VALUABLE TO THE WORLD.  TO PARTICIPATE, YOU CAN ELECT TO PARTICIPATE IN SLINGSHOT, EVERGREEN, OR BOTH.",
             "_template": "text_block"
+          }
+        ]
+      },
+      {
+        "id": "intro-2",
+        "block": [
+          {
+            "cols": {
+              "num": "col-8",
+              "push_left": "off-2",
+              "push_right": "off-2"
+            },
+            "theme": "light",
+            "heading": "STORAGE PROVIDER BENEFITS",
+            "description": "BE A FOUNDING MEMBER OF A NEW STORAGE PROVIDER COMMUNITY CONNECT WITH FELLOW STORAGE PROVIDERS THROUGH PROTOCOL LABS EARN AND INCREASE YOUR BLOCK REWARDS VIA QUALITY ADJUSTED POWER",
+            "_template": "text_block"
+          },
+          {
+            "src": "/images/nebula-2.png",
+            "theme": "background",
+            "_template": "image_block"
           }
         ]
       }
