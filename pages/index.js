@@ -22,9 +22,9 @@ export default function HomePage(props) {
   return (
     <div className="site-container">
 
-    <Navigation
-      logo={navigation?.site_logo?.button}
-      navItems={navigation?.nav_items} />
+      <Navigation
+        logo={navigation?.site_logo?.button}
+        navItems={navigation?.nav_items} />
 
       <main className="page page-index">
         {pageContent && pageContent.sections.map((section, index) => (
