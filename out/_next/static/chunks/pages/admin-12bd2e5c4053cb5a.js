@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[964],{4730:function(a,b,c){(window.__NEXT_P=window.__NEXT_P||[]).push(["/admin",function(){return c(2626)}])},2626:function(a,b,c){"use strict";c.r(b);var d=c(9803);b.default=d.TinaAdmin}},function(a){a.O(0,[774,372,563,917,379,885,6,361,769,888,179],function(){var b;return a(a.s=4730)}),_N_E=a.O()}])
