@@ -1,0 +1,50 @@
+{
+  "navigation": {
+    "site_logo": {
+      "button": {
+        "action": "next-link",
+        "url": "/",
+        "text": "MOONLANDING"
+      }
+    },
+    "nav_items": [
+      {
+        "button": {
+          "action": "next-link",
+          "url": "/",
+          "text": "LEARN MORE"
+        }
+      },
+      {
+        "button": {
+          "action": "a",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
+          "text": "REGISTER",
+          "target": "_blank"
+        }
+      }
+    ]
+  },
+  "footer": {
+    "copyright": [
+      {
+        "button": {
+          "action": "a",
+          "url": "https://www.nasa.gov/",
+          "text": "Photography courtesy of NASA.",
+          "theme": "footer",
+          "target": "_blank"
+        }
+      },
+      {
+        "button": {
+          "action": "a",
+          "url": "https://protocol.ai/",
+          "text": "A project from Protocol Labs.",
+          "theme": "footer",
+          "target": "_blank"
+        }
+      }
+    ]
+  }
+}

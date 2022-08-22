@@ -1,22 +1,40 @@
+// .tina/schema.ts
 import { defineSchema, defineConfig } from 'tinacms'
-import { client } from './__generated__/client'
-import { seo, openGraph } from './templates/general'
-import { indexPage } from './templates/index-page'
-import { buttonComponent } from './templates/components'
+import { client } from './__generated__/client.ts'
+import type { TinaTemplate } from "tinacms";
+import { seo, openGraph } from './templates/general.ts'
+import { indexPage } from './templates/index-page.ts'
+import { button, navigation, footer } from './templates/components.ts'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
   process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
   'main'
+
 const schema = defineSchema({
-  // See https://tina.io/docs/tina-cloud/connecting-site/ for more information about this config
   config: {
     token: process.env.TINA_CLOUD_TOKEN, // generated on app.tina.io,
     clientId: process.env.TINA_CLOUD_CLIENT_ID, // generated on app.tina.io
     branch,
+    media: {
+      tina: {
+        publicFolder: "public",
+        mediaRoot: "images"
+      }
+    }
   },
   collections: [
+    {
+      label: 'General Site Content',
+      name: 'general',
+      path: 'content/general',
+      format: 'json',
+      fields: [
+        navigation,
+        footer
+      ]
+    },
     {
       label: 'Pages',
       name: 'page',
@@ -25,41 +43,7 @@ const schema = defineSchema({
       fields: [
         seo,
         openGraph,
-        {
-          label: 'Navigation',
-          name: 'navigation',
-          type: 'object',
-          fields: [
-            {
-              label: 'Site Logo',
-              name: 'site_logo',
-              type: 'object',
-              fields: [buttonComponent]
-            },
-            {
-              label: 'Nav',
-              name: 'nav_items',
-              type: 'object',
-              list: true,
-              fields: [buttonComponent]
-            }
-          ]
-        },
-        indexPage,
-        {
-          label: 'Footer',
-          name: 'footer',
-          type: 'object',
-          fields: [
-            {
-              label: 'Copyright',
-              name: 'copyright',
-              type: 'object',
-              list: true,
-              fields: [buttonComponent]
-            }
-          ]
-        }
+        indexPage
       ]
     }
   ],

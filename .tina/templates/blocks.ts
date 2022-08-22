@@ -1,10 +1,10 @@
+import type { TinaTemplate } from "tinacms";
 import { columns } from './layouts'
-import { buttonComponent } from './components'
+import { button } from './components'
 
-export const textBlock = {
+export const textBlock:TinaTemplate = {
   label: 'Text Block',
   name: 'text_block',
-  _template: 'text_block',
   type: 'object',
   fields: [
     columns,
@@ -45,12 +45,12 @@ export const textBlock = {
       name: 'cta',
       type: 'object',
       list: true,
-      fields: [buttonComponent]
+      fields: [button]
     }
   ]
 }
 
-export const imageBlock = {
+export const imageBlock:TinaTemplate = {
   label: 'Image block',
   name: 'image_block',
   _template: 'image_block',
@@ -60,7 +60,7 @@ export const imageBlock = {
     {
       label: 'Image',
       name: 'src',
-      type: 'string'
+      type: 'image'
     },
     {
       label: 'Theme',
