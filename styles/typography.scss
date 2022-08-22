@@ -1,3 +1,7 @@
+@use 'sass:math';
+
+$font_Primary: 'Tiempos';
+$font_Secondary: 'Aller';
 // ---------------------------------------------------------------------- Sizing
 
 // fontSize_Tiny | 13pt
@@ -7,68 +11,56 @@
 
 $fontSize_Tiny: 0.8125rem;
 $fontSize_Regular: 1rem;
-$fontSize_Large: 2.25rem;
+$fontSize_Large: 2.75rem;
 $fontSize_Huge: 6.875rem;
 
-// ---------------------------------------------------------------------- Weight
-$fontWeight_Light: 'Futura PT Light';
-$fontWeight_Regular: 'Futura PT Book';
-$fontWeight_Medium: 'Futura PT Medium';
-$fontWeight_Semibold: 'Futura PT Demi';
-$fontWeight_Bold: 'Futura PT Bold';
-
 // --------------------------------------------------------------------- Leading
-$leading_Tiny: 1;
-$leading_Small: 1.2;
-$leading_Medium: 1.5;
-$leading_MediumLarge: 1.6;
-
 @function leading($lineHeight, $fontSize) {
   @return math.div(math.round(10 * math.div($lineHeight, $fontSize)), 10);
 }
 
-// -------------------------------------------------------------- Letter Spacing
-$letterSpacing_None: 0;
-$letterSpacing_Regular: 0.06em;
-$letterSpacing_Medium: 0.1em;
-$letterSpacing_Large: 0.17em;
-
 // ////////////////////////////////////////////////////////////////////// Mixins
 // =============================================================================
-// ---------------------------------------------------- Typography | Font Weight
-@mixin font_Light {
-  font-family: $fontWeight_Light;
-}
-@mixin font_Regular {
-  font-family: $fontWeight_Regular;
-}
-@mixin font_Medium {
-  font-family: $fontWeight_Medium;
-}
-@mixin font_Semibold {
-  font-family: $fontWeight_Semibold;
-}
-@mixin font_Bold {
-  font-family: $fontWeight_Bold;
-}
+// ---------------------------------------------------- Typography | Font Family
+@mixin font_Primary { font-family: $font_Primary; }
+@mixin font_Secondary { font-family: $font_Secondary; }
 
+// ---------------------------------------------------- Typography | Font Weight
+@mixin fontWeight_Light { font-weight: 300; }
+@mixin fontWeight_Regular { font-weight: 400; }
+@mixin fontWeight_Medium { font-weight: 500; }
+@mixin fontWeight_Semibold { font-weight: 600; }
+@mixin fontWeight_Bold { font-weight: 700; }
+
+// ----------------------------------------------------- Typography | Categories
 @mixin typography_h1 {
-  @include font_Bold;
+  @include font_Primary;
+  @include fontWeight_Medium;
   font-size: $fontSize_Huge;
-  letter-spacing: $letterSpacing_None;
-  line-height: $leading_Tiny;
+  letter-spacing: 7.2px;
+  line-height: leading(160, 180);
 }
 
 @mixin typography_h2 {
-  @include font_Bold;
+  @include font_Primary;
+  @include fontWeight_Regular;
   font-size: $fontSize_Large;
-  letter-spacing: $letterSpacing_Regular;
-  line-height: $leading_MediumLarge;
+  // letter-spacing: $letterSpacing_Regular;
+  // line-height: $leading_MediumLarge;
+}
+
+@mixin typography_h4 {
+  @include font_Secondary;
+  @include fontWeight_Regular;
+  font-size: $fontSize_Large;
+  letter-spacing: 0.44px;
+  line-height: leading(53, 44);
 }
 
 @mixin typography_p2 {
-  @include font_Bold;
+  @include font_Secondary;
+  @include fontWeight_Regular;
   font-size: $fontSize_Regular;
-  letter-spacing: $letterSpacing_Large;
-  line-height: $leading_Small;
+  // letter-spacing: $letterSpacing_Large;
+  // line-height: $leading_Small;
 }

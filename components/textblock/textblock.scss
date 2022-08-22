@@ -52,6 +52,7 @@
 
 .subheading {
   margin-bottom: 0.5rem;
+  @include typography_h4;
 }
 
 .description {

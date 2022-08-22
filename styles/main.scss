@@ -17,60 +17,53 @@
 // -------------------------------------------------------------------------- //
 $fontAssetPath: '../assets/fonts';
 
+// ----------------------------------------------------------------------- Aller
 @font-face {
-  font-family: 'Futura PT Book';
-  font-style: normal;
+  font-family: 'Aller';
+  src: url('#{$fontAssetPath}/Aller/Aller.woff2') format('woff2');
   font-weight: normal;
-  src: local('Futura PT Book'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicBook.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT Light';
+  font-family: 'Aller';
+  src: url('#{$fontAssetPath}/Aller/Aller-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
+  font-display: swap;
+}
+
+// ------------------------------------------------------------ Tiempos Headline
+@font-face {
+  font-family: 'Tiempos';
+  src: url('#{$fontAssetPath}/Tiempos/TiemposHeadline-Fine.woff2') format('woff2');
   font-weight: normal;
-  src: local('Futura PT Light'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicLight.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT Medium';
+  font-family: 'Tiempos';
+  src: url('#{$fontAssetPath}/Tiempos/TiemposHeadline-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
-  font-weight: normal;
-  src: local('Futura PT Medium'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicMedium.woff') format('woff');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Futura PT Demi';
+  font-family: 'Tiempos';
+  src: url('#{$fontAssetPath}/Tiempos/TiemposHeadline-Bold.woff2') format('woff2');
+  font-weight: 700;
   font-style: normal;
-  font-weight: normal;
-  src: local('Futura PT Demi'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicDemi.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Futura PT Heavy';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Futura PT Heavy'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicHeavy.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Futura PT Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Futura PT Bold'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicBold.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Futura PT Extra Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Futura PT Extra Bold'), url('#{$fontAssetPath}/FuturaPT/FuturaCyrillicExtraBold.woff') format('woff');
+  font-display: swap;
 }
 
 // ///////////////////////////////////////////////////////////////////// General
 // -------------------------------------------------------------------------- //
 html,
 body {
-  font-family: 'Futura PT Book', helvetica, sans-serif;
+  font-family: 'Tiempos', helvetica, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.2;

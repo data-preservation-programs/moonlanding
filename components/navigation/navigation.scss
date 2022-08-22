@@ -16,6 +16,7 @@
 
 .header-content {
   padding-top: 1.5rem;
+  justify-content: flex-end;
 }
 
 .site-logo-button {
@@ -23,10 +24,10 @@
     padding: 0.3125rem 0.75rem;
     background: transparent;
     color: $white;
-    @include font_Bold;
+    // @include font_Bold;
     font-size: $fontSize_Large;
-    letter-spacing: $letterSpacing_Large;
-    line-height: $leading_Medium;
+    // letter-spacing: $letterSpacing_Large;
+    // line-height: $leading_Medium;
   }
 }
 
@@ -38,9 +39,9 @@
     margin: auto;
     background: transparent;
     color: $white;
-    @include font_Bold;
+    // @include font_Bold;
     font-size: $fontSize_Tiny;
-    letter-spacing: $letterSpacing_Large;
-    line-height: $leading_Medium;
+    // letter-spacing: $letterSpacing_Large;
+    // line-height: $leading_Medium;
   }
 }

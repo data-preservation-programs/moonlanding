@@ -9,7 +9,7 @@ import Footer from '../components/footer/footer.js'
 
 // ===================================================================== Exports
 export default function HomePage(props) {
-  // const { general } = props.siteData
+  const { general } = props.siteData
   const { data } = useTina({
     query: props.query,
     variables: props.variables,
@@ -22,29 +22,32 @@ export default function HomePage(props) {
   return (
     <div className="site-container">
 
+      <Navigation
+        logo={navigation?.site_logo?.button}
+        navItems={navigation?.nav_items} />
+
+      <main className="page page-index">
+        {pageContent && pageContent.sections.map((section, index) => (
+          <BlockBuilder key={`section_${index + 1}`} section={section} />
+        ))}
+      </main>
+
+      <Footer copyright={footer?.copyright} />
+
     </div>
   )
 }
 
 export const getStaticProps = async () => {
-  // const generalData = await client.queries.general({ relativePath: 'general.json' })
-  const pageData = await client.queries.page({ relativePath: 'home.json' })
-  console.log(pageData)
+  const generalData = await client.queries.general({ relativePath: 'general.json' })
+  const pageData = await client.queries.page({ relativePath: 'index.json' })
+
   return {
     props: {
+      siteData: generalData.data,
       pageData: pageData.data,
       query: pageData.query,
       variables: pageData.variables
     }
   }
 }
-
-// <Navigation
-//   logo={navigation?.site_logo?.button}
-//   navItems={navigation?.nav_items} />
-// <main className="page page-index">
-//   {pageContent && pageContent.sections.map((section, index) => (
-//     <BlockBuilder key={`section_${index + 1}`} section={section} />
-//   ))}
-// </main>
-// <Footer copyright={footer?.copyright} />

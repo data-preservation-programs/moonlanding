@@ -77,7 +77,7 @@ export default function TextBlock({ block }) {
         <div className={'subheading'} dangerouslySetInnerHTML={{ __html: block?.subheading }}></div>
       )}
 
-      {hasDescription && <div className={'description'}>{formatDescription(block?.description)}</div>}
+      {hasDescription && <div className={'description'} dangerouslySetInnerHTML={{ __html: block?.description }}></div>}
 
       <div className="button-row">
         {Array.isArray(block?.cta) && (

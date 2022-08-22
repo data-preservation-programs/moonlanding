@@ -26,11 +26,11 @@
     color: $codGray;
     .button-contents {
       background: transparent;
-      @include font_Bold;
+      // @include font_Bold;
       font-size: $fontSize_Regular;
       text-transform: uppercase;
-      letter-spacing: $letterSpacing_Medium;
-      line-height: $leading_Tiny;
+      // letter-spacing: $letterSpacing_Medium;
+      // line-height: $leading_Tiny;
     }
   }
 
