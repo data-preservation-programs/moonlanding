@@ -32,9 +32,9 @@ export const getStaticProps = async () => {
   console.log(pageData)
   return {
     props: {
-      pageData: indexPageData.data,
-      query: indexPageData.query,
-      variables: indexPageData.variables
+      pageData: pageData.data,
+      query: pageData.query,
+      variables: pageData.variables
     }
   }
 }
