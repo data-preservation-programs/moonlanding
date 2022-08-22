@@ -10,14 +10,14 @@ import Footer from '../components/footer/footer.js'
 // ===================================================================== Exports
 export default function HomePage(props) {
   // const { general } = props.siteData
-  // const { data } = useTina({
-  //   query: props.query,
-  //   variables: props.variables,
-  //   data: props.pageData
-  // })
-  // const navigation = general?.navigation
-  // const pageContent = data?.page?.page_content
-  // const footer = general?.footer
+  const { data } = useTina({
+    query: props.query,
+    variables: props.variables,
+    data: props.pageData
+  })
+  const navigation = general?.navigation
+  const pageContent = data?.page?.page_content
+  const footer = general?.footer
 
   return (
     <div className="site-container">
@@ -28,14 +28,13 @@ export default function HomePage(props) {
 
 export const getStaticProps = async () => {
   // const generalData = await client.queries.general({ relativePath: 'general.json' })
-  // const pageData = await client.queries.page({ relativePath: 'home.json' })
-  const test = await client.queries.page({ relativePath: 'home.json' })
-  console.log(test)
+  const pageData = await client.queries.page({ relativePath: 'home.json' })
+  console.log(pageData)
   return {
     props: {
-    //   pageData: indexPageData.data,
-    //   query: indexPageData.query,
-    //   variables: indexPageData.variables
+      pageData: indexPageData.data,
+      query: indexPageData.query,
+      variables: indexPageData.variables
     }
   }
 }
