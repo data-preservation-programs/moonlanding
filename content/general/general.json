@@ -30,8 +30,8 @@
       {
         "button": {
           "action": "a",
-          "url": "https://www.nasa.gov/",
-          "text": "Photography courtesy of NASA.",
+          "url": "https://protocol.ai/",
+          "text": "A project from Protocol Labs.",
           "theme": "footer",
           "target": "_blank"
         }
@@ -39,8 +39,8 @@
       {
         "button": {
           "action": "a",
-          "url": "https://protocol.ai/",
-          "text": "A project from Protocol Labs.",
+          "url": "https://www.nasa.gov/",
+          "text": "Photography courtesy of NASA.",
           "theme": "footer",
           "target": "_blank"
         }

@@ -11,7 +11,7 @@ $font_Secondary: 'Aller';
 
 $fontSize_Tiny: 0.8125rem;
 $fontSize_Regular: 1rem;
-$fontSize_Large: 2.75rem;
+$fontSize_Large: 2.0625rem;
 $fontSize_Huge: 6.875rem;
 
 // --------------------------------------------------------------------- Leading
@@ -45,8 +45,8 @@ $fontSize_Huge: 6.875rem;
   @include font_Primary;
   @include fontWeight_Regular;
   font-size: $fontSize_Large;
-  // letter-spacing: $letterSpacing_Regular;
-  // line-height: $leading_MediumLarge;
+  letter-spacing: 0.44px;
+  line-height: leading(62, 44);
 }
 
 @mixin typography_h4 {

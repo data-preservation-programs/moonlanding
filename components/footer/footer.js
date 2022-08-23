@@ -9,7 +9,7 @@ import Button from '../button/button'
 export default function Footer({ copyright = [] }) {
   return (
     <footer id="site-footer">
-      <div className="grid">
+      <div className="grid-middle-noGutter footer-grid">
         <div className="col-8" data-push-left="off-2">
           <div className="footer-content">
             <div className="footer-copyright">

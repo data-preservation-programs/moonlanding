@@ -23,6 +23,11 @@ export const textBlock:TinaTemplate = {
       ]
     },
     {
+      label: 'Label',
+      name: 'label',
+      type: 'string'
+    },
+    {
       label: 'Heading',
       name: 'heading',
       type: 'string'

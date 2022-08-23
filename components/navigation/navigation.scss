@@ -21,10 +21,11 @@
 
 .site-logo-button {
   .button-contents {
+    @include font_Secondary;
+    @include fontWeight_Regular;
     padding: 0.3125rem 0.75rem;
     background: transparent;
     color: $white;
-    // @include font_Bold;
     font-size: $fontSize_Large;
     // letter-spacing: $letterSpacing_Large;
     // line-height: $leading_Medium;
@@ -35,11 +36,12 @@
   display: flex;
   margin: 0 1rem;
   .button-contents {
+    @include font_Secondary;
+    @include fontWeight_Regular;
     padding: 0.618rem 0;
     margin: auto;
     background: transparent;
     color: $white;
-    // @include font_Bold;
     font-size: $fontSize_Tiny;
     // letter-spacing: $letterSpacing_Large;
     // line-height: $leading_Medium;

@@ -45,6 +45,7 @@
               "num": "col-6"
             },
             "format": "medium",
+            "theme": "light",
             "heading": "Program Overview",
             "description": "Moon Landing is an acceleration program from <a>Protocol Labs</a> designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public datasets that are valuable to the world. \n<br>\n<br>\nTo participate, you can elect to participate in <a>Slingshot</a>, <a>Evergreen</a>, or both.",
             "_template": "text_block"
@@ -62,6 +63,7 @@
           },
           {
             "format": "medium",
+            "theme": "light",
             "heading": "Storage Provider Benefits",
             "description": "Be a founding member of a new storage provider community\n<br>\n<br>\nConnect with fellow storage providers through protocol labs\n<br>\n<br>\nEarn and increase your block rewards via Quality Adjusted Power",
             "_template": "text_block"

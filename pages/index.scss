@@ -19,28 +19,18 @@
   .heading {
     margin-bottom: 2rem;
   }
+  .label,
+  .heading,
+  .subheading,
+  .description {
+    text-align: center;
+  }
 }
 
 #intro-1 {
+  background-color: $ebony;
   .text-block {
     margin-top: 1.75rem;
     padding: 0 1rem;
-  }
-}
-
-#intro-2 {
-  padding: 22.8125rem 0;
-  .text-block {
-    .description {
-      line-height: 2;
-    }
-  }
-  .image-block {
-    img {
-      min-width: 2424px !important;
-      @include customMaxMQ(2424px) {
-        transform: translate(calc((100vw - 2424px) / 2), 0rem);
-      }
-    }
   }
 }

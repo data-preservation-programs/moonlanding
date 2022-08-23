@@ -25,10 +25,10 @@
   &.variant__footer {
     color: $codGray;
     .button-contents {
-      background: transparent;
-      // @include font_Bold;
+      @include font_Secondary;
+      @include fontWeight_Regular;
       font-size: $fontSize_Regular;
-      text-transform: uppercase;
+      background: transparent;
       // letter-spacing: $letterSpacing_Medium;
       // line-height: $leading_Tiny;
     }
@@ -38,5 +38,8 @@
     background-color: #f8f8ff;
     padding: 0.625rem 0.5rem;
     border-radius: 2px;
+    .button-contents {
+      text-transform: uppercase;
+    }
   }
 }

@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import clsx from 'clsx';
 
 import Button from '../button/button';
+import EarthIcon from '../icons/earth-icon';
 
 // ====================================================================== Params
 /**
@@ -27,6 +28,9 @@ export default function TextBlock({ block }) {
       tracking.action = block.cta.action;
     }
   }
+  if (format === 'header') {
+
+  }
 
   // ================================================================= Functions
   const formatDescription = text => {
@@ -41,6 +45,14 @@ export default function TextBlock({ block }) {
     }
     return text;
   };
+
+  // const getLabelWithIcon = label => {
+  //   if (label) {
+  //     const elements = label.split(/[oO]/gm);
+  //     return elements.join('')
+  //   }
+  //   return false
+  // }
 
   const getHeadingType = block => {
     switch (block?.format) {
@@ -63,11 +75,20 @@ export default function TextBlock({ block }) {
   );
 
   // ==================================================================== Export
+  // const label = block.format === 'header' ? getLabelWithIcon(block.label) : block.label
   return (
     <div className={clsx('block text-block', `format__${format}`, `theme__${theme}`)}>
-      {typeof block?.label === 'string' && (
+      {block.label || block.format === 'header' && (
         <div className={'label'}>
-          <span className={clsx('label-text')}>{block?.label}</span>
+          {block.format === 'header' ? (
+            <div className="label-contents">
+              <span>FILEC</span>
+              <EarthIcon />
+              <span>IN</span>
+            </div>
+          ) : (
+            <span className="label-contents">{block.label}</span>
+          )}
         </div>
       )}
 
