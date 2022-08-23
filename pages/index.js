@@ -1,4 +1,5 @@
 // ===================================================================== Imports
+import { useMemo } from 'react'
 import { client } from '../.tina/__generated__/client'
 import { useTina } from 'tinacms/dist/edit-state'
 import CloneDeep from 'lodash/cloneDeep'
@@ -15,6 +16,7 @@ export default function HomePage(props) {
     variables: props.variables,
     data: props.pageData
   })
+
   const navigation = general?.navigation
   const pageContent = data?.page?.page_content
   const footer = general?.footer

@@ -1,4 +1,4 @@
-// //////////////////////////////////////////////////////////// General & Themes
+// /////////////////////////////////////////////////// General, Themes & Formats
 .text-block {
   position: relative;
   color: $codGray;
@@ -15,17 +15,9 @@
     .heading {
       @include typography_h2;
     }
-    .description {
-      @include typography_p2;
-    }
   }
 }
-
-// ///////////////////////////////////////////////////////////////////// Formats
-
-
 // ///////////////////////////////////////////////////////////////////// Content
-
 .label,
 .heading,
 .subheading,
@@ -34,7 +26,19 @@
 }
 
 .label {
+  @include font_Secondary;
+  @include fontSize_Medium;
+  letter-spacing: 17px;
   margin-bottom: 1.25rem;
+  .label-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-left: -0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 .heading,
@@ -43,27 +47,46 @@
   p {
     margin-bottom: 1.25rem;
   }
-  a {
-    border-bottom: 0.03125rem solid;
-    padding-bottom: 0.1875rem;
-    transition: all 0.3s ease;
-  }
 }
 
 .subheading {
-  margin-bottom: 0.5rem;
   @include typography_h4;
-}
-
-.description {
-  a {
-    &:hover {
-    }
-  }
+  margin-bottom: 0.5rem;
 }
 
 .button-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
+}
+
+// ///////////////////////////////////////////////////////////// Markdown styles
+.description {
+  a {
+    color: $white;
+    text-decoration: none;
+    border-bottom: 0.03125rem solid;
+    padding-bottom: 0.1875rem;
+    transition: all 0.3s ease;
+    &:hover {
+    }
+  }
+
+  p {
+    @include typography_p1;
+  }
+
+  blockquote {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: -2rem;
+      top: 0;
+      width: 0.3125rem;
+      height: 100%;
+      border-radius: 0.15625rem;
+      background-color: $white;
+    }
+  }
 }

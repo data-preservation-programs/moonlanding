@@ -14,23 +14,44 @@
 }
 
 #hero-header {
-  padding-top: calc(12rem + #{$navigationHeight});
-  padding-bottom: 14rem;
-  .heading {
-    margin-bottom: 2rem;
-  }
+  padding-top: calc(4.78125rem + #{$navigationHeight});
+  padding-bottom: 42.625rem;
+  background: transparent linear-gradient(180deg, #161E36 0%, #000000 40%) 0% 0% no-repeat padding-box;
+  z-index: 1;
   .label,
   .heading,
   .subheading,
   .description {
     text-align: center;
   }
+  .subheading {
+    margin-bottom: 8rem;
+  }
+  .image-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
 
 #intro-1 {
   background-color: $ebony;
-  .text-block {
-    margin-top: 1.75rem;
-    padding: 0 1rem;
+  padding-bottom: 0;
+  z-index: 2;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 100px;
+    background-color: inherit;
+    transform: translateY(-50%);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
+  }
+  [class~='col'],
+  [class*='col-'],
+  [class*='col_'] {
+    padding: 0 0.5rem 7.5rem;
   }
 }

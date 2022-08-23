@@ -12,14 +12,14 @@
         "button": {
           "action": "next-link",
           "url": "/",
-          "text": "LEARN MORE"
+          "text": "Learn more"
         }
       },
       {
         "button": {
           "action": "a",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
-          "text": "REGISTER",
+          "text": "Register",
           "target": "_blank"
         }
       }

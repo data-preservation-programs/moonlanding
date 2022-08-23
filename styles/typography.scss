@@ -6,11 +6,15 @@ $font_Secondary: 'Aller';
 
 // fontSize_Tiny | 13pt
 // fontSize_Regular | 16pt
+// fontSize_Book | 24pt
+// fontSize_Medium | 26pt
 // fontSize_Large | 36pt
 // fontSize_Huge | 110pt
 
 $fontSize_Tiny: 0.8125rem;
 $fontSize_Regular: 1rem;
+$fontSize_Book: 1.125rem;
+$fontSize_Medium: 1.625rem;
 $fontSize_Large: 2.0625rem;
 $fontSize_Huge: 6.875rem;
 
@@ -24,6 +28,14 @@ $fontSize_Huge: 6.875rem;
 // ---------------------------------------------------- Typography | Font Family
 @mixin font_Primary { font-family: $font_Primary; }
 @mixin font_Secondary { font-family: $font_Secondary; }
+
+// ------------------------------------------------------ Typography | Font Size
+@mixin fontSize_Tiny { font-size: $fontSize_Tiny; }
+@mixin fontSize_Regular { font-size: $fontSize_Regular; }
+@mixin fontSize_Book { font-size: $fontSize_Book; }
+@mixin fontSize_Medium { font-size: $fontSize_Medium; }
+@mixin fontSize_Large { font-size: $fontSize_Large; }
+@mixin fontSize_Huge { font-size: $fontSize_Huge; }
 
 // ---------------------------------------------------- Typography | Font Weight
 @mixin fontWeight_Light { font-weight: 300; }
@@ -57,10 +69,10 @@ $fontSize_Huge: 6.875rem;
   line-height: leading(53, 44);
 }
 
-@mixin typography_p2 {
+@mixin typography_p1 {
   @include font_Secondary;
   @include fontWeight_Regular;
-  font-size: $fontSize_Regular;
-  // letter-spacing: $letterSpacing_Large;
-  // line-height: $leading_Small;
+  @include fontSize_Book;
+  letter-spacing: 0.24px;
+  line-height: leading(45, 24);
 }

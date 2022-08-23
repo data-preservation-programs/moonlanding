@@ -14,6 +14,7 @@
             "theme": "light",
             "heading": "MOONLANDING",
             "subheading": "The next frontier in Storage",
+            "description": "",
             "cta": [
               {
                 "button": {
@@ -42,30 +43,41 @@
         "block": [
           {
             "cols": {
-              "num": "col-6"
+              "num": "col-5",
+              "push_left": "off-1",
+              "push_right": "off-1"
             },
             "format": "medium",
             "theme": "light",
             "heading": "Program Overview",
-            "description": "Moon Landing is an acceleration program from <a>Protocol Labs</a> designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public datasets that are valuable to the world. \n<br>\n<br>\nTo participate, you can elect to participate in <a>Slingshot</a>, <a>Evergreen</a>, or both.",
+            "description": "> Moon Landing is an acceleration program from [Protocol Labs](https://protocol.ai/) designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public datasets that are valuable to the world.\n>\n> To participate, you can elect to participate in [Slingshot](https://slingshot.filecoin.io/), [Evergreen](https://evergreen.filecoin.io/), or both.",
             "_template": "text_block"
           },
           {
+            "cols": {
+              "num": "col-4",
+              "push_right": "off-1"
+            },
             "src": "/images/lunar-orbit-rendezvous.png",
             "_template": "image_block"
           },
           {
             "cols": {
-              "num": "col-6"
+              "num": "col-5",
+              "push_left": "off-1",
+              "push_right": "off-1"
             },
             "src": "/images/docking-image.gif",
             "_template": "image_block"
           },
           {
+            "cols": {
+              "num": "col-5"
+            },
             "format": "medium",
             "theme": "light",
             "heading": "Storage Provider Benefits",
-            "description": "Be a founding member of a new storage provider community\n<br>\n<br>\nConnect with fellow storage providers through protocol labs\n<br>\n<br>\nEarn and increase your block rewards via Quality Adjusted Power",
+            "description": "> Be a founding member of a new storage provider community\n\n> Connect with fellow storage providers through protocol labs\n\n> Earn and increase your block rewards via Quality Adjusted Power",
             "_template": "text_block"
           }
         ]

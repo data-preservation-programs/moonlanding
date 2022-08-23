@@ -57,8 +57,12 @@ export const tinaConfig = defineConfig({
   client,
   schema,
   cmsCallback: (cms) => {
-    //  add your CMS callback code here (if you want)
-
+    /**
+     * Add MarkdownFieldPlugin
+     **/
+    import('react-tinacms-editor').then((field) => {
+      cms.plugins.add(field.MarkdownFieldPlugin)
+    })
     // The Route Mapper
     /**
      * 1. Import `tinacms` and `RouteMappingPlugin`

@@ -42,7 +42,7 @@ export const textBlock:TinaTemplate = {
       name: 'description',
       type: 'string',
       ui: {
-        component: 'textarea'
+        component: 'markdown'
       }
     },
     {

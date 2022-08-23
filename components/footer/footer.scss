@@ -1,5 +1,4 @@
 #site-footer {
-  // padding: 6.25rem 0;
   height: 4.25rem;
   margin: auto 0;
   background: transparent linear-gradient(270deg, rgba(#4B8FE0, 0.52) 0%, rgba(#427EDF, 0.52) 49%, rgba(#70D19D, 0.52) 100%) 0% 0% no-repeat padding-box;
@@ -13,4 +12,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.pl-logo {
+  margin: 0 0.75rem;
 }

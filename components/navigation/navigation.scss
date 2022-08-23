@@ -26,24 +26,38 @@
     padding: 0.3125rem 0.75rem;
     background: transparent;
     color: $white;
-    font-size: $fontSize_Large;
-    // letter-spacing: $letterSpacing_Large;
-    // line-height: $leading_Medium;
   }
 }
 
 .nav-item {
   display: flex;
-  margin: 0 1rem;
+  padding: 0 0.75rem;
+  margin: 0 1.125rem;
   .button-contents {
     @include font_Secondary;
+    @include fontSize_Book;
     @include fontWeight_Regular;
+    position: relative;
     padding: 0.618rem 0;
     margin: auto;
     background: transparent;
     color: $white;
-    font-size: $fontSize_Tiny;
-    // letter-spacing: $letterSpacing_Large;
-    // line-height: $leading_Medium;
+    &:after {
+      content: '';
+      position: absolute;
+      left: -0.75rem;
+      bottom: -0.75rem;
+      width: calc(100% + 1.5rem);
+      height: 0.3125rem;
+      border-radius: 0.15625rem;
+      background-color: $white;
+      opacity: 0;
+      transition: 200ms ease;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
+    }
   }
 }

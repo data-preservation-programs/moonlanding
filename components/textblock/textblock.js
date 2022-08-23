@@ -2,6 +2,7 @@
 import { useCallback } from 'react';
 import { useRouter } from 'next/router';
 import clsx from 'clsx';
+import ReactMarkdown from 'react-markdown'
 
 import Button from '../button/button';
 import EarthIcon from '../icons/earth-icon';
@@ -15,7 +16,6 @@ export default function TextBlock({ block }) {
   const router = useRouter();
   const format = block.format || 'medium';
   const theme = block.theme;
-  const hasDescription = typeof block.description === 'string' || Array.isArray(block.description);
   const tracking = {};
   if (typeof block.cta === 'object') {
     if (block?.cta?.event) {
@@ -46,14 +46,6 @@ export default function TextBlock({ block }) {
     return text;
   };
 
-  // const getLabelWithIcon = label => {
-  //   if (label) {
-  //     const elements = label.split(/[oO]/gm);
-  //     return elements.join('')
-  //   }
-  //   return false
-  // }
-
   const getHeadingType = block => {
     switch (block?.format) {
       case 'header':
@@ -75,7 +67,6 @@ export default function TextBlock({ block }) {
   );
 
   // ==================================================================== Export
-  // const label = block.format === 'header' ? getLabelWithIcon(block.label) : block.label
   return (
     <div className={clsx('block text-block', `format__${format}`, `theme__${theme}`)}>
       {block.label || block.format === 'header' && (
@@ -98,7 +89,13 @@ export default function TextBlock({ block }) {
         <div className={'subheading'} dangerouslySetInnerHTML={{ __html: block?.subheading }}></div>
       )}
 
-      {hasDescription && <div className={'description'} dangerouslySetInnerHTML={{ __html: block?.description }}></div>}
+      {block.description && (
+        <div className={'description'}>
+          <ReactMarkdown>
+            {block.description}
+          </ReactMarkdown>
+        </div>
+      )}
 
       <div className="button-row">
         {Array.isArray(block?.cta) && (

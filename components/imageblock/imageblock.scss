@@ -20,8 +20,8 @@
     left: 0;
     span {
       position: absolute;
-      width: 100% !important;
-      height: 100% !important;
+      width: fit-content !important;
+      height: fit-content !important;
       left: -9999px;
       right: -9999px;
       margin: auto;
@@ -39,20 +39,19 @@
       }
     }
     img {
-      min-width: 1700px !important;
+      min-width: 1366px !important;
       min-height: unset !important;
       max-width: unset !important;
       max-height: unset !important;
       height: unset !important;
       transform: translate(0, 0rem);
-      @include customMaxMQ(1720px) {
-        transform: translate(calc((100vw - 1720px) / 2), 0rem);
+      @include customMaxMQ(1366px) {
+        transform: translate(calc((100vw - 1366px) / 2), 0rem);
       }
     }
   }
-}
-
-.label {
-  text-align: center;
-  margin-top: 2rem;
+  .label {
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
