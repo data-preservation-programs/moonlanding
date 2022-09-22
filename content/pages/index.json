@@ -1,4 +1,8 @@
 {
+  "seo": {
+    "title": "Filecoin Moonlanding ",
+    "description": "accelerator program moon landing web3 protocol labs filecoin "
+  },
   "page_content": {
     "sections": [
       {
@@ -83,5 +87,10 @@
         ]
       }
     ]
-  }
+  },
+  "_collection": "page",
+  "_keepTemplateKey": false,
+  "_template": "page",
+  "_relativePath": "index.json",
+  "_id": "content/pages/index.json"
 }
