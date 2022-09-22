@@ -3,6 +3,21 @@
     "title": "Filecoin Moonlanding Learn More",
     "description": "Protocol Labs' accelerator program to onboard storage providers to the Filecoin ecosystem."
   },
+  "page_content": {
+    "sections": [
+      {
+        "grid": [
+          "middle"
+        ],
+        "block": [
+          {
+            "theme": "background",
+            "_template": "image_block"
+          }
+        ]
+      }
+    ]
+  },
   "_collection": "page",
   "_keepTemplateKey": false,
   "_template": "page",
