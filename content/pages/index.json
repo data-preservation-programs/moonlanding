@@ -87,6 +87,11 @@
             "heading": "Storage Provider Benefits",
             "description": "> Be a founding member of a new storage provider community\n\n> Connect with fellow storage providers through protocol labs\n\n> Earn and increase your block rewards via Quality Adjusted Power",
             "_template": "text_block"
+          },
+          {
+            "theme": "light",
+            "description": "\n### **Program Timeline**\n\n\n**Month 1**\n\n* **learn about Moon Landing**\n* **get to know your capsule mates**\n\n**Month 2**\n\n* **start the process of sealing real data**\n\n**Month 3**\n\n* **complete sealing of your 1st 10 TiB of real data with Moon Landing**\n\n**Month 4**\n\n* **seal more real data with Evergreen and/or Slingshot, aiming for 10 TiB / month** \n* **complete sealing your 1st replica from another SP in your country / continent**\n* **20 TiB data milestone**\n\n**Month 5**\n\n* **complete sealing another replica from another SP in a different country / continent**\n* **30 TiB data milestone**\n\n**Month 6**\n\n* **40 TiB milestone**\n\n**Month 7**\n\n* **end of the Moon Landing program - congratulations graduates!!!**\n\n\n\n\n\n\n",
+            "_template": "text_block"
           }
         ]
       }
