@@ -11,7 +11,7 @@
       {
         "button": {
           "action": "next-link",
-          "url": "/",
+          "url": "/learnmore",
           "text": "Learn more"
         }
       },
@@ -46,5 +46,10 @@
         }
       }
     ]
-  }
+  },
+  "_collection": "general",
+  "_keepTemplateKey": false,
+  "_template": "general",
+  "_relativePath": "general.json",
+  "_id": "content/general/general.json"
 }
