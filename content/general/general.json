@@ -11,7 +11,7 @@
       {
         "button": {
           "action": "next-link",
-          "url": "/learnmore",
+          "url": "/learn-more",
           "text": "Learn more"
         }
       },
