@@ -1,6 +1,7 @@
 {
   "seo": {
-    "title": "Filecoin Moonlanding Learn More"
+    "title": "Filecoin Moonlanding Learn More",
+    "description": "Protocol Labs' accelerator program to onboard storage providers to the Filecoin ecosystem."
   },
   "_collection": "page",
   "_keepTemplateKey": false,
