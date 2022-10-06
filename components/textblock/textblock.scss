@@ -62,6 +62,7 @@
 
 // ///////////////////////////////////////////////////////////// Markdown styles
 .description {
+  @include typography_p1;
   a {
     color: $white;
     text-decoration: none;
@@ -69,6 +70,7 @@
     padding-bottom: 0.1875rem;
     transition: all 0.3s ease;
     &:hover {
+      border-bottom: 0.125rem solid;
     }
   }
 
