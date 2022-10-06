@@ -6,6 +6,9 @@
   &.theme__light {
     color: $white;
   }
+  h1, h2 {
+    @include typography_h2;
+  }
   &.format__header {
     .heading {
       @include typography_h1;
