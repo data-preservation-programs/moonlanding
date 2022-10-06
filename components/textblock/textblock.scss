@@ -6,6 +6,9 @@
   &.theme__light {
     color: $white;
   }
+  h1, h2 {
+    @include typography_h2;
+  }
   &.format__header {
     .heading {
       @include typography_h1;
@@ -62,6 +65,7 @@
 
 // ///////////////////////////////////////////////////////////// Markdown styles
 .description {
+  @include typography_p1;
   a {
     color: $white;
     text-decoration: none;
@@ -69,6 +73,7 @@
     padding-bottom: 0.1875rem;
     transition: all 0.3s ease;
     &:hover {
+      border-bottom: 0.125rem solid;
     }
   }
 
