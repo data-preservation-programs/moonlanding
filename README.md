@@ -10,28 +10,27 @@
 - The site's resources are served statically, but internal navigation is virtualized: in other words, the site acts as an SPA when browsed on the client
 
 ## Content management
-- To make changes to site content visit the staging URL admin page and login with Tina Cloud
-  - [filecoin-moonlanding.io/admin](https://www.filecoin-moonlanding.io/admin/)
+- To make changes to site content visit the staging URL admin page and login with Tina Cloud at [filecoin-moonlanding.io/admin](https://www.filecoin-moonlanding.io/admin/)
 - Making edits in this interface commits them directly to the `main` branch, which builds into production
 
 ## Installation
 
 Node 16 or higher and `npm` or `yarn` is required.
 
-### To install locally
+### Running locally
 
 - Clone this repo and navigate to its directory
 - Install dependencies with `npm ci`
 - Run locally with `npm run dev`
 
-### To generate the static site
+### Static site
 
 - Install with `npm ci`
 - Add any environment variables to `.env`
 - Generate the static site with `npm run export`
 - The build will output to a new directory `out`
 
-### To test
+### Testing
 - The site may be tested with `npm run lint` which invokes Next's linter
 
 ### Environment variables
