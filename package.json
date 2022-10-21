@@ -17,5 +17,9 @@
     "export": "tinacms build && next build && next export",
     "start": "tinacms build && next start",
     "lint": "next lint"
+  },
+  "devDependencies": {
+    "eslint": "8.26.0",
+    "eslint-config-next": "12.3.1"
   }
 }
