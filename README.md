@@ -2,21 +2,17 @@
 
 # Moon Landing
 
-A Next website that uses the Tina.io CMS for Filecoin Moonlanding.
-
-To make changes to site content visit the staging URL admin page and login with Tina Cloud: [filecoin-moonlanding.io/admin](https://www.filecoin-moonlanding.io/admin/)
-
-
-
-# Filecoin Green
-
 ## Overview
 
-- This is the repository for the _Filecoin Green_ microsite
-- This repo represents a static site which requires compilation, but can then be served as a static resource
-- This site is hosted on IPFS and is compatible with relative URLs, for IPFS and IPNS gateway paths
+- This is the repository for the _Moon Landing_ microsite
+- This is a Next JS website that uses the Tina.io CMS for Filecoin Moonlanding
+- This site is hosted on IPFS
 - The site's resources are served statically, but internal navigation is virtualized: in other words, the site acts as an SPA when browsed on the client
-- While a static site, this app can be extended at any time to a full application by changing the `target` in settings
+
+## Content management
+- To make changes to site content visit the staging URL admin page and login with Tina Cloud
+  - [filecoin-moonlanding.io/admin](https://www.filecoin-moonlanding.io/admin/)
+- Making edits in this interface commits them directly to the `main` branch, which builds into production
 
 ## Installation
 
@@ -28,9 +24,18 @@ Node 16 or higher and `npm` or `yarn` is required.
 - Install dependencies with `npm ci`
 - Run locally with `npm run dev`
 
-## To generate the static site
+### To generate the static site
 
 - Install with `npm ci`
 - Add any environment variables to `.env`
-- Generate the static site with `npm run generate`
-- The build will output to a new directory `dist`
+- Generate the static site with `npm run export`
+- The build will output to a new directory `out`
+
+### To test
+- The site may be tested with `npm run lint` which invokes Next's linter
+
+### Environment variables
+- For the production site, the following envs are required to work correctly with Tina
+  - `TINA_CLOUD_CLIENT_ID`
+  - `TINA_CLOUD_TOKEN`
+- These should not be exposed in this readme and must be set as secrets
