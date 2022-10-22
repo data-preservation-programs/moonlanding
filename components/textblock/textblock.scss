@@ -31,7 +31,7 @@
 .label {
   @include font_Secondary;
   @include fontSize_Medium;
-  letter-spacing: 17px;
+  letter-spacing: 1.0625rem;
   margin-bottom: 1.25rem;
   .label-contents {
     display: flex;
@@ -40,7 +40,13 @@
     img {
       margin-left: -0.5rem;
       margin-right: 0.5rem;
+      @include mini {
+        transform: scale(0.6);
+      }
     }
+  }
+  @include mini {
+    letter-spacing: 0.75rem;
   }
 }
 

@@ -16,4 +16,7 @@
 
 .pl-logo {
   margin: 0 0.75rem;
+    @include tiny {
+      margin: 0 0.5rem 0 0;
+    }
 }
