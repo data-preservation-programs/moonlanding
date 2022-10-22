@@ -61,6 +61,7 @@ $fontAssetPath: '../assets/fonts';
 
 // ///////////////////////////////////////////////////////////////////// General
 // -------------------------------------------------------------------------- //
+
 html,
 body {
   font-family: 'Tiempos', helvetica, sans-serif;
@@ -72,6 +73,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  overflow-x: hidden;
   &.no-scroll {
     overflow-y: hidden;
   }
