@@ -11,7 +11,7 @@ export default function Footer({ copyright = [] }) {
   return (
     <footer id="site-footer">
       <div className="grid-middle-noGutter footer-grid">
-        <div className="col-10" data-push-left="off-1">
+        <div className="col-10_sm-12" data-push-left="off-1_sm-0">
           <div className="footer-content">
             <div className="footer-copyright">
               {copyright.map((item, index) => (
