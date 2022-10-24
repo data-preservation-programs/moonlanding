@@ -10,9 +10,10 @@
     "nav_items": [
       {
         "button": {
-          "action": "next-link",
-          "url": "/learn-more",
-          "text": "Learn more"
+          "action": "a",
+          "url": "https://docs.google.com/presentation/d/1O-9KCpXAxT-PUmzKyMeogf_JCIC0IFmOcyFokpgea2c/",
+          "text": "Learn more",
+          "target": "_blank"
         }
       },
       {

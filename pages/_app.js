@@ -6,7 +6,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Tina>
       <Head>
-        <title>Filecoin Moonlanding</title>
+        <title>Moon Landing - Filecoin</title>
       </Head>
       <Component {...pageProps} />
     </Tina>

@@ -40,10 +40,21 @@
     box-shadow: 1px 1px 28px #9AACD3;
     border-radius: 1.375rem;
     opacity: 1;
+    transition: all 0.25s ease;
+    @include mini {
+      padding: 0.75rem 2.25rem;
+    }
+    &:hover {
+      box-shadow: 1px 1px 1rem #888;
+      transform: scale(1.05);
+    }
     .button-contents {
       @include fontWeight_Bold;
       text-transform: uppercase;
       letter-spacing: 1px;
+      @include mini {
+        font-size: 0.875rem;
+      }
     }
   }
 

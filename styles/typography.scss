@@ -14,9 +14,9 @@ $font_Secondary: 'Aller';
 $fontSize_Tiny: 0.8125rem;
 $fontSize_Regular: 1rem;
 $fontSize_Book: 1.125rem;
-$fontSize_Medium: 1.625rem;
-$fontSize_Large: 2.0625rem;
-$fontSize_Huge: 6.875rem;
+$fontSize_Medium: min(1.625rem, 3.5vw);
+$fontSize_Large: min(2.0625rem, 5vw);
+$fontSize_Huge: min(6.875rem, 8vw);
 
 // --------------------------------------------------------------------- Leading
 @function leading($lineHeight, $fontSize) {
