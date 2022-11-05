@@ -1,6 +1,6 @@
-![Moonlanding graph image](public/open-graph-image.png)
-
 # Moon Landing
+
+![Moonlanding graph image](public/open-graph-image.png)
 
 ## Overview
 
