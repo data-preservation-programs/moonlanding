@@ -1,0 +1,88 @@
+// ///////////////////////////////////////////////////////////////////// General
+#site-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+  &:before {
+    content: '';
+    position: absolute;
+    top: inherit;
+    left: inherit;
+    width: inherit;
+    height: inherit;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    z-index: 5;
+    transition: 250ms ease-out;
+  }
+  &.active {
+    visibility: visible;
+    pointer-events: all;
+    z-index: 10000;
+    &:before {
+      transition: 250ms ease-in;
+      opacity: 1;
+    }
+    #site-modal-video {
+      transition: 250ms 100ms ease-in;
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+// ///////////////////////////////////////////////////////////////////// Toolbar
+.modal-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modal-close-button {
+  display: flex;
+  padding: 0.618rem 0.75rem;
+  @include font_Secondary;
+  @include fontSize_Book;
+  @include fontWeight_Regular;
+  position: relative;
+  background: transparent;
+  color: $white;
+  border: none;
+}
+
+// /////////////////////////////////////////////////////////////// [Modal] Video
+#site-modal-video {
+  position: relative;
+  width: 50rem;
+  opacity: 0;
+  transform: translateY(2rem);
+  z-index: 10;
+  transition: 250ms ease-out;
+  @include small {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+.modal-video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}

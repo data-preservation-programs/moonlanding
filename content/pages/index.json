@@ -100,10 +100,5 @@
         ]
       }
     ]
-  },
-  "_collection": "page",
-  "_keepTemplateKey": false,
-  "_template": "page",
-  "_relativePath": "index.json",
-  "_id": "content/pages/index.json"
+  }
 }
