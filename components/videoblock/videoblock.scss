@@ -1,0 +1,68 @@
+// ///////////////////////////////////////////////////////////////////// General
+.video-preview-container {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .video-play-icon {
+      transition: 250ms ease-in;
+      transform: scale(1.1);
+      .icon__play__triangle-inner {
+        fill: white;
+      }
+    }
+  }
+}
+
+// ///////////////////////////////////////////////////////////////////// Overlay
+.video-overlay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  z-index: 15;
+  transition: 250ms ease-out;
+  &.video-overlay-tint {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.video-play-icon {
+  width: 3rem;
+  transition: 250ms ease-out;
+  .icon__play__triangle-inner {
+    transition: inherit;
+    fill: transparent;
+  }
+  .icon__play__triangle-outer {
+    fill: white;
+  }
+}
+
+// /////////////////////////////////////////////////////////////// Preview Image
+.video-preview-image {
+  position: relative;
+  border-radius: inherit;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+  div,
+  span,
+  img {
+    position: relative !important;
+  }
+  img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.video-subtext {
+  @include typography_p1;
+  color: white;
+  padding: 0.5rem 0;
+}

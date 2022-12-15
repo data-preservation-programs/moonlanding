@@ -84,3 +84,39 @@ export const imageBlock:TinaTemplate = {
     }
   ]
 }
+
+export const videoBlock:TinaTemplate = {
+  label: 'Video block',
+  name: 'video_block',
+  _template: 'video_block',
+  type: 'object',
+  fields: [
+    columns,
+    {
+      label: 'Preview Image',
+      name: 'preview_image',
+      type: 'image'
+    },
+    {
+      label: 'Video URL',
+      name: 'url',
+      type: 'string'
+    },
+    {
+      label: 'Image Alt',
+      name: 'alt',
+      type: 'string'
+    },
+    {
+      label: 'Image Tint',
+      name: 'tint',
+      type: 'boolean',
+      default: false
+    },
+    {
+      label: 'Video subtext',
+      name: 'subtext',
+      type: 'string'
+    }
+  ]
+}
