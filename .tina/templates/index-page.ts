@@ -1,6 +1,6 @@
 import type { TinaTemplate } from "tinacms";
 import { grid } from './layouts'
-import { textBlock, imageBlock } from './blocks'
+import { textBlock, imageBlock, videoBlock } from './blocks'
 
 export const indexPage:TinaTemplate = {
   label: 'Page Content',
@@ -24,7 +24,7 @@ export const indexPage:TinaTemplate = {
           name: 'block',
           type: 'object',
           list: true,
-          templates: [textBlock, imageBlock]
+          templates: [textBlock, imageBlock, videoBlock]
         }
       ]
     }
