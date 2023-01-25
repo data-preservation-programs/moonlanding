@@ -1,4 +1,30 @@
 // ///////////////////////////////////////////////////////////////////// General
+.video-list-block {
+  display: flex;
+  flex-wrap: wrap;
+  &.columns-1 {
+    .video-block {
+      width: 100%;
+    }
+  }
+  &.columns-2 {
+    .video-block {
+      width: calc(50% - 1.125rem);
+      &:not(:last-child) {
+        margin-right: 2.25rem;
+      }
+    }
+  }
+  &.columns-3 {
+    .video-block {
+      width: calc(33% - 1.5rem);
+      &:not(:last-child) {
+        margin-right: 2.25rem;
+      }
+    }
+  }
+}
+
 .video-preview-container {
   position: relative;
   cursor: pointer;

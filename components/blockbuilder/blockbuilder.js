@@ -54,7 +54,7 @@ class BlockBuilder extends React.Component {
       } else if (type.endsWith('image_block')) {
         return <ImageBlock block={block} />;
       } else if (type.endsWith('video_block')) {
-        return <VideoBlock block={block} />;
+        return <VideoBlock videolist={block} />;
       }  else if (type.endsWith('custom')) {
         return this.getCustomComponents(block.customizations);
       }

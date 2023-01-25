@@ -93,30 +93,51 @@ export const videoBlock:TinaTemplate = {
   fields: [
     columns,
     {
-      label: 'Preview Image',
-      name: 'preview_image',
-      type: 'image'
+      label: 'Videos per row',
+      name: 'videos_per_row',
+      type: 'number',
+      default: 1,
+      ui: {
+        validate: (val) => {
+          if (![1, 2, 3].includes(val)) {
+            return 'The number of columns must be either 1, 2 or 3'
+          }
+        }
+      }
     },
     {
-      label: 'Video URL',
-      name: 'url',
-      type: 'string'
-    },
-    {
-      label: 'Image Alt',
-      name: 'alt',
-      type: 'string'
-    },
-    {
-      label: 'Image Tint',
-      name: 'tint',
-      type: 'boolean',
-      default: false
-    },
-    {
-      label: 'Video subtext',
-      name: 'subtext',
-      type: 'string'
+      label: 'Video',
+      name: 'videos',
+      type: 'object',
+      list: true,
+      fields: [
+        {
+          label: 'Preview Image',
+          name: 'preview_image',
+          type: 'image'
+        },
+        {
+          label: 'Video URL',
+          name: 'url',
+          type: 'string'
+        },
+        {
+          label: 'Image Alt',
+          name: 'alt',
+          type: 'string'
+        },
+        {
+          label: 'Image Tint',
+          name: 'tint',
+          type: 'boolean',
+          default: false
+        },
+        {
+          label: 'Video subtext',
+          name: 'subtext',
+          type: 'string'
+        }
+      ]
     }
   ]
 }
