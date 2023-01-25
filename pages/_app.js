@@ -1,6 +1,8 @@
 import '../styles/main.scss';
 import Head from 'next/head'
 import Tina from '../.tina/components/TinaDynamicProvider.js'
+import store from '../app/store'
+import { Provider } from 'react-redux'
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -8,7 +10,9 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <title>Moon Landing - Filecoin</title>
       </Head>
-      <Component {...pageProps} />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </Tina>
   )
 }

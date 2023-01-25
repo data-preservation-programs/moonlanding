@@ -2,6 +2,8 @@
 // @ts-nocheck
 import Link from 'next/link';
 import clsx from 'clsx';
+import { useDispatch } from 'react-redux'
+import { setModal } from '../../app/modalSlice'
 
 // ====================================================================== Params
 /**
@@ -23,7 +25,13 @@ import clsx from 'clsx';
  */
 // ====================================================================== Export
 const Button = ({ action, url, target, variant = '', className, disabled, onClick, children }) => {
-  const components = { a: 'a', 'next-link': Link, button: 'button' };
+  const dispatch = useDispatch()
+  const components = {
+    a: 'a',
+    'next-link': Link,
+    button: 'button',
+    video: 'button'
+  }
   const Action = components.hasOwnProperty(action) && url && !disabled ? components[action] : 'button'
   const attributes = { disabled }
   if (action === 'next-link') {
@@ -31,6 +39,9 @@ const Button = ({ action, url, target, variant = '', className, disabled, onClic
   }
   if (onClick && action !== 'next-link') {
     attributes['onClick'] = onClick
+  }
+  if (action === 'video') {
+    attributes['onClick'] = () => dispatch(setModal({ action: 'video', url }))
   }
 
   return (

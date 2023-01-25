@@ -96,14 +96,37 @@
             "theme": "light",
             "description": "\n## Program Timeline\n\n\n**Month 1**\n\n* Learn about Moon Landing\n* Get to know your capsule mates\n\n**Month 2**\n\n* Start the process of sealing real data\n\n**Month 3**\n\n* Complete sealing of your 1st 10 TiB of real data with Moon Landing\n\n**Month 4**\n\n* Seal more real data with Evergreen and/or Slingshot, aiming for 10 TiB / month \n* Complete sealing your 1st replica from another SP in your country / continent\n* 20 TiB data milestone\n\n**Month 5**\n\n* Complete sealing another replica from another SP in a different country / continent\n* 30 TiB data milestone\n\n**Month 6**\n\n* 40 TiB milestone\n\n**Month 7**\n\n* End of the Moon Landing program - congratulations graduates!!!\n\n\n\n\n\n\n",
             "_template": "text_block"
+          },
+          {
+            "cols": {
+              "num": "col-12",
+              "push_left": "off-0"
+            },
+            "videos_per_row": 3,
+            "videos": [
+              {
+                "preview_image": "/images/open-graph-image.png",
+                "url": "https://youtu.be/KPgsEIRLL58",
+                "tint": true,
+                "subtext": "Starboard SP ROI Calculator"
+              },
+              {
+                "preview_image": "/images/open-graph-image.png",
+                "url": "https://youtu.be/u_S5F6WyBAU",
+                "tint": true,
+                "subtext": "Multisig Demo"
+              },
+              {
+                "preview_image": "/images/open-graph-image.png",
+                "url": "https://youtu.be/ri8LYuntrMM",
+                "tint": true,
+                "subtext": "Singularity Demo"
+              }
+            ],
+            "_template": "video_block"
           }
         ]
       }
     ]
-  },
-  "_collection": "page",
-  "_keepTemplateKey": false,
-  "_template": "page",
-  "_relativePath": "index.json",
-  "_id": "content/pages/index.json"
+  }
 }

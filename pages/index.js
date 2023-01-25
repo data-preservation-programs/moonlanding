@@ -4,6 +4,7 @@ import { client } from '../.tina/__generated__/client'
 import { useTina } from 'tinacms/dist/edit-state'
 import CloneDeep from 'lodash/cloneDeep'
 
+import Modal from '../components/modal/modal.js'
 import Navigation from '../components/navigation/navigation.js'
 import BlockBuilder from '../components/blockbuilder/blockbuilder.js'
 import Footer from '../components/footer/footer.js'
@@ -23,6 +24,8 @@ export default function HomePage(props) {
 
   return (
     <div className="site-container">
+
+      <Modal />
 
       <Navigation
         logo={navigation?.site_logo?.button}

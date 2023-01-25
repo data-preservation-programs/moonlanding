@@ -21,6 +21,10 @@ export const button:TinaTemplate = {
         {
           label: 'Button',
           value: 'button'
+        },
+        {
+          label: 'Video',
+          value: 'video'
         }
       ]
     },

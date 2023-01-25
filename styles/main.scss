@@ -4,9 +4,11 @@
 @import 'grid/gridlex-2.7.1';
 
 // Components
+@import '../components/modal/modal.scss';
 @import '../components/navigation/navigation.scss';
 @import '../components/imageblock/imageblock.scss';
 @import '../components/textblock/textblock.scss';
+@import '../components/videoblock/videoblock.scss';
 @import '../components/button/button.scss';
 @import '../components/footer/footer.scss';
 
