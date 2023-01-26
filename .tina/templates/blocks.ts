@@ -117,6 +117,11 @@ export const videoBlock:TinaTemplate = {
           type: 'image'
         },
         {
+          label: 'Preview Image External Link',
+          name: 'preview_image_ext',
+          type: 'string'
+        },
+        {
           label: 'Video URL',
           name: 'url',
           type: 'string'

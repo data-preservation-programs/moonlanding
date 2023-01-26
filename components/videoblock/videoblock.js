@@ -12,6 +12,10 @@ import PlayIcon from '../icons/play-icon.js'
 export default function VideoBlock({ videolist }) {
   const dispatch = useDispatch()
   const columns = videolist.videos_per_row ? videolist.videos_per_row : 1
+  console.log(videolist)
+  const getPreviewImage = (block) => {
+    return block.preview_image || block.preview_image_ext
+  }
   return (
     <div className={clsx('video-list-block', `columns-${columns}`)}>
       {videolist && videolist.videos.map((block, i) => (
@@ -28,9 +32,12 @@ export default function VideoBlock({ videolist }) {
                   <PlayIcon className="video-play-icon" />
                 </div>
 
-                {block.preview_image && (
+                {(block.preview_image || block.preview_image_ext) && (
                   <div className="video-preview-image">
-                    <Image unoptimized alt={block.alt} src={block.preview_image} layout="fill" />
+                    <Image
+                      unoptimized alt={block.alt}
+                      src={getPreviewImage(block)}
+                      layout="fill" />
                   </div>
                 )}
 

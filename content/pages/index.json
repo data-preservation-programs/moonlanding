@@ -105,20 +105,29 @@
             "videos_per_row": 3,
             "videos": [
               {
-                "preview_image": "/images/open-graph-image.png",
-                "url": "https://youtu.be/KPgsEIRLL58",
+                "preview_image": "",
+                "preview_image_ext": "https://i.ytimg.com/vi/KPgsEIRLL58/maxresdefault.jpg",
+                "url": "https://www.youtube.com/watch?v=KPgsEIRLL58",
                 "tint": true,
                 "subtext": "Starboard SP ROI Calculator"
               },
               {
-                "preview_image": "/images/open-graph-image.png",
-                "url": "https://youtu.be/u_S5F6WyBAU",
+                "preview_image": "",
+                "preview_image_ext": "https://i.ytimg.com/vi/u_S5F6WyBAU/maxresdefault.jpg",
+                "url": "https://www.youtube.com/watch?v=u_S5F6WyBAU",
                 "tint": true,
                 "subtext": "Multisig Demo"
               },
               {
-                "preview_image": "/images/open-graph-image.png",
-                "url": "https://youtu.be/ri8LYuntrMM",
+                "preview_image": "",
+                "preview_image_ext": "https://i.ytimg.com/vi/OcDD_VG2cjY/maxresdefault.jpg",
+                "url": "https://www.youtube.com/watch?v=OcDD_VG2cjY",
+                "tint": true,
+                "subtext": "Introduction to IPFS with Allen Cho"
+              },
+              {
+                "preview_image_ext": "https://i.ytimg.com/vi/ri8LYuntrMM/maxresdefault.jpg",
+                "url": "https://www.youtube.com/watch?v=ri8LYuntrMM",
                 "tint": true,
                 "subtext": "Singularity Demo"
               }

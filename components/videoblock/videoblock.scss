@@ -10,7 +10,7 @@
   &.columns-2 {
     .video-block {
       width: calc(50% - 1.125rem);
-      &:not(:last-child) {
+      &:not(:nth-child(2)) {
         margin-right: 2.25rem;
       }
     }
@@ -18,11 +18,15 @@
   &.columns-3 {
     .video-block {
       width: calc(33% - 1.5rem);
-      &:not(:last-child) {
+      &:not(:nth-child(3)) {
         margin-right: 2.25rem;
       }
     }
   }
+}
+
+.video-block {
+  margin-bottom: 3rem;
 }
 
 .video-preview-container {
