@@ -12,7 +12,6 @@ import PlayIcon from '../icons/play-icon.js'
 export default function VideoBlock({ videolist }) {
   const dispatch = useDispatch()
   const columns = videolist.videos_per_row ? videolist.videos_per_row : 1
-  console.log(videolist)
   const getPreviewImage = (block) => {
     return block.preview_image || block.preview_image_ext
   }
