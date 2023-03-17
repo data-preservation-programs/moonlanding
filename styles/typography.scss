@@ -1,7 +1,8 @@
 @use 'sass:math';
 
-$font_Primary: 'Tiempos';
-$font_Secondary: 'Aller';
+$font_Primary: 'Hoverunit';
+$font_Secondary: 'Univers';
+$font_Tertiary: 'Perfectly Nineties';
 // ---------------------------------------------------------------------- Sizing
 
 // fontSize_Tiny | 13pt
@@ -9,14 +10,14 @@ $font_Secondary: 'Aller';
 // fontSize_Book | 24pt
 // fontSize_Medium | 26pt
 // fontSize_Large | 36pt
-// fontSize_Huge | 110pt
+// fontSize_Huge | 190pt
 
 $fontSize_Tiny: 0.8125rem;
 $fontSize_Regular: 1rem;
 $fontSize_Book: 1.125rem;
 $fontSize_Medium: min(1.625rem, 3.5vw);
 $fontSize_Large: min(2.0625rem, 5vw);
-$fontSize_Huge: min(6.875rem, 8vw);
+$fontSize_Huge: min(11.875rem, 100vw);
 
 // --------------------------------------------------------------------- Leading
 @function leading($lineHeight, $fontSize) {
@@ -28,6 +29,7 @@ $fontSize_Huge: min(6.875rem, 8vw);
 // ---------------------------------------------------- Typography | Font Family
 @mixin font_Primary { font-family: $font_Primary; }
 @mixin font_Secondary { font-family: $font_Secondary; }
+@mixin font_Tertiary { font-family: $font_Tertiary; }
 
 // ------------------------------------------------------ Typography | Font Size
 @mixin fontSize_Tiny { font-size: $fontSize_Tiny; }
@@ -51,6 +53,7 @@ $fontSize_Huge: min(6.875rem, 8vw);
   font-size: $fontSize_Huge;
   letter-spacing: 7.2px;
   line-height: leading(160, 180);
+  color: $linkWater;
 }
 
 @mixin typography_h2 {
@@ -60,6 +63,7 @@ $fontSize_Huge: min(6.875rem, 8vw);
   font-size: $fontSize_Large;
   letter-spacing: 0.44px;
   line-height: leading(62, 44);
+  color: $nebula;
 }
 
 @mixin typography_h4 {
@@ -68,6 +72,7 @@ $fontSize_Huge: min(6.875rem, 8vw);
   font-size: $fontSize_Large;
   letter-spacing: 0.44px;
   line-height: leading(53, 44);
+  color: $nebula;
 }
 
 @mixin typography_p1 {
@@ -76,4 +81,5 @@ $fontSize_Huge: min(6.875rem, 8vw);
   @include fontSize_Book;
   letter-spacing: 0.24px;
   line-height: leading(45, 24);
+  color: $nebula;
 }

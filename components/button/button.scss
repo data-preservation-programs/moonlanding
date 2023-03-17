@@ -49,8 +49,8 @@
       transform: scale(1.05);
     }
     .button-contents {
-      @include fontWeight_Bold;
-      text-transform: uppercase;
+      @include font_Primary;
+      @include fontWeight_Regular;
       letter-spacing: 1px;
       @include mini {
         font-size: 0.875rem;

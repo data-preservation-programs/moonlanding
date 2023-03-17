@@ -1,10 +1,10 @@
 // /////////////////////////////////////////////////// General, Themes & Formats
 .text-block {
   position: relative;
-  color: $codGray;
+  color: $nebula;
   z-index: 2;
   &.theme__light {
-    color: $white;
+    color: $nebula;
   }
   h1, h2 {
     @include typography_h2;
@@ -29,7 +29,6 @@
 }
 
 .label {
-  @include font_Secondary;
   @include fontSize_Medium;
   letter-spacing: 1.0625rem;
   margin-bottom: 1.25rem;
@@ -60,6 +59,7 @@
 
 .subheading {
   @include typography_h4;
+  @include font_Tertiary;
   margin-bottom: 0.5rem;
 }
 

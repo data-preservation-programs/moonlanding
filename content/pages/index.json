@@ -20,7 +20,7 @@
             },
             "format": "header",
             "theme": "light",
-            "heading": "MOONLANDING",
+            "heading": "MOON<br>LANDING",
             "subheading": "The next frontier in storage",
             "description": "",
             "cta": [
@@ -40,7 +40,7 @@
             "cols": {
               "num": ""
             },
-            "src": "/images/moon-landing-image.png",
+            "src": "/images/astronaut-on-moon.png",
             "theme": "background",
             "_template": "image_block"
           }
