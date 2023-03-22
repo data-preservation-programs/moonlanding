@@ -16,39 +16,45 @@ export default function VideoBlock({ videolist }) {
     return block.preview_image || block.preview_image_ext
   }
   return (
-    <div className={clsx('video-list-block', `columns-${columns}`)}>
-      {videolist && videolist.videos.map((block, i) => (
-        <div
-          key={`video-${i}`}
-          className="block video-block">
-          {block && block.url && (
-            <>
-              <div
-                className="video-preview-container"
-                onClick={() => dispatch(setModal({ action: 'video', url: block.url }))}>
+    <div className="block video-list-block">
 
-                <div className={clsx('video-overlay', block.tint ? 'video-overlay-tint' : '')}>
-                  <PlayIcon className="video-play-icon" />
+      {videolist?.heading && (<h2 className="h2 heading">{videolist.heading}</h2>)}
+
+      <div className={clsx('video-list', `columns-${columns}`)}>
+
+        {videolist && videolist.videos.map((block, i) => (
+          <div
+            key={`video-${i}`}
+            className="block video-block">
+            {block && block.url && (
+              <>
+                <div
+                  className="video-preview-container"
+                  onClick={() => dispatch(setModal({ action: 'video', url: block.url }))}>
+
+                  <div className={clsx('video-overlay', block.tint ? 'video-overlay-tint' : '')}>
+                    <PlayIcon className="video-play-icon" />
+                  </div>
+
+                  {(block.preview_image || block.preview_image_ext) && (
+                    <div className="video-preview-image">
+                      <Image
+                        unoptimized alt={block.alt}
+                        src={getPreviewImage(block)}
+                        layout="fill" />
+                    </div>
+                  )}
+
                 </div>
 
-                {(block.preview_image || block.preview_image_ext) && (
-                  <div className="video-preview-image">
-                    <Image
-                      unoptimized alt={block.alt}
-                      src={getPreviewImage(block)}
-                      layout="fill" />
-                  </div>
-                )}
-
-              </div>
-
-              <div className="video-subtext">
-                { block.subtext }
-              </div>
-            </>
-          )}
-        </div>
-      ))}
+                <div className="video-subtext">
+                  { block.subtext }
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

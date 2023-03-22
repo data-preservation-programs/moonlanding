@@ -33,6 +33,11 @@
   display: flex;
   padding: 0 0.75rem;
   margin: 0 1.125rem;
+  &:after {
+    width: 100% !important;
+    left: 0 !important;
+    bottom: -0.625rem !important;
+  }
   .button-contents {
     @include font_Secondary;
     @include fontSize_Regular;

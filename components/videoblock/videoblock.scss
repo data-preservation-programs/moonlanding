@@ -1,5 +1,18 @@
+@use 'sass:math';
+
 // ///////////////////////////////////////////////////////////////////// General
+$videoBlockSpacing: 5.125rem;
+
 .video-list-block {
+  h1, 
+  h2,
+  .heading {
+    @include typography_h2;
+    margin-bottom: toRem(55);
+  }
+}
+
+.video-list {
   display: flex;
   flex-wrap: wrap;
   &.columns-1 {
@@ -9,17 +22,17 @@
   }
   &.columns-2 {
     .video-block {
-      width: calc(50% - 1.125rem);
-      &:not(:nth-child(2)) {
-        margin-right: 2.25rem;
+      width: calc(50% - #{math.div($videoBlockSpacing, 2)});
+      &:not(:nth-child(2n)) {
+        margin-right: $videoBlockSpacing;
       }
     }
   }
   &.columns-3 {
     .video-block {
-      width: calc(33% - 1.5rem);
-      &:not(:nth-child(3)) {
-        margin-right: 2.25rem;
+      width: calc(33% - #{math.div($videoBlockSpacing, 3)});
+      &:not(:nth-child(3n)) {
+        margin-right: $videoBlockSpacing;
       }
     }
   }
@@ -32,14 +45,18 @@
 .video-preview-container {
   position: relative;
   cursor: pointer;
+  aspect-ratio: 16 / 9;
   &:hover {
     .video-play-icon {
       transition: 250ms ease-in;
       transform: scale(1.1);
       .icon__play__triangle-inner {
-        fill: white;
+        opacity: 1;
       }
     }
+  }
+  span {
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -67,10 +84,11 @@
   transition: 250ms ease-out;
   .icon__play__triangle-inner {
     transition: inherit;
-    fill: transparent;
+    fill: white;
+    opacity: 0;
   }
   .icon__play__triangle-outer {
-    fill: white;
+    fill: transparent;
   }
 }
 
@@ -92,7 +110,7 @@
 }
 
 .video-subtext {
-  @include typography_p1;
-  color: white;
-  padding: 0.5rem 0;
+  @include typography_p2;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }

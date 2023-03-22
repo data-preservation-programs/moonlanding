@@ -1,17 +1,58 @@
 #site-footer {
-  height: 4.25rem;
+  position: relative;
+  height: toRem(960);
   margin: auto 0;
-  background: transparent linear-gradient(270deg, rgba(#4B8FE0, 0.52) 0%, rgba(#427EDF, 0.52) 49%, rgba(#70D19D, 0.52) 100%) 0% 0% no-repeat padding-box;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 10;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  .text-block {
+    .label {
+      margin-bottom: 0;
+      span {
+        font-size: 2rem;
+        line-height: leading(37, 31);
+        letter-spacing: 20px;
+      }
+      img {
+        transform: scale(1.2) translate(2px, -3px);
+        margin-right: 0.5rem;
+      }
+    }
+  }
 }
 
-.footer-grid {
-  height: 100%;
+.footer-content {
+  padding-top: toRem(198);
 }
 
-.footer-copyright {
+.links-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-links {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
+}
+
+.footer-link {
+  width: 50%;
+  padding: 0.5rem 1rem 0.5rem 0;
+  margin-bottom: 2.25rem;
+  &:last-child,
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+  }
 }
 
 .pl-logo {

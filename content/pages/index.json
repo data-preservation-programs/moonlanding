@@ -89,8 +89,8 @@
           {
             "cols": {
               "num": "col-5_sm-12",
-              "push_left": "off-1_sm-0",
-              "push_right": "off-0_sm-0"
+              "push_left": "off-0_sm-0",
+              "push_right": "off-1_sm-0"
             },
             "format": "medium",
             "icon": "wheel",
@@ -170,6 +170,7 @@
               "num": "col-12",
               "push_left": "off-0"
             },
+            "heading": "RESOURCES",
             "videos_per_row": 2,
             "videos": [
               {
@@ -201,6 +202,24 @@
               }
             ],
             "_template": "video_block"
+          },
+          {
+            "cols": {
+              "num": "col-6",
+              "push_left": "off-3",
+              "push_right": "off-3"
+            },
+            "_template": "text_block",
+            "cta": [
+              {
+                "button": {
+                  "action": "nuxt-link",
+                  "url": "/resources",
+                  "text": "View All Resources",
+                  "theme": "cta-solid"
+                }
+              }
+            ]
           }
         ]
       }

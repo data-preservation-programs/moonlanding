@@ -34,6 +34,7 @@
 }
 
 #section-overview {
+  margin-bottom: 2rem;
   .text-block {
     .subheading,
     .description {
@@ -43,12 +44,17 @@
 }
 
 #intro-1 {
-  padding-bottom: 0;
+  padding-bottom: 8.75rem;
   z-index: 2;
   [class~='col'],
   [class*='col-'],
   [class*='col_'] {
-    padding: 0 0.5rem 7.5rem;
+    padding: 0 0.5rem 6rem;
+  }
+  .text-block {
+    svg {
+      margin-bottom: toRem(56);
+    }
   }
 }
 
@@ -60,6 +66,17 @@
   .timeline-block {
     .heading {
       margin-bottom: toRem(144);
+    }
+  }
+}
+
+#section-resources {
+  padding-top: 10.75rem;
+  .text-block {
+    .cta.variant__cta-solid {
+      .button-contents {
+        @include fontSize_Medium;
+      }
     }
   }
 }

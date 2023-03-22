@@ -112,6 +112,11 @@ export const videoBlock:TinaTemplate = {
   fields: [
     columns,
     {
+      label: 'Heading',
+      name: 'heading',
+      type: 'string'
+    },
+    {
       label: 'Videos per row',
       name: 'videos_per_row',
       type: 'number',

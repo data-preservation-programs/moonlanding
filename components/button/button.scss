@@ -1,40 +1,25 @@
 .button {
   cursor: pointer;
   width: fit-content;
-
   &[disabled] {
     cursor: default;
   }
-
   button {
     border: none;
     width: 100%;
     display: flex;
   }
-
   a {
     text-decoration: none;
-    color: $codGray;
+    color: $nebula;
   }
-
   .button-contents {
     display: flex;
     align-items: center;
   }
-
   &.variant__cta,
-  &.variant__footer {
-    color: $codGray;
-    .button-contents {
-      @include font_Secondary;
-      @include fontSize_Book;
-      line-height: leading(30, 25);
-      background: transparent;
-      color: $codGray;
-    }
-  }
-
-  &.variant__cta {
+  &.variant__cta-solid {
+    color: $nebula;
     position: relative;
     padding: 0 toRem(26) 0 toRem(55);
     border-radius: 0.1875rem;
@@ -52,30 +37,56 @@
       transform: scale(1.025);
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='51' viewBox='0 0 10 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M 1 0 V 16.1121 C 1.872 17.2016 2.114 18.223 2.761 19.1081 L 7.53 25.1001 C 8.177 25.9172 8.5 26.8705 8.5 27.9599 V 46.0721 C 8.5 48.5 7.5 49 5.5 49 H 0' stroke='%23D0DFDC' stroke-width='3' /%3e%3c/svg%3e");
     }
-    @include mini {
-      // padding: 0.75rem 2.25rem;
-    }
     &:hover {
       // box-shadow: 1px 1px 1rem #888;
       // transform: scale(1.05);
     }
     .button-contents {
-      @include font_Primary;
-      @include fontWeight_Regular;
-      @include fontSize_Book;
-      letter-spacing: 0.44px;
-      line-height: 2;
       color: $nebula;
-      @include mini {
-        font-size: 0.875rem;
+    }
+    &:not(.nav-item) {
+      .button-contents {
+        @include font_Primary;
+        @include fontWeight_Regular;
+        @include fontSize_Book;
+        letter-spacing: 0.44px;
+        line-height: 2;
+        background: transparent;
       }
     }
   }
-
-    &.variant__footer {
-      .button-contents {
-        @include fontWeight_Regular;
-        letter-spacing: 0.24px;
+  &.variant__cta-solid {
+    border: none;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.9375rem;
+      left: 1.125rem;
+      width: calc(100% - 2.25rem);
+      height: 1rem;
+      opacity: 0;
+      transition: 200ms ease;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='388' height='15' viewBox='0 0 388 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 12.5H11.4415C12.7333 12.5 13.9456 11.8761 14.6965 10.825L19.8035 3.67505C20.5544 2.62386 21.7667 2 23.0585 2H388' stroke='%23D0DFDC' stroke-width='4'/%3e%3c/svg%3e ");
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
       }
     }
+  }
+  &.variant__footer {
+    .button-contents {
+      @include font_Primary;
+      @include fontSize_Book;
+      @include fontWeight_Regular;
+      letter-spacing: 0.24px;
+      line-height: leading(29, 24);
+      color: $nebula;
+    }
+  }
 }

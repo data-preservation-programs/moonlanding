@@ -22,7 +22,7 @@ export default function Navigation({ logo = {}, navItems = [] }) {
                   url={item.button.url}
                   target={item.button.target}
                   variant={item.button.theme}
-                  className={'nav-item'}>
+                  className="nav-item">
 
                   {item.button.text}
 
