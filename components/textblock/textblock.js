@@ -6,6 +6,9 @@ import ReactMarkdown from 'react-markdown'
 
 import Button from '../button/button';
 import EarthIcon from '../icons/earth-icon';
+import WheelIcon from '../icons/wheel-icon';
+import ConnectionIcon from '../icons/connection-icon';
+import PowerIcon from '../icons/power-icon';
 
 // ====================================================================== Params
 /**
@@ -45,6 +48,19 @@ export default function TextBlock({ block }) {
     }
     return text;
   };
+
+  const getBlockIcon = icon => {
+    switch (icon) {
+      case 'wheel':
+        return <WheelIcon />;
+      case 'connection':
+        return <ConnectionIcon />;
+      case 'power':
+        return <PowerIcon />;
+      default:
+        return false;
+    }
+  }
 
   const getHeadingType = block => {
     switch (block?.format) {
@@ -87,6 +103,12 @@ export default function TextBlock({ block }) {
 
       {typeof block?.subheading === 'string' && (
         <div className={'subheading'} dangerouslySetInnerHTML={{ __html: block?.subheading }}></div>
+      )}
+
+      {block.icon && (
+        <>
+        { getBlockIcon(block.icon) }
+        </>
       )}
 
       {block.description && (

@@ -14,8 +14,8 @@
 }
 
 #hero-header {
-  padding-top: calc(4.78125rem + #{$navigationHeight});
-  padding-bottom: 42.625rem;
+  padding-top: $navigationHeight;
+  padding-bottom: 51rem;
   z-index: 1;
   .label,
   .heading,
@@ -24,7 +24,7 @@
     text-align: center;
   }
   .subheading {
-    margin-bottom: 8rem;
+    margin-bottom: toRem(50);
   }
   .image-block {
     display: flex;
@@ -33,24 +33,33 @@
   }
 }
 
+#section-overview {
+  .text-block {
+    .subheading,
+    .description {
+      text-align: center;
+    } 
+  }
+}
+
 #intro-1 {
-  background-color: $ebony;
   padding-bottom: 0;
   z-index: 2;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10%;
-    width: 120%;
-    height: 100px;
-    background-color: inherit;
-    transform: translateY(-50%);
-    border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
-  }
   [class~='col'],
   [class*='col-'],
   [class*='col_'] {
     padding: 0 0.5rem 7.5rem;
+  }
+}
+
+#section-timeline {
+  .image-block {
+    left: unset;
+    right: 50vw;
+  }
+  .timeline-block {
+    .heading {
+      margin-bottom: toRem(144);
+    }
   }
 }

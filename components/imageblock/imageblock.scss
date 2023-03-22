@@ -39,14 +39,14 @@
       }
     }
     img {
-      min-width: 1366px !important;
+      min-width: 1440px !important;
       min-height: unset !important;
       max-width: unset !important;
       max-height: unset !important;
       height: unset !important;
       transform: translate(0, 0rem);
-      @include customMaxMQ(1366px) {
-        transform: translate(calc((100vw - 1366px) / 2), 0rem);
+      @include customMaxMQ(1440px) {
+        transform: translate(calc((100vw - 1440px) / 2), 0rem);
       }
     }
   }

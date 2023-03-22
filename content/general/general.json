@@ -11,16 +11,16 @@
       {
         "button": {
           "action": "a",
-          "url": "https://docs.google.com/presentation/d/1O-9KCpXAxT-PUmzKyMeogf_JCIC0IFmOcyFokpgea2c/",
-          "text": "Learn more",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
+          "text": "Register",
           "target": "_blank"
         }
       },
       {
         "button": {
           "action": "a",
-          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
-          "text": "Register",
+          "url": "https://docs.google.com/presentation/d/1O-9KCpXAxT-PUmzKyMeogf_JCIC0IFmOcyFokpgea2c/",
+          "text": "Learn more",
           "target": "_blank"
         }
       }

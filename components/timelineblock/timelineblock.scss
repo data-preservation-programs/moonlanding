@@ -1,0 +1,37 @@
+// /////////////////////////////////////////////////// General, Themes & Formats
+.timeline-block {
+  h1, 
+  h2,
+  .heading {
+    @include typography_h2;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: toRem(50);
+  width: 100%;
+  .date-heading,
+  .event {
+    @include fontSize_Regular;
+    line-height: leading(36, 18);
+  }
+  .date-heading {
+    @include fontWeight_Bold;
+    letter-spacing: 0.4px;
+    padding-right: toRem(80);
+    width: 33%;
+  }
+  .event {
+    @include fontWeight_Regular;
+    letter-spacing: 0.24px;
+    width: 66%;
+  }
+}

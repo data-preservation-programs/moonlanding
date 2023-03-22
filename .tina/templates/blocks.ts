@@ -38,6 +38,25 @@ export const textBlock:TinaTemplate = {
       type: 'string'
     },
     {
+      label: 'Icon',
+      name: 'icon',
+      type: 'string',
+      options: [
+        {
+          label: 'Wheel',
+          value: 'wheel'
+        },
+        {
+          label: 'Connection',
+          value: 'connection'
+        },
+        {
+          label: 'Power',
+          value: 'power'
+        }
+      ]
+    },
+    {
       label: 'Description',
       name: 'description',
       type: 'string',
@@ -141,6 +160,42 @@ export const videoBlock:TinaTemplate = {
           label: 'Video subtext',
           name: 'subtext',
           type: 'string'
+        }
+      ]
+    }
+  ]
+}
+
+export const timelineBlock:TinaTemplate = {
+  label: 'Timeline block',
+  name: 'timeline_block',
+  _template: 'timeline_block',
+  type: 'object',
+  fields: [
+    columns,
+    {
+      label: 'Heading',
+      name: 'heading',
+      type: 'string'
+    },
+    {
+      label: 'Timeline',
+      name: 'timeline',
+      type: 'object',
+      list: true,
+      fields: [
+        {
+          label: 'Date',
+          name: 'date',
+          type: 'string'
+        },
+        {
+          label: 'Event',
+          name: 'event',
+          type: 'string',
+          ui: {
+            component: 'markdown'
+          }
         }
       ]
     }

@@ -40,9 +40,25 @@
             "cols": {
               "num": ""
             },
-            "src": "/images/astronaut-on-moon.png",
+            "src": "/images/Nasa-AS11-Moonlanding-astronaut.png",
             "theme": "background",
             "_template": "image_block"
+          }
+        ]
+      },
+      {
+        "id": "section-overview",
+        "block": [
+          {
+            "cols": {
+              "num": "col-10",
+              "push_left": "off-1",
+              "push_right": "off-1"
+            },
+            "format": "medium",
+            "subheading": "Program Overview",
+            "description": "Moon Landing is an acceleration program from Protocol Labs designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public datasets that are valuable to the world\n\nTo participate, you can elect to participate in Slingshot, Evergreen, or both.",
+            "_template": "text_block"
           }
         ]
       },
@@ -52,57 +68,109 @@
           {
             "cols": {
               "num": "col-5_sm-12",
-              "push_left": "off-1_sm-0",
+              "push_left": "off-0_sm-0",
               "push_right": "off-1_sm-0"
             },
             "format": "medium",
-            "theme": "light",
-            "heading": "Program Overview",
-            "description": "> Moon Landing is an acceleration program from [Protocol Labs](https://protocol.ai/) designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public datasets that are valuable to the world.\n>\n> To participate, you can elect to participate in [Slingshot](https://slingshot.filecoin.io/), [Evergreen](https://evergreen.filecoin.io/), or both.",
+            "heading": "STORAGE PROVIDER BENEFITS",
             "_template": "text_block"
-          },
-          {
-            "cols": {
-              "num": "col-4_sm-12",
-              "push_right": "off-1_sm-0"
-            },
-            "src": "/images/lunar-orbit-rendezvous.png",
-            "_template": "image_block"
           },
           {
             "cols": {
               "num": "col-5_sm-12",
               "push_left": "off-1_sm-0",
-              "push_right": "off-1_sm-0"
+              "push_right": "off-0_sm-0"
             },
-            "src": "/images/docking-image.gif",
+            "format": "medium",
+            "icon": "connection",
+            "description": "Connect with fellow storage providers through Protocol Labs",
+            "_template": "text_block"
+          },
+          {
+            "cols": {
+              "num": "col-5_sm-12",
+              "push_left": "off-1_sm-0",
+              "push_right": "off-0_sm-0"
+            },
+            "format": "medium",
+            "icon": "wheel",
+            "description": "Be a founding member of a new storage provider community",
+            "_template": "text_block"
+          },
+          {
+            "cols": {
+              "num": "col-5_sm-12",
+              "push_left": "off-1_sm-0",
+              "push_right": "off-0_sm-0"
+            },
+            "format": "medium",
+            "icon": "power",
+            "description": "Earn and increase your block rewards via Quality Adjusted Power",
+            "_template": "text_block"
+          }
+        ]
+      },
+      {
+        "id": "section-timeline",
+        "block": [
+          {
+            "cols": {
+              "num": "col-6_sm-12"
+            },
+            "src": "/images/Nasa-Earth-from-distance-in-space.png",
+            "theme": "background",
             "_template": "image_block"
           },
           {
             "cols": {
-              "num": "col-5_sm-12"
+              "num": "col-6_sm-12",
+              "push_left": "off-6_sm-0",
+              "push_right": "off-0_sm-0"
             },
-            "format": "medium",
-            "theme": "light",
-            "heading": "Storage Provider Benefits",
-            "description": "> Be a founding member of a new storage provider community\n\n> Connect with fellow storage providers through protocol labs\n\n> Earn and increase your block rewards via Quality Adjusted Power",
-            "_template": "text_block"
-          },
-          {
-            "cols": {
-              "num": "col-8_sm-12",
-              "push_left": "off-3_sm-0"
-            },
-            "theme": "light",
-            "description": "\n## Program Timeline\n\n\n**Month 1**\n\n* Learn about Moon Landing\n* Get to know your capsule mates\n\n**Month 2**\n\n* Start the process of sealing real data\n\n**Month 3**\n\n* Complete sealing of your 1st 10 TiB of real data with Moon Landing\n\n**Month 4**\n\n* Seal more real data with Evergreen and/or Slingshot, aiming for 10 TiB / month \n* Complete sealing your 1st replica from another SP in your country / continent\n* 20 TiB data milestone\n\n**Month 5**\n\n* Complete sealing another replica from another SP in a different country / continent\n* 30 TiB data milestone\n\n**Month 6**\n\n* 40 TiB milestone\n\n**Month 7**\n\n* End of the Moon Landing program - congratulations graduates!!!\n\n\n\n\n\n\n",
-            "_template": "text_block"
-          },
+            "_template": "timeline_block",
+            "heading": "PROGRAM TIMELINE",
+            "timeline": [
+              {
+                "date": "Month 1",
+                "event": "Learn about Moon Landing\nGet to know your capsule mates"
+              },
+              {
+                "date": "Month 2",
+                "event": "Start the process of sealing real data"
+              },
+              {
+                "date": "Month 3",
+                "event": "Complete sealing of your 1st 10 TiB of real data with Moon Landing"
+              },
+              {
+                "date": "Month 4",
+                "event": "Seal more real data with Evergreen and/or Slingshot, aiming for 10TiB / month\n\nComplete sealing your 1st replica from another SP in your country / continent\n\n20 TiB data milestone"
+              },
+              {
+                "date": "Month 5",
+                "event": "Complete sealing another replica from another SP in a different country / continent..."
+              },
+              {
+                "date": "Month 6",
+                "event": "40 TiB milestone"
+              },
+              {
+                "date": "Month 7",
+                "event": "End of the Moon Landing program -\n\ncongratulations graduates!!!"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "section-resources",
+        "block": [
           {
             "cols": {
               "num": "col-12",
               "push_left": "off-0"
             },
-            "videos_per_row": 3,
+            "videos_per_row": 2,
             "videos": [
               {
                 "preview_image": "",

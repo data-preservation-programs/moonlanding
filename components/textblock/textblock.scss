@@ -12,6 +12,7 @@
   &.format__header {
     .heading {
       @include typography_h1;
+      margin-bottom: 1.25rem;
     }
   }
   &.format__medium {
@@ -29,16 +30,23 @@
 }
 
 .label {
-  @include fontSize_Medium;
-  letter-spacing: 1.0625rem;
   margin-bottom: 1.25rem;
   .label-contents {
     display: flex;
     justify-content: center;
     align-items: center;
+    span {
+      @include fontSize_Book;
+      @include fontWeight_Bold;
+      line-height: leading(29, 24);
+      letter-spacing: 1rem;
+    }
     img {
+      width: 2rem;
+      height: 2rem;
       margin-left: -0.5rem;
       margin-right: 0.5rem;
+      transform: translate(0.125rem, -0.125rem);
       @include mini {
         transform: scale(0.6);
       }
@@ -59,8 +67,7 @@
 
 .subheading {
   @include typography_h4;
-  @include font_Tertiary;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .button-row {

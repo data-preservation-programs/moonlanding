@@ -35,29 +35,31 @@
   margin: 0 1.125rem;
   .button-contents {
     @include font_Secondary;
-    @include fontSize_Book;
-    @include fontWeight_Regular;
+    @include fontSize_Regular;
+    @include fontWeight_Bold;
+    line-height: leading(29, 18);
+    letter-spacing: 0.24px;
     position: relative;
     padding: 0.618rem 0;
     margin: auto;
     background: transparent;
-    color: $white;
-    &:after {
-      content: '';
-      position: absolute;
-      left: -0.75rem;
-      bottom: -0.75rem;
-      width: calc(100% + 1.5rem);
-      height: 0.3125rem;
-      border-radius: 0.15625rem;
-      background-color: $white;
-      opacity: 0;
-      transition: 200ms ease;
-    }
-    &:hover {
-      &:after {
-        opacity: 1;
-      }
-    }
+    color: $nebula;
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   left: -0.75rem;
+    //   bottom: -0.75rem;
+    //   width: calc(100% + 1.5rem);
+    //   height: 0.3125rem;
+    //   border-radius: 0.15625rem;
+    //   background-color: $white;
+    //   opacity: 0;
+    //   transition: 200ms ease;
+    // }
+    // &:hover {
+    //   &:after {
+    //     opacity: 1;
+    //   }
+    // }
   }
 }
