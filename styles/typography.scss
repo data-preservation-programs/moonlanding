@@ -89,6 +89,9 @@ $fontSize_Huge: min(10rem, 11.1vw);
   @include fontSize_Book;
   letter-spacing: 0.24px;
   line-height: leading(45, 24);
+  @include mini {
+    @include fontSize_Regular;
+  }
 }
 
 @mixin typography_p2 {
@@ -97,4 +100,7 @@ $fontSize_Huge: min(10rem, 11.1vw);
   @include fontSize_Regular;
   letter-spacing: 0.24px;
   line-height: leading(36, 18);
+  @include mini {
+    font-size: 1rem;
+  }
 }

@@ -26,6 +26,10 @@ $videoBlockSpacing: 5.125rem;
       &:not(:nth-child(2n)) {
         margin-right: $videoBlockSpacing;
       }
+      @include mini {
+        width: 100%;
+        margin-right: 0 !important;
+      }
     }
   }
   &.columns-3 {
@@ -33,6 +37,10 @@ $videoBlockSpacing: 5.125rem;
       width: calc(33% - #{math.div($videoBlockSpacing, 3)});
       &:not(:nth-child(3n)) {
         margin-right: $videoBlockSpacing;
+      }
+      @include small {
+        width: 100%;
+        margin-right: 0 !important;
       }
     }
   }

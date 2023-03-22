@@ -51,9 +51,9 @@
         "block": [
           {
             "cols": {
-              "num": "col-10",
-              "push_left": "off-1",
-              "push_right": "off-1"
+              "num": "col-10_mi-12",
+              "push_left": "off-1_mi-0",
+              "push_right": "off-1_mi-0"
             },
             "format": "medium",
             "subheading": "Program Overview",
@@ -67,9 +67,9 @@
         "block": [
           {
             "cols": {
-              "num": "col-5_sm-12",
-              "push_left": "off-0_sm-0",
-              "push_right": "off-1_sm-0"
+              "num": "col-5_sm-10_mi-12",
+              "push_left": "off-0_sm-1_mi-0",
+              "push_right": "off-1_sm-1_mi-0"
             },
             "format": "medium",
             "heading": "STORAGE PROVIDER BENEFITS",
@@ -77,9 +77,9 @@
           },
           {
             "cols": {
-              "num": "col-5_sm-12",
-              "push_left": "off-1_sm-0",
-              "push_right": "off-0_sm-0"
+              "num": "col-5_sm-10_mi-12",
+              "push_left": "off-1_sm-1_mi-0",
+              "push_right": "off-0_sm-1_mi-0"
             },
             "format": "medium",
             "icon": "connection",
@@ -88,9 +88,9 @@
           },
           {
             "cols": {
-              "num": "col-5_sm-12",
-              "push_left": "off-0_sm-0",
-              "push_right": "off-1_sm-0"
+              "num": "col-5_sm-10_mi-12",
+              "push_left": "off-0_sm-1_mi-0",
+              "push_right": "off-1_sm-1_mi-0"
             },
             "format": "medium",
             "icon": "wheel",
@@ -99,9 +99,9 @@
           },
           {
             "cols": {
-              "num": "col-5_sm-12",
-              "push_left": "off-1_sm-0",
-              "push_right": "off-0_sm-0"
+              "num": "col-5_sm-10_mi-12",
+              "push_left": "off-1_sm-1_mi-0",
+              "push_right": "off-0_sm-1_mi-0"
             },
             "format": "medium",
             "icon": "power",
@@ -115,7 +115,7 @@
         "block": [
           {
             "cols": {
-              "num": "col-6_sm-12"
+              "num": "col-6_md-12"
             },
             "src": "/images/Nasa-Earth-from-distance-in-space.png",
             "theme": "background",
@@ -123,9 +123,9 @@
           },
           {
             "cols": {
-              "num": "col-6_sm-12",
-              "push_left": "off-6_sm-0",
-              "push_right": "off-0_sm-0"
+              "num": "col-6_md-8_sm-10_ti-12",
+              "push_left": "off-6_md-4_sm-2_ti-0",
+              "push_right": "off-0_md-0_sm-0_ti-0"
             },
             "_template": "timeline_block",
             "heading": "PROGRAM TIMELINE",

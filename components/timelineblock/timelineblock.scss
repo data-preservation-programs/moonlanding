@@ -28,6 +28,7 @@
     letter-spacing: 0.4px;
     padding-right: toRem(80);
     width: 33%;
+    white-space: nowrap;
   }
   .event {
     @include fontWeight_Regular;

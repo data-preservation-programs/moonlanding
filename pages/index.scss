@@ -55,15 +55,53 @@
     svg {
       margin-bottom: toRem(56);
     }
+    @include small {
+      display: flex;
+      align-items: center;
+      .description,
+      svg,
+      p {
+        margin-bottom: 0;
+      }
+      svg {
+        min-width: toRem(80);
+        margin-right: 2rem;
+      }
+    }
   }
 }
 
 #section-timeline {
   .image-block {
-    left: unset;
+    left: unset !important;
     right: 50vw;
+    @include tiny {
+      right: 25vw;
+    }
+    &:before,
+    &:after {
+      display: none;
+    }
+    span {
+      margin-right: 0 !important;
+      margin-left: auto !important;
+      @include large {
+        left: -100px !important;
+      }
+      @include medium {
+        left: -200px !important;
+      }
+      @include small {
+        left: -350px !important;
+      }
+      @include tiny {
+        left: -400px !important;
+      }
+    }
   }
   .timeline-block {
+    position: relative;
+    z-index: 1;
     .heading {
       margin-bottom: toRem(144);
     }
