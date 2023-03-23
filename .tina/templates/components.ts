@@ -72,6 +72,25 @@ export const navigation:TinaTemplate = {
   ]
 }
 
+export const breadcrumbs:TinaTemplate = {
+  label: 'Breadcrumbs',
+  name: 'breadcrumbs_mapping',
+  type: 'object',
+  list: true,
+  fields: [
+    {
+      label: 'Key',
+      name: 'key',
+      type: 'string'
+    },
+    {
+      label: 'Value',
+      name: 'value',
+      type: 'string'
+    }
+  ]
+}
+
 export const footer:TinaTemplate = {
   label: 'Footer',
   name: 'footer',

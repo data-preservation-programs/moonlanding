@@ -28,6 +28,16 @@
       }
     ]
   },
+  "breadcrumbs_mapping": [
+    {
+      "key": "index",
+      "value": "Home"
+    },
+    {
+      "key": "resources",
+      "value": "Resources"
+    }
+  ],
   "footer": {
     "image": {
       "src": "/images/moon-at-distance-in-space-over-planet.png",
@@ -57,11 +67,10 @@
       },
       {
         "button": {
-          "action": "a",
-          "url": "http://example.com",
+          "action": "next-link",
+          "url": "/resources",
           "text": "Resources",
-          "theme": "footer",
-          "target": "_blank"
+          "theme": "footer"
         }
       }
     ]

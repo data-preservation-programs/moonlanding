@@ -4,7 +4,7 @@ import { client } from './__generated__/client.ts'
 import type { TinaTemplate } from "tinacms";
 import { seo, openGraph } from './templates/general.ts'
 import { indexPage } from './templates/index-page.ts'
-import { button, navigation, footer } from './templates/components.ts'
+import { button, navigation, breadcrumbs, footer } from './templates/components.ts'
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
@@ -32,6 +32,7 @@ const schema = defineSchema({
       format: 'json',
       fields: [
         navigation,
+        breadcrumbs,
         footer
       ]
     },

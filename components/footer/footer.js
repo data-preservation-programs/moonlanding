@@ -1,4 +1,5 @@
 // ===================================================================== Imports
+import Link from 'next/link';
 import Button from '../button/button'
 import TextBlock from '../textblock/textblock'
 import ImageBlock from '../imageblock/imageblock'
@@ -31,7 +32,11 @@ export default function Footer({ logo = {}, image = {}, links = [] }) {
             data-push-left="off-0_sm-0_ti-0"
             data-push-right="off-2_sm-3_ti-2">
 
-            <TextBlock block={logo} />
+            <Link href="/">
+              <div className="footer-logo-wrapper">
+                <TextBlock block={logo} />
+              </div>
+            </Link>
 
             <ImageBlock block={image} />
 
