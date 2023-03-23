@@ -12,15 +12,24 @@ import ProtocolLabsIcon from '../icons/protocol-labs-icon.js'
  */
 // ====================================================================== Export
 export default function Footer({ logo = {}, image = {}, links = [] }) {
+
+  const getFooterStyles = (image) => {
+    return {
+      'background-image': `url('${image.src}')`
+    }
+  }
+
   return (
-    <footer id="site-footer">
+    <footer 
+      id="site-footer"
+      style={getFooterStyles(image)}>
       <div className="footer-content">
         <div className="grid-middle">
 
           <div 
-            className="col-4_sm-12" 
-            data-push-left="off-0_sm-0"
-            data-push-right="off-2_sm-0">
+            className="col-4_sm-9_ti-10" 
+            data-push-left="off-0_sm-0_ti-0"
+            data-push-right="off-2_sm-3_ti-2">
 
             <TextBlock block={logo} />
 
@@ -29,9 +38,9 @@ export default function Footer({ logo = {}, image = {}, links = [] }) {
           </div>
             
           <div
-            className="col-4_sm-12"
-            data-push-left="off-2_sm-0"
-            data-push-right="off-0_sm-0">
+            className="col-4_sm-7_mi-8_ti-10"
+            data-push-left="off-2_sm-0_mi-0_ti-0"
+            data-push-right="off-0_sm-5_mi-4_ti-2">
             <div className="links-wrapper">
               <div className="footer-links">
                 {links.map((item) => (

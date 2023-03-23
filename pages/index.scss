@@ -31,6 +31,14 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+  .button.variant__cta {
+    background-color: $black;
+    .button-detail {
+      path {
+        fill: $black;
+      }
+    }
+  }
 }
 
 #section-overview {
@@ -114,6 +122,9 @@
     .cta.variant__cta-solid {
       .button-contents {
         @include fontSize_Medium;
+        @include small {
+          @include fontSize_Book;
+        }
       }
     }
   }

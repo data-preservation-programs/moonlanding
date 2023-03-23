@@ -17,6 +17,18 @@
     display: flex;
     align-items: center;
   }
+  .button-detail {
+    position: absolute;
+    top: 0;
+    right: calc(-0.625rem + 2.5px);
+    width: 0.625rem;
+    height: toRem(51);
+    transform: scale(1.025);
+    path {
+      fill: rgba(#D0DFDC, 0);
+      transition: 200ms ease;
+    }
+  }
   &.variant__cta,
   &.variant__cta-solid {
     color: $nebula;
@@ -27,20 +39,6 @@
     border-right: none;
     opacity: 1;
     transition: all 0.25s ease;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: calc(-0.625rem + 2.5px);
-      width: 0.625rem;
-      height: toRem(51);
-      transform: scale(1.025);
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='51' viewBox='0 0 10 51' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M 1 0 V 16.1121 C 1.872 17.2016 2.114 18.223 2.761 19.1081 L 7.53 25.1001 C 8.177 25.9172 8.5 26.8705 8.5 27.9599 V 46.0721 C 8.5 48.5 7.5 49 5.5 49 H 0' stroke='%23D0DFDC' stroke-width='3' /%3e%3c/svg%3e");
-    }
-    &:hover {
-      // box-shadow: 1px 1px 1rem #888;
-      // transform: scale(1.05);
-    }
     .button-contents {
       color: $nebula;
     }
@@ -52,6 +50,19 @@
         letter-spacing: 0.44px;
         line-height: 2;
         background: transparent;
+      }
+    }
+  }
+  &.variant__cta {
+    &:hover {
+      background-color: $nebula !important;
+      .button-detail {
+        path {
+          fill: $nebula !important;
+        }
+      }
+      .button-contents {
+        color: $black;
       }
     }
   }
@@ -87,6 +98,16 @@
       letter-spacing: 0.24px;
       line-height: leading(29, 24);
       color: $nebula;
+      transition: 200ms ease;
+      white-space: nowrap;
+      @include small {
+        @include fontSize_Regular;
+      }
+    }
+    &:hover {
+      .button-contents {
+        transform: scale(1.05);
+      }
     }
   }
 }

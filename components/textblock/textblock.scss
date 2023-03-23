@@ -31,6 +31,7 @@
 
 .label {
   margin-bottom: 1.25rem;
+  transform: translateX(10px);
   .label-contents {
     display: flex;
     justify-content: center;
@@ -40,6 +41,9 @@
       @include fontWeight_Bold;
       line-height: leading(29, 24);
       letter-spacing: 1rem;
+      @include small {
+        @include fontSize_Regular;
+      }
     }
     img {
       width: 2rem;
@@ -47,8 +51,8 @@
       margin-left: -0.5rem;
       margin-right: 0.5rem;
       transform: translate(0.125rem, -0.125rem);
-      @include mini {
-        transform: scale(0.6);
+      @include small {
+        transform: scale(0.8) translate(0.125rem, -0.125rem);
       }
     }
   }

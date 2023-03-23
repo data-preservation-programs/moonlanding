@@ -44,8 +44,28 @@ const Button = ({ action, url, target, variant = '', className, disabled, onClic
     attributes['onClick'] = () => dispatch(setModal({ action: 'video', url }))
   }
 
+  const getButtonDetail = () => {
+    return (
+      <svg 
+        width="10" 
+        height="51"
+        viewBox="0 0 10 51"
+        fill="none" 
+        xmlns="http://www.w3.org/2000/svg"
+        className="button-detail">
+        <path 
+          d="M 1 0 V 16.1121 C 1.872 17.2016 2.114 18.223 2.761 19.1081 L 7.53 25.1001 C 8.177 25.9172 8.5 26.8705 8.5 27.9599 V 46.0721 C 8.5 48.5 7.5 49 5.5 49 H 0" 
+          stroke="#D0DFDC"
+          strokeWidth="3" />
+      </svg>
+    );
+  }
+
   return (
     <div className={clsx(className, 'button', disabled ? 'disabled' : undefined, `variant__${variant}`)}>
+
+      { variant === 'cta' && getButtonDetail() }
+
       <Action
         href={url}
         target={target}
@@ -59,6 +79,7 @@ const Button = ({ action, url, target, variant = '', className, disabled, onClic
           children
         )}
       </Action>
+
     </div>
   );
 };
