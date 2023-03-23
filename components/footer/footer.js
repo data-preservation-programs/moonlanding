@@ -15,7 +15,7 @@ export default function Footer({ logo = {}, image = {}, links = [] }) {
 
   const getFooterStyles = (image) => {
     return {
-      'background-image': `url('${image.src}')`
+      backgroundImage: `url('${image.src}')`
     }
   }
 
