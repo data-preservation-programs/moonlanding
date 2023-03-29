@@ -1,10 +1,10 @@
 // /////////////////////////////////////////////////// General, Themes & Formats
 .text-block {
   position: relative;
-  color: $codGray;
+  color: $nebula;
   z-index: 2;
   &.theme__light {
-    color: $white;
+    color: $nebula;
   }
   h1, h2 {
     @include typography_h2;
@@ -12,6 +12,7 @@
   &.format__header {
     .heading {
       @include typography_h1;
+      margin-bottom: 1.25rem;
     }
   }
   &.format__medium {
@@ -29,19 +30,29 @@
 }
 
 .label {
-  @include font_Secondary;
-  @include fontSize_Medium;
-  letter-spacing: 1.0625rem;
   margin-bottom: 1.25rem;
+  transform: translateX(10px);
   .label-contents {
     display: flex;
     justify-content: center;
     align-items: center;
+    span {
+      @include fontSize_Book;
+      @include fontWeight_Bold;
+      line-height: leading(29, 24);
+      letter-spacing: 1rem;
+      @include small {
+        @include fontSize_Regular;
+      }
+    }
     img {
+      width: 2rem;
+      height: 2rem;
       margin-left: -0.5rem;
       margin-right: 0.5rem;
-      @include mini {
-        transform: scale(0.6);
+      transform: translate(0.125rem, -0.125rem);
+      @include small {
+        transform: scale(0.8) translate(0.125rem, -0.125rem);
       }
     }
   }
@@ -60,7 +71,7 @@
 
 .subheading {
   @include typography_h4;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2.25rem;
 }
 
 .button-row {

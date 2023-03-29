@@ -1,26 +1,32 @@
 @use 'sass:math';
 
-$font_Primary: 'Tiempos';
-$font_Secondary: 'Aller';
+$font_Primary: 'Hoverunit';
+$font_Secondary: 'Univers';
+$font_Tertiary: 'Perfectly Nineties';
 // ---------------------------------------------------------------------- Sizing
 
 // fontSize_Tiny | 13pt
-// fontSize_Regular | 16pt
+// fontSize_Regular | 18pt
 // fontSize_Book | 24pt
-// fontSize_Medium | 26pt
-// fontSize_Large | 36pt
-// fontSize_Huge | 110pt
+// fontSize_Medium | 45pt
+// fontSize_Large | 85pt
+// fontSize_Huge | 160pt
 
 $fontSize_Tiny: 0.8125rem;
-$fontSize_Regular: 1rem;
-$fontSize_Book: 1.125rem;
-$fontSize_Medium: min(1.625rem, 3.5vw);
-$fontSize_Large: min(2.0625rem, 5vw);
-$fontSize_Huge: min(6.875rem, 8vw);
+$fontSize_Regular: 1.125rem;
+$fontSize_Book: 1.5rem;
+$fontSize_Medium: min(2.8125rem, 3.125vw);
+$fontSize_Large: min(5.3125rem, 5.9vw);
+$fontSize_Huge: min(10rem, 11.1vw);
 
-// --------------------------------------------------------------------- Leading
+// ------------------------------------------------------------------- Functions
 @function leading($lineHeight, $fontSize) {
   @return math.div(math.round(10 * math.div($lineHeight, $fontSize)), 10);
+}
+
+@function toRem($value) {
+  $remValue: math.div($value, 16) + rem;
+  @return $remValue;
 }
 
 // ////////////////////////////////////////////////////////////////////// Mixins
@@ -28,6 +34,7 @@ $fontSize_Huge: min(6.875rem, 8vw);
 // ---------------------------------------------------- Typography | Font Family
 @mixin font_Primary { font-family: $font_Primary; }
 @mixin font_Secondary { font-family: $font_Secondary; }
+@mixin font_Tertiary { font-family: $font_Tertiary; }
 
 // ------------------------------------------------------ Typography | Font Size
 @mixin fontSize_Tiny { font-size: $fontSize_Tiny; }
@@ -47,27 +54,45 @@ $fontSize_Huge: min(6.875rem, 8vw);
 // ----------------------------------------------------- Typography | Categories
 @mixin typography_h1 {
   @include font_Primary;
-  @include fontWeight_Medium;
-  font-size: $fontSize_Huge;
-  letter-spacing: 7.2px;
-  line-height: leading(160, 180);
+  @include fontWeight_Regular;
+  @include fontSize_Huge;
+  line-height: leading(160, 160);
+  color: $linkWater;
+  filter: drop-shadow(-22px -16px 16px $tarawera);
+  @include small {
+    font-size: 4rem;
+  }
 }
 
 @mixin typography_h2 {
   @include font_Primary;
   @include fontWeight_Regular;
-  padding-bottom: 1.5rem;
-  font-size: $fontSize_Large;
-  letter-spacing: 0.44px;
-  line-height: leading(62, 44);
+  @include fontSize_Large;
+  line-height: leading(105, 85);
+  @include small {
+    font-size: 2.125rem;
+  }
+}
+
+@mixin typography_h3 {
+  @include font_Primary;
+  @include fontWeight_Regular;
+  @include fontSize_Medium;
+  line-height: leading(53, 45);
 }
 
 @mixin typography_h4 {
-  @include font_Secondary;
+  @include font_Tertiary;
   @include fontWeight_Regular;
-  font-size: $fontSize_Large;
+  @include fontSize_Medium;
   letter-spacing: 0.44px;
-  line-height: leading(53, 44);
+  line-height: leading(53, 45);
+  @include small {
+    font-size: 2rem;
+  }
+  @include tiny {
+    @include fontSize_Book;
+  }
 }
 
 @mixin typography_p1 {
@@ -76,4 +101,18 @@ $fontSize_Huge: min(6.875rem, 8vw);
   @include fontSize_Book;
   letter-spacing: 0.24px;
   line-height: leading(45, 24);
+  @include mini {
+    @include fontSize_Regular;
+  }
+}
+
+@mixin typography_p2 {
+  @include font_Secondary;
+  @include fontWeight_Regular;
+  @include fontSize_Regular;
+  letter-spacing: 0.24px;
+  line-height: leading(36, 18);
+  @include mini {
+    font-size: 1rem;
+  }
 }

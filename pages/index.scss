@@ -14,9 +14,8 @@
 }
 
 #hero-header {
-  padding-top: calc(4.78125rem + #{$navigationHeight});
-  padding-bottom: 42.625rem;
-  background: transparent linear-gradient(180deg, #161E36 0%, #000000 40%) 0% 0% no-repeat padding-box;
+  padding-top: $navigationHeight;
+  padding-bottom: 51rem;
   z-index: 1;
   .label,
   .heading,
@@ -25,33 +24,108 @@
     text-align: center;
   }
   .subheading {
-    margin-bottom: 8rem;
+    margin-bottom: toRem(50);
   }
   .image-block {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
+  .button.variant__cta {
+    background-color: $black;
+    .button-detail {
+      path {
+        fill: $black;
+      }
+    }
+  }
+}
+
+#section-overview {
+  margin-bottom: 2rem;
+  .text-block {
+    .subheading,
+    .description {
+      text-align: center;
+    } 
+  }
 }
 
 #intro-1 {
-  background-color: $ebony;
-  padding-bottom: 0;
+  padding-bottom: 8.75rem;
   z-index: 2;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -10%;
-    width: 120%;
-    height: 100px;
-    background-color: inherit;
-    transform: translateY(-50%);
-    border-radius: 50% 50% 50% 50% / 100% 100% 0 0;
-  }
   [class~='col'],
   [class*='col-'],
   [class*='col_'] {
-    padding: 0 0.5rem 7.5rem;
+    padding: 0 0.5rem 6rem;
+  }
+  .text-block {
+    svg {
+      margin-bottom: toRem(56);
+    }
+    @include small {
+      display: flex;
+      align-items: center;
+      .description,
+      svg,
+      p {
+        margin-bottom: 0;
+      }
+      svg {
+        min-width: toRem(80);
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+#section-timeline {
+  .image-block {
+    left: unset !important;
+    right: 50vw;
+    @include tiny {
+      right: 25vw;
+    }
+    &:before,
+    &:after {
+      display: none;
+    }
+    span {
+      margin-right: 0 !important;
+      margin-left: auto !important;
+      @include large {
+        left: -100px !important;
+      }
+      @include medium {
+        left: -200px !important;
+      }
+      @include small {
+        left: -350px !important;
+      }
+      @include tiny {
+        left: -400px !important;
+      }
+    }
+  }
+  .timeline-block {
+    position: relative;
+    z-index: 1;
+    .heading {
+      margin-bottom: toRem(144);
+    }
+  }
+}
+
+#section-resources {
+  padding-top: 10.75rem;
+  .text-block {
+    .cta.variant__cta-solid {
+      .button-contents {
+        @include fontSize_Medium;
+        @include small {
+          @include fontSize_Book;
+        }
+      }
+    }
   }
 }

@@ -37,7 +37,10 @@ export default function HomePage(props) {
         ))}
       </main>
 
-      <Footer copyright={footer?.copyright} />
+      <Footer
+        logo={footer?.logo}
+        image={footer?.image} 
+        links={footer?.links} />
 
     </div>
   )

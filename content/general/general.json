@@ -11,28 +11,47 @@
       {
         "button": {
           "action": "a",
-          "url": "https://docs.google.com/presentation/d/1O-9KCpXAxT-PUmzKyMeogf_JCIC0IFmOcyFokpgea2c/",
-          "text": "Learn more",
-          "target": "_blank"
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
+          "text": "Register",
+          "target": "_blank",
+          "theme": "cta-solid"
         }
       },
+      {
+        "button": {
+          "action": "a",
+          "url": "https://docs.google.com/presentation/d/1O-9KCpXAxT-PUmzKyMeogf_JCIC0IFmOcyFokpgea2c/",
+          "text": "Learn more",
+          "target": "_blank",
+          "theme": "cta-solid"
+        }
+      }
+    ]
+  },
+  "breadcrumbs_mapping": [
+    {
+      "key": "index",
+      "value": "Home"
+    },
+    {
+      "key": "resources",
+      "value": "Resources"
+    }
+  ],
+  "footer": {
+    "image": {
+      "src": "/images/moon-at-distance-in-space-over-planet.png",
+      "theme": "background"
+    },
+    "logo": {
+      "format": "header"
+    },
+    "links": [
       {
         "button": {
           "action": "a",
           "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
           "text": "Register",
-          "target": "_blank"
-        }
-      }
-    ]
-  },
-  "footer": {
-    "copyright": [
-      {
-        "button": {
-          "action": "a",
-          "url": "https://protocol.ai/",
-          "text": "A project from Protocol Labs.",
           "theme": "footer",
           "target": "_blank"
         }
@@ -40,10 +59,18 @@
       {
         "button": {
           "action": "a",
-          "url": "https://www.nasa.gov/",
-          "text": "Photography courtesy of NASA.",
+          "url": "https://docs.google.com/presentation/d/1O-9KCpXAxT-PUmzKyMeogf_JCIC0IFmOcyFokpgea2c/",
+          "text": "Learn more",
           "theme": "footer",
           "target": "_blank"
+        }
+      },
+      {
+        "button": {
+          "action": "next-link",
+          "url": "/resources",
+          "text": "Resources",
+          "theme": "footer"
         }
       }
     ]

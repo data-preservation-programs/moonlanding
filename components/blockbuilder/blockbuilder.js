@@ -6,6 +6,7 @@ import CloneDeep from 'lodash/cloneDeep'
 import TextBlock from '../textblock/textblock.js';
 import ImageBlock from '../imageblock/imageblock.js';
 import VideoBlock from '../videoblock/videoblock.js';
+import TimelineBlock from '../timelineblock/timelineblock.js';
 
 // ====================================================================== Export
 class BlockBuilder extends React.Component {
@@ -55,7 +56,9 @@ class BlockBuilder extends React.Component {
         return <ImageBlock block={block} />;
       } else if (type.endsWith('video_block')) {
         return <VideoBlock videolist={block} />;
-      }  else if (type.endsWith('custom')) {
+      } else if (type.endsWith('timeline_block')) {
+        return <TimelineBlock block={block} />;
+      } else if (type.endsWith('custom')) {
         return this.getCustomComponents(block.customizations);
       }
     }

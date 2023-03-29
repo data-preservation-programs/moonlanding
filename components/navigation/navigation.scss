@@ -1,3 +1,4 @@
+// ///////////////////////////////////////////////////////////////////// General
 #site-header {
   position: absolute;
   top: 0;
@@ -15,17 +16,44 @@
 }
 
 .header-content {
-  padding-top: 1.5rem;
+  padding-top: toRem(40);
   justify-content: flex-end;
+  &.page-resources {
+    justify-content: space-between;
+  }
 }
 
-.site-logo-button {
-  .button-contents {
-    @include font_Secondary;
-    @include fontWeight_Regular;
-    padding: 0.3125rem 0.75rem;
-    background: transparent;
-    color: $white;
+// ////////////////////////////////////////////////////////////////// Navigation
+.nav-site-logo {
+  display: inherit;
+  transition: 200ms ease;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  .label-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      @include fontSize_Book;
+      @include fontWeight_Bold;
+      line-height: leading(29, 24);
+      letter-spacing: 1rem;
+      @include small {
+        @include fontSize_Regular;
+      }
+    }
+    img {
+      width: 2rem;
+      height: 2rem;
+      margin-left: -0.5rem;
+      margin-right: 0.5rem;
+      transform: translate(0.125rem, -0.125rem);
+      @include small {
+        transform: scale(0.8) translate(0.125rem, -0.125rem);
+      }
+    }
   }
 }
 
@@ -33,31 +61,75 @@
   display: flex;
   padding: 0 0.75rem;
   margin: 0 1.125rem;
+  &:after {
+    width: 100% !important;
+    left: 0 !important;
+    bottom: -0.625rem !important;
+  }
   .button-contents {
     @include font_Secondary;
-    @include fontSize_Book;
-    @include fontWeight_Regular;
+    @include fontSize_Regular;
+    @include fontWeight_Bold;
+    line-height: leading(29, 18);
+    letter-spacing: 0.24px;
     position: relative;
-    padding: 0.618rem 0;
+    padding: 0.625rem 0;
     margin: auto;
     background: transparent;
-    color: $white;
-    &:after {
-      content: '';
-      position: absolute;
-      left: -0.75rem;
-      bottom: -0.75rem;
-      width: calc(100% + 1.5rem);
-      height: 0.3125rem;
-      border-radius: 0.15625rem;
-      background-color: $white;
-      opacity: 0;
-      transition: 200ms ease;
+    color: $nebula;
+    @include small {
+      font-size: 1rem;
     }
-    &:hover {
+  }
+}
+
+// ///////////////////////////////////////////////////////////////// Breadcrumbs
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumb {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  line-height: leading(29, 16);
+  letter-spacing: 0.24px;
+  margin-right: 1.375rem;
+  @include fontWeight_Regular;
+  transition: 400ms ease;
+  &:after {
+    content: '//';
+    position: absolute;
+    left: calc(100% + 0.375rem);
+    height: 100%;
+    top: 0;
+    @include fontWeight_Regular;
+  }
+  &:hover {
+    &.link {
+      @include fontWeight_Bold;
+      cursor: pointer;
       &:after {
-        opacity: 1;
+        @include fontWeight_Regular;
       }
+    } 
+  }
+}
+
+.breadcrumb-wrapper {
+  &:last-child {
+    .breadcrumb {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.breadcrumb-link {
+  &:hover {
+    .breadcrumb {
+      @include fontWeight_Bold;
     }
   }
 }

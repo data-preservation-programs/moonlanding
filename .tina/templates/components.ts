@@ -72,14 +72,73 @@ export const navigation:TinaTemplate = {
   ]
 }
 
+export const breadcrumbs:TinaTemplate = {
+  label: 'Breadcrumbs',
+  name: 'breadcrumbs_mapping',
+  type: 'object',
+  list: true,
+  fields: [
+    {
+      label: 'Key',
+      name: 'key',
+      type: 'string'
+    },
+    {
+      label: 'Value',
+      name: 'value',
+      type: 'string'
+    }
+  ]
+}
+
 export const footer:TinaTemplate = {
   label: 'Footer',
   name: 'footer',
   type: 'object',
   fields: [
     {
-      label: 'Copyright',
-      name: 'copyright',
+      label: 'Logo',
+      name: 'logo',
+      type: 'object',
+      fields: [
+        {
+          label: 'Format',
+          name: 'format',
+          type: 'string',
+          default: 'header'
+        }
+      ]
+    },
+    {
+      label: 'Image',
+      name: 'image',
+      type: 'object',
+      fields: [
+        {
+          label: 'Image',
+          name: 'src',
+          type: 'image'
+        },
+        {
+          label: 'Theme',
+          name: 'theme',
+          type: 'string',
+          options: [
+            {
+              label: 'none',
+              value: 'none'
+            },
+            {
+              label: 'background',
+              value: 'background'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      label: 'Links',
+      name: 'links',
       type: 'object',
       list: true,
       fields: [button]

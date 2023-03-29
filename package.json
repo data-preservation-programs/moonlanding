@@ -14,7 +14,7 @@
     "tinacms": "^1.1.3"
   },
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
+    "dev": "tinacms dev -c \"node server.js\"",
     "build": "tinacms build && next build",
     "export": "tinacms build && next build && next export",
     "start": "tinacms build && next start",
@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "eslint": "8.26.0",
-    "eslint-config-next": "12.3.1"
+    "eslint-config-next": "12.3.1",
+    "url-loader": "^4.1.1"
   }
 }

@@ -1,0 +1,12 @@
+// ///////////////////////////////////////////////////// General [Page Sections]
+// -----------------------------------------------------------------------------
+#section-resources {
+  padding-top: toRem(245);
+  .text-block {
+    padding-bottom: 5.75rem;
+    .heading {
+      line-height: leading(125, 85);
+      margin-bottom: 1.75rem;
+    }
+  }
+}
