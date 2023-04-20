@@ -2,6 +2,7 @@
 
 ![Moonlanding graph image](public/open-graph-image.png)
 
+
 ## Overview
 
 - This is the repository for the _Moon Landing_ microsite
