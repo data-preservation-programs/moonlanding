@@ -72,6 +72,7 @@ class BlockBuilder extends React.Component {
 
     return (
       <section className="sectional" id={section.id}>
+        {section.beforeGrid && (<div className="before-grid" dangerouslySetInnerHTML={{ __html: section.beforeGrid }}></div>) }
         <div className={clsx(this.getGridClasses(section.grid))}>
           {blocks.map((block, i) => (
             <div

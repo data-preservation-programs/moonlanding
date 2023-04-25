@@ -57,8 +57,19 @@
             },
             "format": "medium",
             "subheading": "Program Overview",
-            "description": "Moon Landing is an acceleration program from Protocol Labs designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public datasets that are valuable to the world\n\nTo participate, you can elect to participate in Slingshot, Evergreen, or both.",
-            "_template": "text_block"
+            "description": "Moon Landing is an acceleration program from Protocol Labs designed to onramp storage providers with real data. By participating in Moon Landing, storage providers will store public and enterprise datasets onto the Filecoin network.",
+            "_template": "text_block",
+            "cta": [
+              {
+                "button": {
+                  "action": "a",
+                  "text": "Register today to be part of Capsule 1.",
+                  "url": "https://docs.google.com/forms/d/e/1FAIpQLSd5w1qKhWm_THr6yYwEe09p5SpsOWOYTU9AetCbSbpVp5poVg/viewform",
+                  "target": "_blank",
+                  "variant": ""
+                }
+              }
+            ]
           }
         ]
       },
@@ -68,8 +79,8 @@
           {
             "cols": {
               "num": "col-5_sm-10_mi-12",
-              "push_left": "off-0_sm-1_mi-0",
-              "push_right": "off-1_sm-1_mi-0"
+              "push_left": "off-1_sm-1_mi-0",
+              "push_right": "off-0_sm-1_mi-0"
             },
             "format": "medium",
             "heading": "STORAGE PROVIDER BENEFITS",
@@ -77,24 +88,13 @@
           },
           {
             "cols": {
-              "num": "col-5_sm-10_mi-12",
+              "num": "col-4_sm-10_mi-12",
               "push_left": "off-1_sm-1_mi-0",
-              "push_right": "off-0_sm-1_mi-0"
-            },
-            "format": "medium",
-            "icon": "connection",
-            "description": "Connect with fellow storage providers through Protocol Labs",
-            "_template": "text_block"
-          },
-          {
-            "cols": {
-              "num": "col-5_sm-10_mi-12",
-              "push_left": "off-0_sm-1_mi-0",
               "push_right": "off-1_sm-1_mi-0"
             },
             "format": "medium",
-            "icon": "wheel",
-            "description": "Be a founding member of a new storage provider community",
+            "icon": "connection",
+            "description": "Connect with fellow storage providers in the ecosystem",
             "_template": "text_block"
           },
           {
@@ -102,10 +102,57 @@
               "num": "col-5_sm-10_mi-12",
               "push_left": "off-1_sm-1_mi-0",
               "push_right": "off-0_sm-1_mi-0"
+            },
+            "format": "medium",
+            "icon": "wheel",
+            "description": "Grow your business by acquiring datasets from various data clients",
+            "_template": "text_block"
+          },
+          {
+            "cols": {
+              "num": "col-4_sm-10_mi-12",
+              "push_left": "off-1_sm-1_mi-0",
+              "push_right": "off-1_sm-1_mi-0"
             },
             "format": "medium",
             "icon": "power",
             "description": "Earn and increase your block rewards via Quality Adjusted Power",
+            "_template": "text_block"
+          }
+        ]
+      },
+      {
+        "id": "section-info",
+        "beforeGrid": "<div class='border-element-before'></div><div class='border-element-after'></div>",
+        "block": [
+          {
+            "cols": {
+              "num": "col-6_sm-10",
+              "push_left": "off-1_sm-1",
+              "push_right": "off-5_sm-1"
+            },
+            "format": "medium",
+            "heading": "  MOONLANDING CAPSULE 1",
+            "subheading": "5/1/2023 - 12/1/2023",
+            "_template": "text_block"
+          },
+          {
+            "cols": {
+              "num": "col-4_sm-10_mi-12",
+              "push_left": "off-1_sm-1_mi-0",
+              "push_right": "off-0_sm-1_mi-0"
+            },
+            "src": "/images/orbit-slingshot-diagram.png",
+            "_template": "image_block"
+          },
+          {
+            "cols": {
+              "num": "col-6_sm-10_mi-12",
+              "push_left": "off-0_sm-1_mi-0",
+              "push_right": "off-1_sm-1_mi-0"
+            },
+            "format": "medium",
+            "description": "- Store deals with Fil+ through Slingshot, E Fil+, and LDN and earn 10x Quality Adjusted Power\n- Grow your SP business together with other participants in your capsule to further your impact\n- Get hands-on help from our engineers and long-term Fil+ community members\n- Join the Disaster-Recovery-as-a-Service offering and store under-replicated datasets in the Fil+ network",
             "_template": "text_block"
           }
         ]
@@ -136,15 +183,15 @@
               },
               {
                 "date": "Month 2",
-                "event": "Start the process of sealing real data"
+                "event": "Start the process of sealing\nverified deals"
               },
               {
                 "date": "Month 3",
-                "event": "Complete sealing of your 1st 10 TiB of real data with Moon Landing"
+                "event": "Complete sealing of your 1st 10TiB of verified deals with Moon Landing"
               },
               {
                 "date": "Month 4",
-                "event": "Seal more real data with Evergreen and/or Slingshot, aiming for 10TiB / month\n\nComplete sealing your 1st replica from another SP in your country / continent\n\n20 TiB data milestone"
+                "event": "Complete sealing your 1st replica from another SP in your country / continent\n20TiB data milestone"
               },
               {
                 "date": "Month 5",
@@ -152,11 +199,11 @@
               },
               {
                 "date": "Month 6",
-                "event": "40 TiB milestone"
+                "event": "40TiB milestone"
               },
               {
                 "date": "Month 7",
-                "event": "End of the Moon Landing program -\n\ncongratulations graduates!!!"
+                "event": "End of the Moon Landing program -\ncongratulations graduates!!!"
               }
             ]
           }

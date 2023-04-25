@@ -21,9 +21,13 @@ export default function Footer({ logo = {}, image = {}, links = [] }) {
   }
 
   return (
-    <footer 
-      id="site-footer"
-      style={getFooterStyles(image)}>
+    <footer id="site-footer">
+    
+      <div
+        className="footer-background-image" 
+        style={getFooterStyles(image)}>
+      </div>
+
       <div className="footer-content">
         <div className="grid-middle">
 
