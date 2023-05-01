@@ -2,16 +2,9 @@
   position: relative;
   height: toRem(960);
   margin: auto 0;
-  background-size: 160%;
-  background-repeat: no-repeat;
-  background-position: left top;
   @include small {
     height: auto;
     padding-bottom: 20rem;
-  }
-  @include mini {
-    background-size: 1020px;
-    background-position: 25% top;
   }
   &:before {
     content: '';
@@ -22,6 +15,24 @@
     height: 5rem;
     z-index: 10;
     background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  .footer-background-image {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    @include small {
+      display: block;
+    }
+    @include mini {
+      background-size: 1020px;
+      background-position: 25% top;
+    }
   }
   .image-block {
     @include small {

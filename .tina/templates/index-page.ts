@@ -20,6 +20,11 @@ export const indexPage:TinaTemplate = {
         },
         grid,
         {
+          label: 'Before Grid',
+          name: 'beforeGrid',
+          type: 'string'
+        },
+        {
           label: 'Blocks',
           name: 'block',
           type: 'object',

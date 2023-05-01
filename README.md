@@ -2,6 +2,7 @@
 
 ![Moonlanding graph image](public/open-graph-image.png)
 
+
 ## Overview
 
 - This is the repository for the _Moon Landing_ microsite
@@ -24,7 +25,6 @@ Node 16 or higher and `npm` or `yarn` is required.
 - Run locally with `npm run dev`
 
 ### Static site
-
 - Install with `npm ci`
 - Add any environment variables to `.env`
 - Generate the static site with `npm run export`
