@@ -255,7 +255,8 @@
                   "action": "next-link",
                   "url": "/resources",
                   "text": "View All Resources",
-                  "theme": "cta-solid"
+                  "theme": "cta-solid",
+                  "className": "detail-redraw"
                 }
               }
             ]

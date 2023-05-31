@@ -33,7 +33,6 @@
   &.variant__cta-solid {
     color: $nebula;
     position: relative;
-    padding: 0 toRem(26) 0 toRem(55);
     border-radius: 0.1875rem;
     border: solid 3px $nebula;
     border-right: none;
@@ -54,6 +53,7 @@
     }
   }
   &.variant__cta {
+    padding: 0 toRem(36) 0 toRem(44);
     &:hover {
       background-color: $nebula !important;
       .button-detail {
@@ -87,6 +87,42 @@
     &:hover {
       &:after {
         opacity: 1;
+      }
+    }
+    &:not(.detail-redraw) {
+      .button-detail-after {
+        display: none;
+      }
+    }
+    &.detail-redraw {
+      &:after {
+        transition: none;
+        opacity: 1;
+      }
+      .button-detail-after {
+        position: absolute;
+        bottom: -0.9375rem;
+        left: 1.125rem;
+        width: 0;
+        height: 1rem;
+        transition: 400ms ease-in-out;
+        overflow: hidden;
+        &:after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='388' height='15' viewBox='0 0 388 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 12.5H11.4415C12.7333 12.5 13.9456 11.8761 14.6965 10.825L19.8035 3.67505C20.5544 2.62386 21.7667 2 23.0585 2H388' stroke='%23D0DFDC' stroke-width='4'/%3e%3c/svg%3e ");
+          background-repeat: no-repeat;
+        }
+      }
+      &:hover {
+        &:after {
+          opacity: 0;
+        }
+        .button-detail-after {
+          width: calc(100% - 2.25rem);
+        }
       }
     }
   }
