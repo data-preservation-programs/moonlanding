@@ -22,8 +22,6 @@ $breakpoint_Large: 75rem; // 1200px
 $breakpoint_Xlarge: 90rem; // 1440px
 $breakpoint_UltraLarge: 140.625rem; // 2250px
 
-
-
 // --------------------------------------------------------------- Media Queries
 @mixin tiny {
   @media screen and (max-width: $breakpoint_Tiny) {

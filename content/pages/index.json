@@ -35,14 +35,6 @@
               }
             ],
             "_template": "text_block"
-          },
-          {
-            "cols": {
-              "num": ""
-            },
-            "src": "/images/Nasa-AS11-Moonlanding-astronaut.png",
-            "theme": "background",
-            "_template": "image_block"
           }
         ]
       },

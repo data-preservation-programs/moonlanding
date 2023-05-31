@@ -15,8 +15,44 @@
 
 #hero-header {
   padding-top: $navigationHeight;
-  padding-bottom: 51rem;
+  padding-bottom: 72rem;
   z-index: 1;
+  @include ultraLarge {
+    padding-bottom: 51rem;
+  }
+  @include medium {
+    padding-bottom: 30rem;
+  }
+  @include mini {
+    padding-bottom: 24rem;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-image: url('/images/nasa-as11-moonlanding-astronaut.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    @include ultraLarge {
+      width: toRem(2304);
+      height: toRem(1285);
+      background-size: 100%;
+      background-position: center;
+    }
+    @include medium {
+      width: toRem(1224);
+      height: toRem(682);
+    }
+    @include mini {
+      width: toRem(800);
+      height: toRem(446);
+    }
+  }
   .label,
   .heading,
   .subheading,
