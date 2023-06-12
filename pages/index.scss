@@ -252,36 +252,33 @@
     background-repeat: repeat;
     background-size: 1797px 1086px;
   }
-  .image-block {
-    left: unset !important;
-    right: 50vw;
-    @include tiny {
-      right: 25vw;
-    }
-    &:before,
-    &:after {
-      display: none;
-    }
-    span {
-      margin-right: 0 !important;
-      margin-left: auto !important;
-      @include large {
-        left: -100px !important;
-      }
-      @include medium {
-        left: -200px !important;
-      }
-      @include small {
-        left: -350px !important;
-      }
-      @include tiny {
-        left: -400px !important;
-      }
-    }
-  }
   .timeline-block {
     position: relative;
     z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(calc(-50% + 2rem));
+      right: calc(100% - 6rem);
+      width: toRem(1466);
+      height: toRem(1466);
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: right center;
+      background-image: url('/images/Nasa-Earth-from-distance-in-space.png');
+      z-index: -1;
+      @include small {
+        width: toRem(1200);
+        height: toRem(1200);
+        right: calc(100% - 12rem);
+        transform: translateY(-50%);
+      }
+      @include mini {
+        width: toRem(1000);
+        height: toRem(1000);
+      }
+    }
     .heading {
       margin-bottom: toRem(144);
     }

@@ -154,14 +154,6 @@
         "block": [
           {
             "cols": {
-              "num": "col-6_md-12"
-            },
-            "src": "/images/Nasa-Earth-from-distance-in-space.png",
-            "theme": "background",
-            "_template": "image_block"
-          },
-          {
-            "cols": {
               "num": "col-6_md-8_sm-10_ti-12",
               "push_left": "off-6_md-4_sm-2_ti-0",
               "push_right": "off-0_md-0_sm-0_ti-0"
