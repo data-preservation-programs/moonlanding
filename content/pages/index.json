@@ -91,9 +91,9 @@
           },
           {
             "cols": {
-              "num": "col-5_sm-10_mi-12",
+              "num": "col-4_sm-10_mi-12",
               "push_left": "off-1_sm-1_mi-0",
-              "push_right": "off-0_sm-1_mi-0"
+              "push_right": "off-1_sm-1_mi-0"
             },
             "format": "medium",
             "icon": "wheel",
@@ -255,8 +255,7 @@
                   "action": "next-link",
                   "url": "/resources",
                   "text": "View All Resources",
-                  "theme": "cta-solid",
-                  "className": "detail-redraw"
+                  "theme": "cta-solid"
                 }
               }
             ]

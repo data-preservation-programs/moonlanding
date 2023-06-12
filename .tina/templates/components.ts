@@ -47,11 +47,6 @@ export const button:TinaTemplate = {
       label: 'Target',
       name: 'target',
       type: 'string'
-    },
-    {
-      label: 'Classes',
-      name: 'className',
-      type: 'string'
     }
   ]
 }

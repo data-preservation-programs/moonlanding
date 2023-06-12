@@ -128,7 +128,7 @@ export default function TextBlock({ block }) {
               url={cta.button.url}
               target={cta.button.target}
               variant={cta.button.theme}
-              className={cta.button.className ? `cta ${cta.button.className}` : 'cta'}>
+              className={'cta'}>
 
               {cta.button.text}
 
