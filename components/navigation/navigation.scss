@@ -61,10 +61,21 @@
   display: flex;
   padding: 0 0.75rem;
   margin: 0 1.125rem;
+  &:after,
+  .button-detail-after {
+    bottom: -0.5rem !important;
+    left: 0 !important;
+  }
   &:after {
     width: 100% !important;
-    left: 0 !important;
-    bottom: -0.625rem !important;
+  }
+  .button-detail-after {
+    width: 0 !important;
+  }
+  &:hover {
+    .button-detail-after {
+      width: 100% !important;
+    }
   }
   .button-contents {
     @include font_Secondary;

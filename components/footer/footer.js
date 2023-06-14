@@ -42,8 +42,6 @@ export default function Footer({ logo = {}, image = {}, links = [] }) {
               </div>
             </Link>
 
-            <ImageBlock block={image} />
-
           </div>
             
           <div

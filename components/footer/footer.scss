@@ -6,32 +6,40 @@
     height: auto;
     padding-bottom: 20rem;
   }
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 5rem;
-    z-index: 10;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-  }
   .footer-background-image {
-    display: none;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 50%;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background-size: 160%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: left top;
+    background-position: center top;
+    transform: translateX(-50%);
+    @include ultraLarge {
+      bottom: -14rem;
+      width: toRem(2304);
+      height: toRem(1285);
+      background-position: center;
+    }
+    @include customMaxMQ(1812px) {
+      bottom: 0;
+      width: toRem(1812);
+      height: toRem(1011);
+    }
     @include small {
-      display: block;
+      left: 0;
+      transform: none;
+      width: toRem(1024);
+      height: toRem(571);
+      background-size: 100%;
+      background-position: left bottom;
     }
     @include mini {
-      background-size: 1020px;
-      background-position: 25% top;
+      transform: translateX(-100px);
+    }
+    @include tiny {
+      transform: translateX(-160px);
     }
   }
   .image-block {

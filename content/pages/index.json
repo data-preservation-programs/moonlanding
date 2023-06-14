@@ -35,14 +35,6 @@
               }
             ],
             "_template": "text_block"
-          },
-          {
-            "cols": {
-              "num": ""
-            },
-            "src": "/images/Nasa-AS11-Moonlanding-astronaut.png",
-            "theme": "background",
-            "_template": "image_block"
           }
         ]
       },
@@ -99,9 +91,9 @@
           },
           {
             "cols": {
-              "num": "col-5_sm-10_mi-12",
+              "num": "col-4_sm-10_mi-12",
               "push_left": "off-1_sm-1_mi-0",
-              "push_right": "off-0_sm-1_mi-0"
+              "push_right": "off-1_sm-1_mi-0"
             },
             "format": "medium",
             "icon": "wheel",
@@ -160,14 +152,6 @@
       {
         "id": "section-timeline",
         "block": [
-          {
-            "cols": {
-              "num": "col-6_md-12"
-            },
-            "src": "/images/Nasa-Earth-from-distance-in-space.png",
-            "theme": "background",
-            "_template": "image_block"
-          },
           {
             "cols": {
               "num": "col-6_md-8_sm-10_ti-12",

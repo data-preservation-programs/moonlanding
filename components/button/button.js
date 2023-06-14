@@ -80,6 +80,8 @@ const Button = ({ action, url, target, variant = '', className, disabled, onClic
         )}
       </Action>
 
+      { variant === 'cta-solid' && <div className="button-detail-after"></div> }
+
     </div>
   );
 };
